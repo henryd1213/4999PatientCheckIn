@@ -19,6 +19,7 @@ USE `mydb` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Pin` (
   `idPin` INT NOT NULL AUTO_INCREMENT,
+  `Pin_Number` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idPin`),
   UNIQUE INDEX `idPin_UNIQUE` (`idPin` ASC) VISIBLE)
 ENGINE = InnoDB;
