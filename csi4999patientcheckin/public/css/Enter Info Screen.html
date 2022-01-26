@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!--Temporary style found here: https://www.codecademy.com/forum_questions/55ad460dd3292f1a8200050c-->
-        <link rel="stylesheet" href="Enter Info Screen.css">
-        <title>Launch Screen</title>
-    </head>
+    <style>
+        .container {
+            position: relative;
+        }
+        .bottomright {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+            font-size: 18px;
+        }
+        
+        img {
+            width: 20%;
+            height: auto;
+            opacity: 0.3;
+        }
+    </style>
+        <head>
+            <!--Temporary style found here: https://www.codecademy.com/forum_questions/55ad460dd3292f1a8200050c-->
+            <link rel="stylesheet" href="Enter Info Screen.css">
+            <title>Launch Screen</title>
+        </head>
 
-    <body>
-        <center>
-            <h1>
-                Welcome to our website!
-            </h1>
-        </center>
-        
-        <!--This button will take the user to our first question.-->
-        <center>
-            <div id="button"><a href="Q1.html">Get Started</a></div>
-        </center>
-        
-    </body>
+        <body>
+            <center>
+                <h1>
+                    Welcome to our website!
+                </h1>
+            </center>
+            
+            <!--This button will take the user to our first question.-->
+            <center>
+                <div id="button"><a href="Q1.html">Get Started</a></div>
+            </center>
+            <div class="container">
+                <div class="bottomright">
+                    <a href="Settings.html">
+                        <img src="Cogs.png" alt="Pin" width="90" height="85">
+                    </a>
+                </div>
+            </div>
+            
+        </body>
 
     
 
