@@ -7,6 +7,8 @@
 
     <body>
         <center>
+            <!--Creates form for the patient's name.-->
+            <div id="Name">
             <p>Please enter your name.<br></p>
             <form>
                 <label for="fname">First name:</label><br>
@@ -15,6 +17,18 @@
                 <input type="text" id="lname" name="lname"><br><br>
                 <input type="submit" value="Submit">
             </form>
+            </div>
         </center>
     </body>
+
+    <!--The following code is an attempt to print the previously entered information.-->
+    <script type="text/javascript">
+        function printDiv(Name) {
+            var printContents = document.getElementById(Name);
+            w=window.open("");
+            w.document.write(printContents.outerHTML);
+            w.print();
+            w.close();
+        }
+    </script>
 </html>
