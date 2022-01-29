@@ -1,0 +1,204 @@
+body{
+  background-color:seashell;
+  margin: auto;
+}
+h2{
+  color: navy; 
+}
+
+
+.container{
+  position: relative;
+}
+
+.closebutton {
+  position: relative;
+  top: -219px;
+  left: 23px;
+  float: left;
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color:cadetblue;
+  background-color: lightblue;
+  margin: auto;
+  outline: none;
+  border-color: transparent;
+  cursor: pointer;
+}
+a.two {
+  display: inline-block;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  }
+a.two:hover{
+  color:steelblue;
+  background: powderblue;
+}
+
+
+img{
+    position: relative;
+    top: -246px;
+    left: -24px;
+    float: right;
+    width: 9%;
+    padding: 10px;
+    height: auto;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+  img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+
+  .btone{
+    position: relative;
+    top: 50px;
+    display: block;
+    padding: 11px 13px;
+    text-align: center;
+    text-decoration: none;
+    color:cadetblue;
+    background-color: lightblue;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+  }
+  a.btone{
+    width: 46%;
+    line-height: 2em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    
+    }
+  a.btone:hover{
+    color:steelblue;
+    background: powderblue;
+  }
+  .bttwo{
+    position: relative;
+    top: 70px;
+    
+    display: block;
+    padding: 11px 13px;
+    text-align: center;
+    text-decoration: none;
+    color:cadetblue;
+    background-color: lightblue;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+  }
+  a.bttwo{
+
+    display: block;
+    width: 46%;
+    line-height: 2em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    
+    }
+  a.bttwo:hover{
+    color:steelblue;
+    background: powderblue;
+  }
+
+  .btthree{
+    position: relative;
+    top: 90px;
+    
+    display: block;
+    padding: 11px 13px;
+    text-align: center;
+    text-decoration: none;
+    color:cadetblue;
+    background-color: lightblue;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+  }
+  a.btthree {
+
+    display: block;
+    width: 46%;
+    line-height: 2em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    
+    }
+  a.btthree:hover{
+    color:steelblue;
+    background: powderblue;
+  }
+  .btfour{
+    position: relative;
+    top: 110px;
+    
+    display: block;
+    padding: 11px 13px;
+    text-align: center;
+    text-decoration: none;
+    color:cadetblue;
+    background-color: lightblue;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+  }
+  a.btfour{
+
+    display: block;
+    width: 46%;
+    line-height: 2em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    
+    }
+  a.btfour:hover{
+    color:steelblue;
+    background: powderblue;
+  }
+  .btfive{
+    position: relative;
+    top: 130px;
+    
+    display: block;
+    padding: 11px 13px;
+    text-align: center;
+    text-decoration: none;
+    color:cadetblue;
+    background-color: lightblue;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+  }
+  a.btfive {
+
+    display: block;
+    width: 46%;
+    line-height: 2em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    
+    }
+  a.btfive:hover{
+    color:steelblue;
+    background: powderblue;
+  }
+  
+
+  
+
+
+
+
