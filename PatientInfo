@@ -1,0 +1,67 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema PatientInfo
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema PatientInfo
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `PatientInfo` DEFAULT CHARACTER SET utf8 ;
+USE `PatientInfo` ;
+
+-- -----------------------------------------------------
+-- Table `PatientInfo`.`Pin_Info`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PatientInfo`.`Pin_Info` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(45) NOT NULL,
+  `Pin` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `PatientInfo`.`Patient_Info`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PatientInfo`.`Patient_Info` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `FName` VARCHAR(45) NOT NULL,
+  `Lname` VARCHAR(45) NOT NULL,
+  `Street` VARCHAR(45) NOT NULL,
+  `Apt/Floor/Suite` VARCHAR(45) NULL,
+  `City` VARCHAR(45) NOT NULL,
+  `State` VARCHAR(45) NOT NULL,
+  `Zip` VARCHAR(45) NOT NULL,
+  `Phone` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Pref_Contact` VARCHAR(45) NOT NULL,
+  `Pin_Info_ID` INT NOT NULL,
+  PRIMARY KEY (`ID`, `Pin_Info_ID`),
+  UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE,
+  INDEX `fk_Patient_Info_Pin_Info_idx` (`Pin_Info_ID` ASC) VISIBLE,
+  CONSTRAINT `fk_Patient_Info_Pin_Info`
+    FOREIGN KEY (`Pin_Info_ID`)
+    REFERENCES `PatientInfo`.`Pin_Info` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+INSERT INTO Pin_Info
+VALUES 
+(0,'admin1','P1n3xampl3');
+
+INSERT INTO PATIENT_INFO VALUES
+(0,'Henry','Dare','1234 Example Street Dr','','Example City','MI','48309','123-456-7891','email@exampledomain.com','Text','1');
+
+SELECT * FROM PATIENT_INFO;
