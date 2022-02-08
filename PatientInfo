@@ -15,14 +15,26 @@ CREATE SCHEMA IF NOT EXISTS `PatientInfo` DEFAULT CHARACTER SET utf8 ;
 USE `PatientInfo` ;
 
 -- -----------------------------------------------------
--- Table `PatientInfo`.`Pin_Info`
+-- Table `PatientInfo`.`Employee_Info`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PatientInfo`.`Pin_Info` (
+CREATE TABLE IF NOT EXISTS `PatientInfo`.`Employee_Info` (
   `ID` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(45) NOT NULL,
-  `Pin` VARCHAR(45) NOT NULL,
+  `Fname` VARCHAR(45) NOT NULL,
+  `Lname` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Birthday` VARCHAR(45) NOT NULL,
+  `Username` VARCHAR(45) NOT NULL,
+  `Password` VARCHAR(45) NOT NULL,
+  `Role` VARCHAR(45) NOT NULL,
+  `Phone` VARCHAR(45) NOT NULL,
+  `Gender` VARCHAR(45) NOT NULL,
+  `Age` VARCHAR(45) NOT NULL,
+  `FPass` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`ID`),
-  UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE)
+  UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE,
+  UNIQUE INDEX `Username_UNIQUE` (`Username` ASC) VISIBLE,
+  UNIQUE INDEX `Phone_UNIQUE` (`Phone` ASC) VISIBLE,
+  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -31,7 +43,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PatientInfo`.`Patient_Info` (
   `ID` INT NOT NULL AUTO_INCREMENT,
-  `FName` VARCHAR(45) NOT NULL,
+  `Fname` VARCHAR(45) NOT NULL,
   `Lname` VARCHAR(45) NOT NULL,
   `Street` VARCHAR(45) NOT NULL,
   `Apt/Floor/Suite` VARCHAR(45) NULL,
@@ -40,14 +52,34 @@ CREATE TABLE IF NOT EXISTS `PatientInfo`.`Patient_Info` (
   `Zip` VARCHAR(45) NOT NULL,
   `Phone` VARCHAR(45) NOT NULL,
   `Email` VARCHAR(45) NOT NULL,
-  `Pref_Contact` VARCHAR(45) NOT NULL,
-  `Pin_Info_ID` INT NOT NULL,
-  PRIMARY KEY (`ID`, `Pin_Info_ID`),
+  `Pref_contact` VARCHAR(45) NOT NULL,
+  `List_num` INT NOT NULL,
+  `Patient_num` INT NOT NULL,
+  `Employee_Info_ID` INT NOT NULL,
+  PRIMARY KEY (`ID`, `Employee_Info_ID`),
   UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE,
-  INDEX `fk_Patient_Info_Pin_Info_idx` (`Pin_Info_ID` ASC) VISIBLE,
-  CONSTRAINT `fk_Patient_Info_Pin_Info`
-    FOREIGN KEY (`Pin_Info_ID`)
-    REFERENCES `PatientInfo`.`Pin_Info` (`ID`)
+  INDEX `fk_Patient_Info_Employee_Info1_idx` (`Employee_Info_ID` ASC) VISIBLE,
+  CONSTRAINT `fk_Patient_Info_Employee_Info1`
+    FOREIGN KEY (`Employee_Info_ID`)
+    REFERENCES `PatientInfo`.`Employee_Info` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `PatientInfo`.`Pin_Info`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PatientInfo`.`Pin_Info` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Pinname` VARCHAR(45) NOT NULL,
+  `Pin` VARCHAR(45) NOT NULL,
+  `Employee_Info_ID` INT NOT NULL,
+  PRIMARY KEY (`ID`, `Employee_Info_ID`),
+  INDEX `fk_Pin_Info_Employee_Info1_idx` (`Employee_Info_ID` ASC) VISIBLE,
+  CONSTRAINT `fk_Pin_Info_Employee_Info1`
+    FOREIGN KEY (`Employee_Info_ID`)
+    REFERENCES `PatientInfo`.`Employee_Info` (`ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -57,11 +89,19 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-INSERT INTO Pin_Info
+INSERT INTO Employee_Info
 VALUES 
-(0,'admin1','P1n3xampl3');
+(0,'Henry','Dare','exampleemail@domain.com','12/13/1999','nurseUser1','test','Nurse','123-456-7890','Male','22','N'),
+(0,'Sam','Dillon','exampleemail2@domain.com','12/13/1999','doctorUser1','test','Doctor','246-810-1214','Male','22','N'),
+(0,'Jared','Ormond','exampleemail3@domain.com','12/13/1999','adminUser1','test','Admin','135-791-1315','Male','22','N');
 
 INSERT INTO PATIENT_INFO VALUES
-(0,'Henry','Dare','1234 Example Street Dr','','Example City','MI','48309','123-456-7891','email@exampledomain.com','Text','1');
+(0,'Henry','Dare','1234 Example Street Dr','','Example City','MI','48309','123-456-7891','email@exampledomain.com','Text','1','101','1'),
+(0,'Sam','Dillon','5678 Example Street Dr','','Example City','MI','48309','101-121-1314','email2@exampledomain.com','Text','2','137','1'),
+(0,'Jared','Ormond','9101 Example Street Dr','','Example City','MI','48309','151-171-1920','email3@exampledomain.com','Text','3','456','1'),
+(0,'Mansi','Patel','1213 Example Street Dr','','Example City','MI','48309','212-232-2526','email4@exampledomain.com','Text','4','739','1');
 
-SELECT * FROM PATIENT_INFO;
+INSERT INTO Pin_Info VALUES
+(0,'genericPin','12345','1');
+
+SELECT * FROM Employee_INFO;
