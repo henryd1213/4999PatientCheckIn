@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Q5
+            Q17
         </title>
     </head>
 
@@ -47,25 +47,14 @@
     <body>
         <center>
             <!--Creates form for the patient's name.-->
-            <div id="Zip">
-            <p>Please enter your zip.<br></p>
-            <form action="Q6.html">
-                <label for="zip">Zip:</label><br>
-                <input type="text" id="zip" name="zip"><br><br>
-                <a href="Q6.html" class="btone">Submit<br></a>     
+            <div id="Cell Phone">
+            <p>Please enter your cell phone.<br></p>
+            <form action="Q18.html">
+                <label for="cphn">Cell Phone:</label><br>
+                <input type="text" id="cphn" name="cphn"><br><br>
+                <a href="Q18.html" class="btone">Submit<br></a>     
             </form>
             </div>
         </center>
     </body>
-
-    <!--The following code is an attempt to print the previously entered information.-->
-    <script type="text/javascript">
-        function printDiv(Name) {
-            var printContents = document.getElementById(Name);
-            w=window.open("");
-            w.document.write(printContents.outerHTML);
-            w.print();
-            w.close();
-        }
-    </script>
 </html>
