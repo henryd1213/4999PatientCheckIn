@@ -62,6 +62,27 @@
                     img:hover {
                         box-shadow: 0 0 2px 1px black(0, 140, 186, 0.5);
                     }
+            
+             /*Input readonly text field for user name */
+                    input[type="text"]{
+                       top: 100px;
+                        left: 10px;
+                        float:right;
+                        width: 8%;
+                        border: 2px solid steelblue;
+                        margin: 8px 8px;
+                        outline: none;
+                        padding: 6px 6px;
+                        box-sizing: border-box;
+                        font-size: large;
+                        text-align: center;
+                    }
+
+                    input[type="type"]:focus{
+                        border-color:dodgerBlue;
+                        box-shadow:0 0 8px 0 dodgerBlue;
+
+                    }
 
             /* link to Patient List */
                     .btone{
@@ -139,6 +160,13 @@
             </a>
             </div>
             </div>
+            
+             <!-- readonly text field for username -->
+            <div id="Username">
+                <label for="username" style = "font-size:larger; top:100px; right:100px; float:right;">User:</label>
+                <input type="text" id="username" name="username" value=""  readonly>
+            </div>
+            
           
             <!--Exit button-->
             <div class="close">
