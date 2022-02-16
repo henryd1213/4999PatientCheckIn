@@ -1,0 +1,84 @@
+<!-- using CFquery to retrieve list of patients-->
+<!--  <cfquery name="" datasource="">
+                <Select> FirstName, LastName, Patient Number</Select>
+                from 
+                order by LastName 
+             </cfquery> -->
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>User List </title>
+    <link href="public/css/List.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--- output number of records in query results --->
+    <!--   <CFOUTPUT> -->
+    <!--- the 'RecordCount' variable is automatically created --->
+    <!--  <B>#(Name of the list).RecordCount#</B> Employees Found
+                             </CFOUTPUT>
+         
+                             <table>
+                                 <tr>
+                                 <th>NO.</th>
+                                 <th>Last Name</th>
+                                 <th>First Name</th>
+                                 <th>Patient Number</th>
+                                 </tr> -->
+
+    <!--- output query information--->
+    <!--<CFOUTPUT QUERY="file_name">-->
+    <!--- since this row is inside a cfoutput block,
+                                     it loops to create a new row for each record--->
+    <!-- <tr> -->
+    <!-- the 'CurrentRow' variable is automatically 
+                                              created --->
+    <!-- <td>#CurrentRow#</td>
+                                      <td><B>#LastName#</B></td> 
+                                      <td>#FirstName#</td>
+                                      <td>#Patient Sr. number#</td>
+                                     
+                                     </tr>
+                                     </CFOUTPUT>
+                            </table> -->
+
+
+    <center>
+        <h1>Users List</h1>
+
+        <!-- Output table-->
+        <table>
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Email</th>
+                <th>Username</th>
+            </tr>
+            <%data.forEach((item)=>{%>
+                <form method="post" action="deleteUser">
+
+                    <tr>
+                        <td><input type="submit" value="<%= item.Lname%>" class="PatientTableButton" name="Lname"></td>
+                        <td><input type="submit" value="<%= item.Fname%>" class="PatientTableButton" name="Fname"></td>
+                        <td><input type="submit" value="<%= item.Email%>" class="PatientTableButton" name="Email"> </td>
+                        <td><input type="submit" value="<%= item.Username%>" class="PatientTableButton"
+                                name="Username"> </td>
+                    </tr>
+                </form>
+                <%});%>
+
+
+        </table>
+    </center>
+
+    <!--Exit button-->
+    <div class="close">
+        <a href="admin_list_return" class="closebutton">Back</a>
+    </div>
+</body>
+
+</html>

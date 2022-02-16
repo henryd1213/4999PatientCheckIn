@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Patient List </title>
+    <link href="public/css/List.css" rel="stylesheet">
+</head>
+<style>
+    .btone {
+        position: relative;
+        top: 50px;
+        display: block;
+        padding: 11px 13px;
+        text-align: center;
+        text-decoration: none;
+        color: cadetblue;
+        background-color: lightblue;
+        margin: auto;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        font-size: 15px;
+    }
+
+    .btone {
+        width: 46%;
+        line-height: 2em;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+
+    }
+
+    .btone:hover {
+        color: steelblue;
+        background: powderblue;
+    }
+</style>
+
+<body>
+
+
+    <center>
+        <h1>Create Form</h1>
+
+        <!-- Output table-->
+        <form action="newForm" method="post">
+            <table>
+                <tr>
+                    <th>Number of Questions</th>
+                    <th>Form Name</th>
+                </tr>
+                <tr>
+
+                    <td> <select name="qNumber" id="qNumber" onchange="questionNumber()" style="background: none;">
+                            <script>
+                                for (var d = 1; d <= 31; d++) {
+                                    document.write("<option>" + d + "</option>");
+                                }
+
+                            </script>
+                        </select>
+                    </td>
+                    <td><input name="formName" type="text" style="background: none;"></td>
+            </table>
+
+            <table name="fullTable" id="fullTable">
+                <tr>
+                    <th>Question Number</th>
+                    <th>Type</th>
+                    <th>Prompt</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><select name="qType1" onchange="typeSelection()" style="background: none;">
+                            <option id="text">Text</option>
+                            <option id="image">Image</option>
+                            <option id="radial">Radial</option>
+                        </select></td>
+                    <td><input name="input1" type="text" style="background: none;"></td>
+                </tr>
+            </table>
+
+            <script>
+                function questionNumber() {
+                    var selection;
+                    selection = document.getElementById('qNumber').value;
+                    var rows = '';
+                    for (var i = 1; i <= selection; i++) {
+                        rows += '<tr id = "row' + i + '"><td>' + i + '</td><td><select name="qType' + i + '" value="Text"onchange="typeSelection()" style="background: none;">   <option id="text">Text</option><option id="image">Image</option> <option id="radial">Radial</option></select></td><td><input name="input' + i + '" type="text" style="background: none;"></td></tr>';
+                    }
+                    var header;
+                    header = '<tr id = "row"><th>Question Number</th><th>Type</th><th>Prompt</th></tr>';
+
+                    document.getElementById('fullTable').innerHTML = header + rows;
+
+
+                }
+            </script>
+            <input type="Submit" value="Submit" style="margin: 5px;" class="btone">
+        </form>
+
+        <!--Exit button-->
+        <div class="close">
+            <a href="admin_list_return" class="closebutton">Back</a>
+        </div>
+</body>
+
+</html>
