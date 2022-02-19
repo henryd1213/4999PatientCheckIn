@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Patient List </title>
+    <link href="public/css/List.css" rel="stylesheet">
+</head>
+<style>
+    .btone {
+        position: relative;
+        top: 50px;
+        display: block;
+        padding: 11px 13px;
+        text-align: center;
+        text-decoration: none;
+        color: cadetblue;
+        background-color: lightblue;
+        margin: auto;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        font-size: 15px;
+    }
+
+    .btone {
+        width: 46%;
+        line-height: 2em;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+
+    }
+
+    .btone:hover {
+        color: steelblue;
+        background: powderblue;
+    }
+</style>
+
+<body>
+
+
+    <center>
+        <h1>Create New Patient Form</h1>
+        <script>
+
+            var today = new Date();
+            
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getHours()+'.'+today.getMinutes()+'.'+today.getSeconds();
+            
+            </script>
+        <!-- Output table-->
+        <form action="newForm" method="post">
+            <table>
+                <tr>
+                    <th>Number of Questions</th>
+                    <th>Form Name</th>
+                  
+                   
+                </tr>
+                <tr>
+                    
+
+                    <td> <select name="qNumber" id="qNumber" onchange="questionNumber()" style="background: none;">
+                            <script>
+                                for (var d = 1; d <= 20; d++) {
+                                    document.write("<option>" + d + "</option>");
+                                }
+
+                            </script>
+                        </select>
+                    </td>
+                    <td><input name="formName" type="text" style="background: none; border:none;"></td>
+                    
+            </table>
+            <script>
+                 document.write('<input name="date" type="text" value="'+ date+'" style="color: seashell; background: none; border: none; position: absolute; z-index: -1000;">');
+            </script>
+            <table name="fullTable" id="fullTable">
+                <tr>
+                    <th>Question Number</th>
+                    <th>Question Type</th>
+                    <th>Question</th>
+                    <th>Number of Radio/Image Options</th>
+                    <th>Image/Radio Option One</th>
+                    <th>Image/Radio Option Two</th>
+                    <th>Image/Radio Option Three</th>
+                    <th>Image/Radio Option Four</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><select name="qType1" onchange="typeSelection()" style="background: none; border:none;">
+                            <option value="text"id="text">Text</option>
+                            <option value="image"id="image">Image</option>
+                            <option value="radial"id="radial">Radial</option>
+                        </select></td>
+                    <td><input name="input1" type="text" style="background: none; border:none;"></td>
+                    <td> <select name="qNumber" id="qNumber" style="background: none;">
+                        <script>
+                            for (var d = 1; d <= 4; d++) {
+                                document.write("<option>" + d + "</option>");
+                            }
+                        </script>
+                    </select>
+                </td>
+                <td><input name="image11" type="text" style="background: none; border:none;"></td>
+                <td><input name="image12" type="text" style="background: none; border:none;"></td>
+                <td><input name="image13" type="text" style="background: none; border:none;"></td>
+                <td><input name="image14" type="text" style="background: none; border:none;"></td>
+                </tr>
+            </table>
+
+            <script>
+                function questionNumber() {
+                    var number;
+                    number = document.getElementById('qNumber').value;
+                    var rows = '';
+                    for (var i = 1; i <= number; i++) {
+                        rows += '<tr id = "row' + i + '"><td>' + i + '</td><td><select name="qType' + i + '" value="text"onchange="typeSelection()" style="background: none; border:none;">   <option value="text"name="text"id="text">Text</option><option value="image"id="image">Image</option> <option value="radial"id="radial">Radial</option></select></td><td><input name="input' + i + '" type="text" style="background: none; border:none"></td><td> <select value="0"name="imageNumber' + i + '" id="imageNumber' + i + '" style="background: none;"><option value="0"name="0"id="0">0</option><option value="1"id="1">1</option> <option value="2"id="2">2</option><option value="3"id="3">3</option> <option value="4"id="4">4</option></select></td><td><input name="image' + i + '1" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '2" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '3" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '4" type="text" style="background: none; border:none;"></td></tr>';
+                    }
+                    var header;
+                    header = '<tr id = "row"><th>Question Number</th><th>Question Type</th><th>Question</th><th>Number of Radio/Image Options</th><th>Image/Radio Option One</th><th>Image/Radio Option Two</th><th>Image/Radio Option Three</th><th>Image/Radio Option Four</th></tr>';
+
+                    document.getElementById('fullTable').innerHTML = header + rows;
+                }
+            </script>
+ 
+            
+            <input type="Submit" value="Submit" style="margin: 5px;" class="btone">
+        </form>
+
+        <!--Exit button-->
+        <div class="close">
+            <a href="admin_list_return" class="closebutton">Back</a>
+        </div>
+</body>
+
+</html>
+
+
+
+
+<td> <select value="0"name="imageNumber' + i + '" id="imageNumber' + i + '" style="background: none;"><option value="0"name="0"id="0">0</option><option value="1"id="1">1</option> <option value="2"id="2">2</option><option value="3"id="3">3</option> <option value="4"id="4">4</option></select></td><td><input name="image' + i + '1" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '2" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '3" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '4" type="text" style="background: none; border:none;"></td>

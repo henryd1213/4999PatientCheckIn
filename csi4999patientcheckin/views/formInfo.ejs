@@ -1,0 +1,157 @@
+<!-- using CFquery to retrieve list of patients-->
+<!--  <cfquery name="" datasource="">
+                <Select> FirstName, LastName, Patient Number</Select>
+                from 
+                order by LastName 
+             </cfquery> -->
+
+             <!DOCTYPE html>
+             <html>
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             
+             <head>
+                 <title>Form Information</title>
+                 <link href="public/css/List.css" rel="stylesheet">
+             </head>
+             <style>
+                 .btone {
+                     position: relative;
+                     top: 50px;
+                     display: block;
+                     padding: 11px 13px;
+                     text-align: center;
+                     text-decoration: none;
+                     color: cadetblue;
+                     background-color: lightblue;
+                     margin: auto;
+                     outline: none;
+                     cursor: pointer;
+                     border: none;
+                     font-size: 15px;
+                 }
+             
+                 .btone {
+                     width: 46%;
+                     line-height: 2em;
+                     margin: auto;
+                     text-align: center;
+                     text-decoration: none;
+                     border-radius: 8px;
+             
+                 }
+             
+                 .btone:hover {
+                     color: steelblue;
+                     background: powderblue;
+                 }
+             </style>
+             
+             <body>
+             
+                 <center>
+                    <form action="formInfoChanges" method="post">
+                    <%data.forEach((item)=>{%>
+                        <h1><%=item.Name%> Form Information</h1>
+                        <input type="text" name="name" value="<%=item.ID%>" style="color: seashell; background: none; border: none; position: absolute; z-index: -1000;">
+                        <%});%>
+             
+                     <!-- Output table-->
+                     <table>
+                        <script>count = 0;</script>
+                          
+                        <%questions.forEach((item)=>{%>
+                           <script>for (var x of '<%=item.ID%>') {
+                                   if (x.ID != '') {
+                                       count++;
+                                   }
+                               }
+                               var allowed;
+                                allowed= 20-count;
+                                var current;
+                                current=20-allowed;
+                           </script>
+                           <%});%>
+                        <tr>
+                            <th>Add Questions?</th>
+                        </tr>
+                        <tr>  
+                            <td> <select name="qNumber" id="qNumber" onchange="questionNumber()" style="background: none;">
+                                    <script>
+                                        for (var d = 0; d <= allowed; d++) {
+                                            document.write("<option>" + d + "</option>");
+                                        }
+                                    </script>
+                                </select>
+                            </td>
+                                                     
+                    </table>
+
+
+                         <table id="fullTable">
+                             <tr>
+                                <th>Question Order</th>
+                                <th>Question Type</th>
+                                 <th>Question</th>
+                                 
+                                 
+                             </tr>
+                             
+
+                                     <%questions.forEach((item)=>{%>
+                                         <tr>
+                                             
+                                             <td>
+                                                 <select name="Position<%= item.Q_apperance%>" id="position" value="0"
+                                                     default="<%= item.Q_apperance%>" osnchange="posSelection()" style="background: none; border: none;">
+                                                     <option name="current" value="<%=item.Q_apperance%>">Current (<%=item.Q_apperance%>)
+                                                     </option>
+                                                     <option name="none" value="0">Don't Show</option>
+                                                     <script>
+                                                         for (var d = 1; d <= count; d++) {
+                                                             document.write("<option>" + d + "</option>");
+                                                         }
+                                                     </script>
+             
+                                                 </select>
+                                             </td>
+                                             <td><select name="qType" onchange="typeSelection()" style="background: none; border:none;"  default="<%=item.Qone_type%>" value="<%= item.Qone_type%>"> 
+                                                <option name="current" value="<%=item.Qone_type%>">Current (<%=item.Qone_type%>)</option>
+                                                <option id="text">Text</option>
+                                                <option id="image">Image</option>
+                                                <option id="radial">Radial</option>
+                                            </select></td>
+                                             <td><input name="question<%=item.Q_apperance%>" type="text" value="<%=item.Qone_content%>" 
+                                                style="background: none; border: none; margin: 0%; text-align: center;"></td>
+                                         </tr>
+             
+             
+                                         <%});%>
+                         </table>
+
+                         <script>
+                            function questionNumber() {
+                                
+                                var number;
+                                number = document.getElementById('qNumber').value;
+                                var rows = '';
+                                for (var i = 1; i <= number; i++) {
+                                    currentRow=i+current
+                                    rows += '<tr id = "row' + currentRow + '"><td>' + currentRow + '</td><td><select name="qType' + currentRow + '" value="text"onchange="typeSelection()" style="background: none; border:none;">   <option name="text"id="text">Text</option><option value="image"id="image">Image</option> <option value="radial"id="radial">Radial</option></select></td><td><input name="input' + currentRow + '" type="text" style="background: none; border:none;"></td></tr>';
+                                }
+                                var header;
+                                header = '<tr id = "row"><th>Question Number</th><th>Type</th><th>Prompt</th></tr>';
+                                document.getElementById('fullTable').innerHTML += rows;
+                            }
+                        </script>
+                         <input type="submit" name="submit"value="Delete Form" style="margin: 5px;" class="btone">
+                         <input type="submit" name ="submit"value="Submit" style="margin: 5px;" class="btone">
+                     </form>
+                 </center>
+             
+                 <!--Exit button-->
+                 <div class="close">
+                     <a href="form_list" class="closebutton" style="margin-top: 9.6em;">Back</a>
+                 </div>
+             </body>
+             
+             </html>
