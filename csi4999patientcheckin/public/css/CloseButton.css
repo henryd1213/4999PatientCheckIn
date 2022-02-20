@@ -1,0 +1,61 @@
+
+/* exit for formlist.ejs*/
+.closebutton {
+    position: relative;
+    top: -179px;
+    left: 11px;
+    float: left;
+    padding: 13px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color:cadetblue;
+   background-color: lightblue;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+   }
+a{
+display: block;
+width: 9%;
+line-height: 1em;
+margin: auto;
+text-align: center;
+text-decoration: none;
+
+}
+a:hover{
+ color:steelblue;
+background: powderblue;
+}
+
+/* exit for newform.ejs */
+
+.closebutton {
+    position: relative;
+    top: -252px;
+    left: 11px;
+    float: left;
+    padding: 13px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color:cadetblue;
+   background-color: lightblue;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+   }
+a{
+display: block;
+width: 9%;
+line-height: 1em;
+margin: auto;
+text-align: center;
+text-decoration: none;
+
+}
+a:hover{
+ color:steelblue;
+background: powderblue;
+}
