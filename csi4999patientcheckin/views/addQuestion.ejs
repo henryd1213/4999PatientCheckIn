@@ -5,116 +5,128 @@
                 order by LastName 
              </cfquery> -->
 
-             <!DOCTYPE html>
-             <html>
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             
-             <head>
-                 <title>Form Information</title>
-                 <link href="/public/css/bootstrap.min.css" rel="stylesheet">
-             </head>
-             <style>
-                 .btone {
-                     position: relative;
-                     top: 50px;
-                     display: block;
-                     padding: 11px 13px;
-                     text-align: center;
-                     text-decoration: none;
-                     color: cadetblue;
-                     background-color: lightblue;
-                     margin: auto;
-                     outline: none;
-                     cursor: pointer;
-                     border: none;
-                     font-size: 15px;
-                 }
-             
-                 .btone {
-                     width: 46%;
-                     line-height: 2em;
-                     margin: auto;
-                     text-align: center;
-                     text-decoration: none;
-                     border-radius: 8px;
-             
-                 }
-             
-                 .btone:hover {
-                     color: steelblue;
-                     background: powderblue;
-                 }
-             </style>
-             
-             <body>
-             
-                 <center>
-                    <form action="addQuestion" method="post">
-                        <h1>Question <%questions.forEach((item)=>{%><%=item.Q_apperance%> <%});%></h1>  <%form.forEach((item)=>{%>
-                        
-                            <input type="text" name="name" value="<%=item.ID%>" style="color: white; background: none; border: none; position: absolute; z-index: -1000;">
-                 
-                            <%});%>
-                            <%questions.forEach((item)=>{%>
-                            <table>
-                                <input type="text" name="qCurrent" value="<%=item.Q_apperance%>" style="color: white; background: none; border: none; position: absolute; z-index: -1000;">
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Form Information</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .btone {
+        position: relative;
+        top: 50px;
+        display: block;
+        padding: 11px 13px;
+        text-align: center;
+        text-decoration: none;
+        color: cadetblue;
+        background-color: lightblue;
+        margin: auto;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        font-size: 15px;
+    }
+
+    .btone {
+        width: 46%;
+        line-height: 2em;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+
+    }
+
+    .btone:hover {
+        color: steelblue;
+        background: powderblue;
+    }
+</style>
+
+<body>
+
+    <center>
+        <form action="addQuestion" method="post">
+            <h1>Question <%questions.forEach((item)=>{%><%=item.Q_apperance%>
+                        <%});%>
+            </h1>
+            <%form.forEach((item)=>{%>
+
+                <input type="text" name="name" value="<%=item.ID%>"
+                    style="color: white; background: none; border: none; position: absolute; z-index: -1000;">
+
+                <%});%>
+                    <%questions.forEach((item)=>{%>
+                        <table>
+                            <input type="text" name="qCurrent" value="<%=item.Q_apperance%>"
+                                style="color: white; background: none; border: none; position: absolute; z-index: -1000;">
                             <tr>
-                                  <th>Question Apperance </th>
-                                </tr>                               
-                                <tr>
-                                  <td>
-                                    <select name="qNumber" id="qNumber" onchange="questionNumber()" style="background: none;">
-                                        <option name="current" value="<%=item.Q_apperance%>">Current (<%=item.Q_apperance%>)
+                                <th>Question Apperance </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="qNumber" id="qNumber" onchange="questionNumber()"
+                                        style="background: none;">
+                                        <option name="current" value="<%=item.Q_apperance%>">Current (
+                                            <%=item.Q_apperance%>)
                                         </option>
-                                       <script>
+                                        <script>
                                             for (var d = 1; d <= 50; d++) {
                                                 document.write("<option>" + d + "</option>");
                                             }
                                         </script>
                                     </select>
-                                </td>  
-                                    </tr>
-                                    <tr>
-                                
-                                        <th>Question Type</th>
-                                      
-                                       
-                                    </tr>
-                                    <tr>
-                                        <td><select name="qType1" onchange="typeSelection()" style="background: none; border:none;">
-                                            <option name="current" value="<%=item.Qone_type%>">Current (<%=item.Qone_type%>)</option>
-                                            <option value="text"id="text">Text</option>
-                                            <option value="image"id="image">Image</option>
-                                            <option value="radial"id="radial">Radial</option>
-                                        </select></td>
-                                        <tr>
-                                
-                                            <th>Question Content</th>
-                                          
-                                           
-                                        </tr>
-                                        <tr>
-                                            <td> <textarea name="qContent" class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 200%;"><%=item.Qone_content%></textarea></td> 
-                         
-                                            </tr>
-                                            
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <th>Question Type</th>
+
+
+                            </tr>
+                            <tr>
+                                <td><select name="qType1" onchange="typeSelection()"
+                                        style="background: none; border:none;">
+                                        <option name="current" value="<%=item.Qone_type%>">Current (<%=item.Qone_type%>)
+                                        </option>
+                                        <option value="text" id="text">Text</option>
+                                        <option value="image" id="image">Image</option>
+                                        <option value="radial" id="radial">Radial</option>
+                                    </select></td>
+                            <tr>
+
+                                <th>Question Content</th>
+
+
+                            </tr>
+                            <tr>
+                                <td> <textarea name="qContent" class="form-control" id="exampleFormControlTextarea1"
+                                        rows="3" style="width: 200%;"><%=item.Qone_content%></textarea></td>
+
+                            </tr>
+
                         </table>
                         <%});%>
-                     <!-- Output table-->
-                    
+                            <!-- Output table-->
 
 
 
-                        
-                         <input type="submit" name="submit"value="Submit and Return to Terminal" style="margin: 5px;" class="btone">
-                         <input type="submit" name ="submit"value="Submit and Add or View Next Question" style="margin: 5px;" class="btone">
-                     </form>
-                 </center>
-             
-                 <!--Exit button-->
-                 <div class="close">
-                     <a href="form_list" class="closebutton" style="margin-top: 9.6em;">Back</a>
-                 </div>
-             </body>
-             
-             </html>
+
+
+                            <input type="submit" name="submit" value="Submit and Return to Terminal"
+                                style="margin: 5px;" class="btone">
+                            <input type="submit" name="submit" value="Submit and Add or View Next Question"
+                                style="margin: 5px;" class="btone">
+        </form>
+    </center>
+
+    <!--Exit button-->
+    <div class="close">
+        <a href="form_list" class="closebutton" style="margin-top: 9.6em;">Back</a>
+    </div>
+</body>
+
+</html>
