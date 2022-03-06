@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Auhtorized User</title>
+     <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  html,body {
+            height: 100%;
+        }
+       
+            h2{
+                color: white; 
+         }
+
+         .mb{
+             margin-bottom:10%;
+         }
+
+          /*Header*/
+
+          .nav-masthead .nav-link {
+                padding: .25rem 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, .5);
+                background-color: transparent;
+                border-bottom: .25rem solid transparent;
+            }
+
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, .25);
+            }
+
+            .nav-masthead .nav-link {
+                margin-left: 1rem;
+             
+            }
+
+            .nav-masthead .active {
+                color: white;
+                border-bottom-color: white;
+        }
+    </style>
+</head>
+
+
+<body class="d-flex h-100 text-center bg-dark">
+
+    <!-- Header -->
+    <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+      <header class="mb-10">
+        <div>
+            <h3 class="float-md-start mb-0">Check-In</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link active" aria-current="page" href="adminterminal.html">Back</a>
+              <a class="nav-link" aria-current="page" href="Home.html">logout</a>
+            <a class="nav-link" href="userinfo.html">Profile</a>
+          </nav>
+        </div>
+      </header> <br> <br>
+
+    <center>
+        <h1>
+            Enter User information
+        </h1> <br>
+
+        <div id="User">
+            <form method="post" action="addUser">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="fname" style="font-size:larger;">First name:</label>
+                        </td>
+
+                        <td>
+                            <input type="text" placeholder= "First Name"id="fname" name="Fname">
+                        </td>
+
+                        <td>
+                            <label for="lname" style="font-size: larger;">Last name: </label>
+                        </td>
+                    
+                        <td>
+                            <input type="text"  placeholder= "Last Name"id="lname" name="Lname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="emal" style="font-size: larger;">Email: </label>
+                        </td>
+                        <td>
+                            <input type="email" placeholder= "Email" id="email" name="Email">
+                        </td>
+                        <td>
+                            <label for="birthday" style="font-size: larger;">Birthday:</label>
+                        </td>
+                        <td>
+                            <input type="date" id="birthday" name="Birthday" style="margin: 5px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone" style="font-size: larger;">Phone:</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder= "Number"id="phone" name="Phone" style="margin: 5px;">
+                        </td>
+                        <td>
+                            <lable for="gender" style="font-size: larger;">Gender:</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder= "Gender" id="gender" name="Gender" style="margin: 5px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="username" style="font-size: larger;">Username:</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder= "Username" id="username" name="Username" style="margin: 5px;">
+                        </td>
+                        <td>
+                            <lable for="password" style="font-size: larger;">Password:</label>
+                        </td>
+                        <td>
+                            <input type="password"  placeholder= "Password" id="password" name="Password" style="margin: 5px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="age" style="font-size: larger;">Age:</label>
+                        </td>
+                        <td>
+                            <input type="text"  placeholder= "Age" id="age" name="Age" style="margin: 5px;">
+                        </td>
+                        <td>
+                            <label for="profession" style="font-size: larger;"> Role:</label>
+                        </td>
+                        <td>
+                            <select name="Profession" style="margin: 5px;">
+                                <option valus="none" selected> None</option>
+                                <option value="Doctor"> Doctor</option>
+                                <option value="Nurse"> Nurse</option>
+                                <option value="Admin"> Admin</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                 <br>
+                <button class=" btn-primary btn btn-lg btn-block" type="submit">Submit</button>
+                <p class="mt-5 mb-3 text-muted">&copy; 2021 Company, Inc</p>
+
+            </form>
+        </div>
+    </center>
+
+   
+
+</body>
+
+
+</body>
