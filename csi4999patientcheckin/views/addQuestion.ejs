@@ -47,9 +47,16 @@
 </style>
 
 <body>
-
+    <script>
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getHours()+'.'+today.getMinutes()+'.'+today.getSeconds();
+        </script>
+   
     <center>
         <form action="addQuestion" method="post">
+            <script>
+                document.write('<input name="date" type="text" value="'+ date+'" style="color: white; background: none; border: none; position: absolute; z-index: -1000;">');
+           </script>
             <h1>Question <%questions.forEach((item)=>{%><%=item.Q_apperance%>
                         <%});%>
             </h1>
@@ -88,7 +95,7 @@
 
                             </tr>
                             <tr>
-                                <td><select name="qType1" onchange="typeSelection()"
+                                <td><select name="qType" onchange="typeSelection()" value="<%=item.Qone_type%>"
                                         style="background: none; border:none;">
                                         <option name="current" value="<%=item.Qone_type%>">Current (<%=item.Qone_type%>)
                                         </option>
@@ -116,7 +123,7 @@
 
 
 
-                            <input type="submit" name="submit" value="Submit and Return to Terminal"
+                            <input type="submit" name="submit" value="Return to Terminal"
                                 style="margin: 5px;" class="btone">
                             <input type="submit" name="submit" value="Submit and Add or View Next Question"
                                 style="margin: 5px;" class="btone">
