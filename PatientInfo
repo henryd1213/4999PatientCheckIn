@@ -23,6 +23,8 @@ CREATE TABLE IF NOT EXISTS `PatientInfo`.`Form_List` (
   `Author` VARCHAR(45) NOT NULL,
   `Creation` VARCHAR(45) NOT NULL,
   `Apperance` INT NOT NULL,
+  `Metadata` VARCHAR(45) NULL,
+  `Use` VARCHAR(45) NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB;
 
@@ -104,6 +106,7 @@ CREATE TABLE IF NOT EXISTS `PatientInfo`.`Form_Questions` (
   `Qone_content` VARCHAR(45) NOT NULL,
   `Q_apperance` VARCHAR(45) NOT NULL,
   `Form_List_ID` INT NOT NULL,
+  `Date` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`ID`, `Form_List_ID`),
   INDEX `fk_Form_Questions_Form_List1_idx` (`Form_List_ID` ASC) VISIBLE,
   CONSTRAINT `fk_Form_Questions_Form_List1`
@@ -121,14 +124,13 @@ CREATE TABLE IF NOT EXISTS `PatientInfo`.`Form_Answers` (
   `ID` INT NOT NULL AUTO_INCREMENT,
   `Answer` VARCHAR(45) NOT NULL,
   `Form_Questions_ID` INT NOT NULL,
-  `Form_Questions_Form_List_ID` INT NOT NULL,
   `Patient_Info_ID` INT NOT NULL,
-  PRIMARY KEY (`ID`, `Form_Questions_ID`, `Form_Questions_Form_List_ID`, `Patient_Info_ID`),
-  INDEX `fk_Form_Answers_Form_Questions1_idx` (`Form_Questions_ID` ASC, `Form_Questions_Form_List_ID` ASC) VISIBLE,
+  PRIMARY KEY (`ID`, `Form_Questions_ID`, `Patient_Info_ID`),
+  INDEX `fk_Form_Answers_Form_Questions1_idx` (`Form_Questions_ID` ASC) VISIBLE,
   INDEX `fk_Form_Answers_Patient_Info1_idx` (`Patient_Info_ID` ASC) VISIBLE,
   CONSTRAINT `fk_Form_Answers_Form_Questions1`
-    FOREIGN KEY (`Form_Questions_ID` , `Form_Questions_Form_List_ID`)
-    REFERENCES `PatientInfo`.`Form_Questions` (`ID` , `Form_List_ID`)
+    FOREIGN KEY (`Form_Questions_ID`)
+    REFERENCES `PatientInfo`.`Form_Questions` (`ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Form_Answers_Patient_Info1`
@@ -144,8 +146,9 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
+
 INSERT INTO Form_List VALUES
-(0,'GeneralInfo','Sam Dillon','2-13-2022', 1);
+(0,'GeneralInfo','Sam Dillon','2-13-2022', 1, 'first form, html, general info', 'for general patient info');
 
 INSERT INTO Employee_Info
 VALUES 
@@ -163,11 +166,13 @@ INSERT INTO Pin_Info VALUES
 (0,'genericPin','12345','1');
 
 INSERT INTO Form_Questions VALUES
-(0,'Text','First Name','1', '1'),
-(0,'Text','Last Name','2', '1');
+(0,'Text','First Name','1', '1', '2022-2-17-16.24'),
+(0,'Text','Last Name','2', '1', '2022-2-17-16.24');
 
 SELECT * FROM Form_Questions;
 
 SELECT * FROM Form_List;
 
 SELECT * FROM Form_Answers;
+
+SELECT * FROM Patient_Info;
