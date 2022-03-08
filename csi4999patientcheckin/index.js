@@ -142,7 +142,6 @@ app.get("/qOne_render", (req, res) => {
           var result2 = result;
           res.render("dynamicQ1", { data: result1, user: result2 });
         });
-
       });
     }
   });
@@ -1170,450 +1169,20 @@ app.post("/formChanges", (req, res) => {
 
 
 app.post("/newForm", (req, res) => {
-  qOnecontent = req.body.qType1
   date = req.body.date
 
   let data = {
-    ID: 0, Name: req.body.formName, Author: "example", Creation: date, apperance: "100"
-  };
-  let data1 = {
-    ID: 0, Qone_type: qOnecontent, Qone_content: req.body.input1, Form_List_ID: "1", Q_apperance: "1", date
-  };
-  let data2 = {
-    ID: 0, Qone_type: req.body.qType2, Qone_content: req.body.input2, Form_List_ID: "1", Q_apperance: "2", date
-  };
-  let data3 = {
-    ID: 0, Qone_type: req.body.qType3, Qone_content: req.body.input3, Form_List_ID: "1", Q_apperance: "3", date
-  };
-  let data4 = {
-    ID: 0, Qone_type: req.body.qType4, Qone_content: req.body.input4, Form_List_ID: "1", Q_apperance: "4", date
-  };
-  let data5 = {
-    ID: 0, Qone_type: req.body.qType5, Qone_content: req.body.input5, Form_List_ID: "1", Q_apperance: "5", date
-  };
-  let data6 = {
-    ID: 0, Qone_type: req.body.qType6, Qone_content: req.body.input6, Form_List_ID: "1", Q_apperance: "6", date
-  };
-  let data7 = {
-    ID: 0, Qone_type: req.body.qType7, Qone_content: req.body.input7, Form_List_ID: "1", Q_apperance: "7", date
-  };
-  let data8 = {
-    ID: 0, Qone_type: req.body.qType8, Qone_content: req.body.input8, Form_List_ID: "1", Q_apperance: "8", date
-  };
-  let data9 = {
-    ID: 0, Qone_type: req.body.qType9, Qone_content: req.body.input9, Form_List_ID: "1", Q_apperance: "9", date
-  };
-  let data10 = {
-    ID: 0, Qone_type: req.body.qType10, Qone_content: req.body.input10, Form_List_ID: "1", Q_apperance: "10", date
-  };
-  let data11 = {
-    ID: 0, Qone_type: req.body.qType11, Qone_content: req.body.input11, Form_List_ID: "1", Q_apperance: "11", date
-  };
-  let data12 = {
-    ID: 0, Qone_type: req.body.qType12, Qone_content: req.body.input12, Form_List_ID: "1", Q_apperance: "12", date
-  };
-  let data13 = {
-    ID: 0, Qone_type: req.body.qType13, Qone_content: req.body.input13, Form_List_ID: "1", Q_apperance: "13", date
-  };
-  let data14 = {
-    ID: 0, Qone_type: req.body.qType14, Qone_content: req.body.input14, Form_List_ID: "1", Q_apperance: "14", date
-  };
-  let data15 = {
-    ID: 0, Qone_type: req.body.qType15, Qone_content: req.body.input15, Form_List_ID: "1", Q_apperance: "15", date
-  };
-  let data16 = {
-    ID: 0, Qone_type: req.body.qType16, Qone_content: req.body.input16, Form_List_ID: "1", Q_apperance: "16", date
-  };
-  let data17 = {
-    ID: 0, Qone_type: req.body.qType17, Qone_content: req.body.input17, Form_List_ID: "1", Q_apperance: "17", date
-  };
-  let data18 = {
-    ID: 0, Qone_type: req.body.qType18, Qone_content: req.body.input18, Form_List_ID: "1", Q_apperance: "18", date
-  };
-  let data19 = {
-    ID: 0, Qone_type: req.body.qType19, Qone_content: req.body.input19, Form_List_ID: "1", Q_apperance: "19", date
-  };
-  let data20 = {
-    ID: 0, Qone_type: req.body.qType20, Qone_content: req.body.input20, Form_List_ID: "1", Q_apperance: "20", date
+    ID: 0, Name: req.body.formName, Author: req.body.formCreator, Creation: date, apperance: "100", Metadata: req.body.formMeta, Use: req.body.formUse
   };
 
-  let sql = `INSERT INTO Form_List SET ?`;
-  let query = db.query(sql, data, (err, result) => {
+
+  let sql2 = `INSERT INTO Form_List SET ?`;
+  let query = db.query(sql2, data, (err, result) => {
     if (err) {
       throw err;
-    }
-
+    } 
+    res.send('<script>alert("New Form Created"); window.location.href = "/admin_list_return"; </script>');
   });
-  let sql1 = `INSERT INTO Form_Questions SET ?`;
-  let query1 = db.query(sql1, data1, (err, result) => {
-    if (err) {
-      throw err;
-    }
-  });
-
-  let sql3 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Apperance='100' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType1}' AND Qone_content='${req.body.input1}' AND Date='${date}' AND Q_apperance='1')`;
-  let query3 = db.query(sql3, (err, result) => {
-    if (err) {
-      throw err;
-    }
-
-  });
-  let sql4 = `UPDATE Form_List SET Apperance=(SELECT FORM_LIST_ID FROM Form_Questions WHERE Qone_type ='${req.body.qType1}' AND Qone_content = '${req.body.input1}' AND Q_apperance ='1' AND Date='${date}') WHERE ID=(SELECT ID WHERE Name='${req.body.formName}' AND Apperance ='100')`;
-  let sql1000 = `UPDATE Form_List SET Apperance=(SELECT ID FROM Form_Questions WHERE ID IN (SELECT ID WHERE Qone_type ='${req.body.qType1}' AND Qone_content = '${req.body.input1}' AND Q_apperance ='1')) WHERE ID=(SELECT ID WHERE Name='${req.body.formName}' AND Apperance='100') `;
-  let query4 = db.query(sql4, (err, result) => {
-    if (err) {
-      throw err;
-    }
-
-  });
-  if (data2.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data2, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType2}' AND Qone_content='${req.body.input2}' AND Date='${date}' AND Q_apperance='2')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data3.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data3, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType3}' AND Qone_content='${req.body.input3}' AND Date='${date}' AND Q_apperance='3')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data4.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data4, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType4}' AND Qone_content='${req.body.input4}' AND Date='${date}' AND Q_apperance='4')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data5.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data5, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType5}' AND Qone_content='${req.body.input5}' AND Date='${date}' AND Q_apperance='5')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data6.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType6}' AND Qone_content='${req.body.input6}' AND Date='${date}' AND Q_apperance='6')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data7.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data7, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType7}' AND Qone_content='${req.body.input7}' AND Date='${date}' AND Q_apperance='7')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data8.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data8, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType8}' AND Qone_content='${req.body.input8}' AND Date='${date}' AND Q_apperance='8')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data9.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data9, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType9}' AND Qone_content='${req.body.input9}' AND Date='${date}' AND Q_apperance='9')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data10.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data10, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType10}' AND Qone_content='${req.body.input10}' AND Date='${date}' AND Q_apperance='10')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data11.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data11, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType11}' AND Qone_content='${req.body.input11}' AND Date='${date}' AND Q_apperance='11')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data12.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data12, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType12}' AND Qone_content='${req.body.input12}' AND Date='${date}' AND Q_apperance='12')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data13.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data13, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType13}' AND Qone_content='${req.body.input13}' AND Date='${date}' AND Q_apperance='13')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data14.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data14, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType14}' AND Qone_content='${req.body.input14}' AND Date='${date}' AND Q_apperance='14')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data15.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data15, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType15}' AND Qone_content='${req.body.input15}' AND Date='${date}' AND Q_apperance='15')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data16.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data16, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType16}' AND Qone_content='${req.body.input16}' AND Date='${date}' AND Q_apperance='16')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data17.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data17, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType17}' AND Qone_content='${req.body.input17}' AND Date='${date}' AND Q_apperance='17')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data18.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data18, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType18}' AND Qone_content='${req.body.input18}' AND Date='${date}' AND Q_apperance='18')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data19.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data19, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType19}' AND Qone_content='${req.body.input19}' AND Date='${date}' AND Q_apperance='19')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  if (data20.Qone_type != null) {
-
-    let sql5 = `INSERT INTO Form_Questions SET ?`;
-    let query5 = db.query(sql5, data20, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-
-    let sql6 = `UPDATE Form_Questions SET Form_List_ID=(SELECT ID FROM Form_List WHERE Name='${req.body.formName}' AND Creation = '${req.body.date}') WHERE ID=(SELECT ID WHERE Qone_type='${req.body.qType20}' AND Qone_content='${req.body.input20}' AND Date='${date}' AND Q_apperance='20')`;
-    let query6 = db.query(sql6, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
-  res.send('<script>alert("New form created"); window.location.href = "/admin_list_return"; </script>');
-
-});
-
-
-app.post("/formInfoChanges", (req, res) => {
-  let formID = req.body.name
-
-  let submits = req.body.submit
-  let editedSubmits = JSON.stringify(submits);
-  question = req.body.question;
-  if (editedSubmits.includes("Delete Form") == true) {
-    ;
-    let sql1 = `DELETE FROM Form_Answers WHERE ID =(SELECT ID WHERE Form_Questions_ID IN (SELECT ID FROM Form_Questions WHERE Form_List_ID='${formID}') )`;
-    let sql2 = `DELETE FROM Form_Questions WHERE ID=(SELECT ID WHERE Form_List_ID='${formID}' )`;
-    let sql3 = `DELETE FROM Form_List WHERE ID='${formID}'`;
-    let query1 = db.query(sql1, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-    let query2 = db.query(sql2, (err, result) => {
-      if (err) {
-        throw err;
-      }
-    });
-    let query3 = db.query(sql3, (err, result) => {
-      if (err) {
-        throw err;
-      }
-      res.send('<script>alert("Form Responses, Form Questions, and Form Deleted"); window.location.href = "/admin_list_return"; </script>');
-    });
-
-
-  }
-  else {
-    let sql1 = `UPDATE Form_Questions SET Q_apperance='${req.body.Position}' WHERE ID =(SELECT ID WHERE Qone_content='${req.body.question1}' AND Form_List_ID='${formID}')`;
-    let query1 = db.query(sql1, (err, result) => {
-      if (err) {
-        throw err;
-      }
-      res.send('<script>alert("Form updated"); window.location.href = "/admin_list_return"; </script>');
-    });
-  }
 });
 
 
@@ -4182,6 +3751,128 @@ else if(listApperance=="4" && apperance=="1"){
    
   });
 });
+
+app.post("/formInfoChanges", (req, res) => {
+  let name = req.body.author;
+  let author = req.body.author;
+  let submission = JSON.stringify(req.body);
+  let id= req.body.name;
+  if (submission.includes("Add Questions") == true) {
+    let sql1 = `SELECT * FROM Form_List WHERE ID='${id}'`;
+    let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID='${id}' AND Q_apperance='1'`;
+    db.query(sql1, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      var result1 = result;
+      db.query(sql2, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result2 = result;
+        if(result2[0]==undefined){
+       res.render("addQuestionNew", { form: result1});
+        }
+        else{
+          res.render("addQuestion", { form: result1, questions: result2 });
+        }
+      }); 
+    }); 
+    
+  }
+
+});
+
+app.post("/addQuestion", (req, res) => {
+  let id = req.body.name;
+  let qNum = req.body.qCurrent;
+  let curQ =parseInt(qNum);
+  let nextQ= curQ+1;
+  let submission = JSON.stringify(req.body);
+  let data = {
+    ID: 0, Qone_type: req.body.qType, Qone_content: req.body.qContent, Q_apperance: req.body.qNumber, Form_List_ID: id, Date: req.body.date
+  };
+  let sql1 = `SELECT * FROM Form_List WHERE ID='${id}'`;
+  let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID='${id}' AND Q_apperance='${nextQ}'`;
+  let sql3= `INSERT INTO Form_Questions SET ?`;
+  let sql4 = `SELECT * FROM Form_Questions WHERE Form_List_ID='${id}' AND Q_apperance='${req.body.qNumber}'`;
+  let sql5 = `SELECT * FROM Form_Questions WHERE Form_List_ID='${id}' AND Q_apperance='${req.body.qNumber}' AND Date='${req.body.date}'`;
+  
+  if (submission.includes("Next Question") == true) {
+    db.query(sql5, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      if(result[0] !=undefined){
+        let sql8= `DELETE FROM Form_Questions WHERE ID=(SELECT ID WHERE Q_apperance='${req.body.qNumber}' AND Form_List_ID='${id}' AND Qone_content='${req.body.qContent}')`;
+        let sql9 = `UPDATE Form_Questions SET Q_apperance ='${nextQ}' WHERE ID =(SELECT ID WHERE Form_List_ID='${id}' AND Date='${req.body.date}' AND Q_apperance='NaN')`;
+        let sql7 = `UPDATE Form_Questions SET Qone_content ='${req.body.qContent}' WHERE ID =(SELECT ID WHERE Form_List_ID='${id}' AND Date='${req.body.date}' AND Q_apperance='${req.body.qNumber}')`;
+       
+        db.query(sql7, (err, result) => {
+          if (err) {
+            throw err;
+          }
+        });
+      
+       
+      }
+      else{
+    db.query(sql4, (err, result) => {
+        if (err) {
+          throw err;
+        }
+       if(result[0]!= undefined){
+         let sql6 = `UPDATE Form_Questions SET Q_apperance ='${nextQ}' WHERE ID =(SELECT ID WHERE Form_List_ID='${id}' AND Q_apperance='${req.body.qNumber}')`;
+         db.query(sql6, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          db.query(sql3, data, (err, result) => {
+            if (err) {
+              throw err;
+            }
+        
+          });
+        });
+        }else {
+        db.query(sql3, data, (err, result) => {
+          if (err) {
+            throw err;
+          }
+      
+        });}
+      });
+    }
+    });
+    
+    
+    
+    db.query(sql1, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      var result1 = result;
+      db.query(sql2, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result2 = result;
+        if(result2[0]==undefined){
+       res.render("addQuestionNew", { form: result1});
+        }
+        else{
+          res.render("addQuestion", { form: result1, questions: result2 });
+        }
+      }); 
+    }); 
+  
+  
+  }else{
+res.render("adminTerminal");
+  }
+
+});
+
 // Setup server ports
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
