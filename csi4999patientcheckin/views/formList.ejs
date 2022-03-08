@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Form List </title>
+    <link href="List.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  html,body {
+            height: 100%;
+        }
+       
+           h1,h2{
+                color: white; 
+         }
+
+         .mb{
+             margin-bottom:10%;
+         }
+
+          /*Header*/
+
+          .nav-masthead .nav-link {
+                padding: .25rem 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, .5);
+                background-color: transparent;
+                border-bottom: .25rem solid transparent;
+            }
+
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, .25);
+            }
+
+            .nav-masthead .nav-link + .nav-link{
+                margin-left: 1rem;
+             
+            }
+
+            .nav-masthead .active {
+                color: white;
+                border-bottom-color: white;
+   
+    }
+</style>
+</head>
+
+    <body class="d-flex h-100 text-center bg-dark">
+
+        <!-- Header -->
+        <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+          <header class="mb-10">
+            <div>
+                <h3 class="float-md-start mb-0">Check-In</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                  <a class="nav-link active" aria-current="page" href="admin_list_return">Back</a>
+                  <a class="nav-link" aria-current="page" href="home_return">logout</a>
+                <a class="nav-link" href="userinfo.html">Profile</a>
+              </nav>
+            </div>
+          </header>
+    
+    
+          <center>
+        <h1>Available Patient Forms</h1> <br>
+
+        <!-- Output table-->
+        <form action="formChanges" method="post">
+            <table>
+                <tr>
+                    <th style="text-align: center;">Form Name</th>
+                    <th>Load Position</th>
+                </tr>
+                <script>count = 0;</script> 
+
+                <%data.forEach((item)=>{%>
+                    <script>for (var x of '<%=item.ID%>') {
+                            if (x.ID != '') {
+                                count++;
+                            }
+                        }
+                    </script>
+                    <%});%>
+
+                        <%data.forEach((item)=>{%>
+                            <tr>
+                                <td>
+                                    <button type="submit" name="form<%=item.ID%>" value="form<%=item.ID%>"
+                                        style="border: none; background: none;"><input name="form<%=item.ID%>"
+                                            type="text" value="<%=item.Name%>"
+                                            style="background: none; border: none; margin: 0%; text-align: center; color: white;"></button>
+                                </td>
+                                <td>
+                                    <select name="Position<%=item.ID%>" id="position" value="0"
+                                        default="<%= item.Name%>" onchange="posSelection()"
+                                        style="background: none; border: none; color: white;">
+                                        <option name="current" value="<%=item.Apperance%>">Current (<%=item.Apperance%>)
+                                        </option>
+                                        <option name="none" value="0">None</option>
+                                        <script>
+                                            for (var d = 1; d <= count; d++) {
+                                                document.write("<option>" + d + "</option>");
+                                            }
+                                        </script>
+                                    </select>
+                                </td>
+                                <td> <button type="submit" name="form<%=item.ID%>" value="form<%=item.ID%>"  style="border: none; background: none;">
+                                    <input type="text" name="form<%=item.ID%>" value="Edit Form"
+                                    style="color: black; margin: 5px;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">
+                                </button>
+                                    </td>
+                            </tr>
+                            <%});%>
+            </table> <br>
+            <input class=" btn-primary btn-lg btn-block "  name="submit" type="submit" value="Submit" style="margin: 5px;" class="btone">
+        </form>
+    </center>
+
+</body>
+
+</html>

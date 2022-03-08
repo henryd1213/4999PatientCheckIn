@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Form Information</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+       
+           h1,h2{
+                color: white; 
+         }
+
+         .mb{
+             margin-bottom:10%;
+         }
+
+          /*Header*/
+
+          .nav-masthead .nav-link {
+                padding: .25rem 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, .5);
+                background-color: transparent;
+                border-bottom: .25rem solid transparent;
+            }
+
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, .25);
+            }
+
+            .nav-masthead .nav-link + .nav-link{
+                margin-left: 1rem;
+             
+            }
+
+            .nav-masthead .active {
+                color: white;
+                border-bottom-color: white;
+   
+    }
+
+    .btone {
+        position: relative;
+        top: 50px;
+        display: block;
+        padding: 11px 13px;
+        text-align: center;
+        text-decoration: none;
+        color: cadetblue;
+        background-color: lightblue;
+        margin: auto;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        font-size: 15px;
+    }
+    .btone {
+        width: 46%;
+        line-height: 2em;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+    .btone:hover {
+        color: steelblue;
+        background: powderblue;
+    }
+</style>
+
+<body class="bg-dark text-center text-white">
+    <!-- Header -->
+    <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+       <header class="mb-10">
+         <div>
+             <h3 class="float-md-start mb-0">Check-In</h3>
+             <nav class="nav nav-masthead justify-content-center float-md-end">
+               <a class="nav-link active" aria-current="page" href="admin_list_return">Back</a>
+               <a class="nav-link" aria-current="page" href="home_return">logout</a>
+             <a class="nav-link" href="userinfo.html">Profile</a>
+           </nav>
+         </div>
+       </header> <br>
+             
+          
+                <script>
+                    var today = new Date();
+                    
+                    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getHours()+'.'+today.getMinutes()+'.'+today.getSeconds();
+                    </script>
+              
+                 <center>
+                    <form action="addQuestion" method="post">
+                        <script>
+                            document.write('<input name="date" type="text" value="'+ date+'" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">');
+                       </script>
+                        <h1>New Question</h1>  <%form.forEach((item)=>{%>
+                        
+                            <input type="text" name="name" value="<%=item.ID%>" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+                 
+                            <%});%>
+                            <table>
+                            <tr>
+                                
+                                    <th>Question Apperance </th>
+                                  
+                                   
+                                </tr>
+                                
+                                <tr>
+                                  <td>
+                                    <select name="qNumber" id="qNumber" onchange="questionNumber()" style=" color: white; border: none; background: none;">
+                                        <script>
+                                            for (var d = 1; d <= 50; d++) {
+                                                document.write("<option>" + d + "</option>");
+                                            }
+            
+                                        </script>
+                                    </select>
+                                </td>  
+                                    </tr>
+                                    <tr>
+                                
+                                        <th>Question Type</th>
+                                      
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td><select name="qType" onchange="typeSelection()" style=" color: white; background: none; border:none;" value="Text">
+                                            <option value="text"id="text">Text</option>
+                                            <option value="image"id="image">Image</option>
+                                            <option value="radial"id="radial">Radial</option>
+                                        </select></td>
+                                        <tr>
+                                
+                                            <th>Question Content</th>
+                                          
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td> <textarea name="qContent" class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 200%;"></textarea></td> 
+                         
+                                            </tr>
+                                            
+                        </table>
+                                 
+                     <!-- Output table-->
+                    
+
+
+
+                        
+                     <input type="submit" name="submit" value="Return to Terminal"
+                     style="color: black; margin: 5px;"class="btn btn-lg btn-secondary fw-bold border-white bg-white"> <br>
+                 <input type="submit" name="submit" value="Submit and Add or View Next Question"
+                 style="color: black; margin: 5px;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">
+ </form>
+                 </center>
+             
+               
+             </body>
+             
+             </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Q1
+    </title>
+</head>
+
+<style>
+    body {
+        background-color: seashell;
+        margin: auto;
+
+    }
+
+    h1 {
+        color: navy;
+    }
+
+    /* link to Patient List */
+    .btone {
+        position: relative;
+        top: 50px;
+        display: block;
+        padding: 11px 13px;
+        text-align: center;
+        text-decoration: none;
+        color: cadetblue;
+        background-color: lightblue;
+        margin: auto;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        font-size: 15px;
+    }
+
+    .btone {
+        width: 46%;
+        line-height: 2em;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+
+    }
+
+    .btone:hover {
+        color: steelblue;
+        background: powderblue;
+    }
+</style>
+
+<body>
+    <script>alert("patient added to system"); </script>
+    <center>
+        <!--Creates form for the patient's name.-->
+
+        <div id="Name">
+            <form action="dynamicQTwo" method="post">
+                <%data.forEach((item)=>{%>
+                    <input type="text" name="id" value="<%=item.ID%>" readonly style="color: seashell; background: none; border: none; position: absolute; z-index: -1000;">
+                    <input type="text" name="date" value="<%=item.Date%>" readonly style="color: seashell; background: none; border: none; position: absolute; z-index: -1000;">
+                    <p><input type="text" name="question" value="<%= item.Qone_content%>" readonly
+                        style="background: none; border: none; margin: 0%; text-align: center; font-size: larger;"><br></p>
+                        
+                    <input type="text" id="qAnswer" name="qAnswer"><br><br>
+
+                    <%});%>
+
+                    <%user.forEach((item)=>{%>
+
+                        <input type="text" name="fname" value="<%=item.Fname%>" style="color: seashell; background: none; border: none; position: absolute; z-index: -1000;">
+                        <input type="text" name="lname" value="<%=item.Lname%>" style="color: seashell; background: none; border: none; position: absolute; z-index: -1000;">
+    
+                        <%});%>
+
+                        <input type="submit" class="btone" value="Submit">
+
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
