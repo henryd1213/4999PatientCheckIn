@@ -8,6 +8,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema PatientInfo
 -- -----------------------------------------------------
 
+
 -- -----------------------------------------------------
 -- Schema PatientInfo
 -- -----------------------------------------------------
@@ -108,12 +109,12 @@ CREATE TABLE IF NOT EXISTS `PatientInfo`.`Form_Questions` (
   `Form_List_ID` INT NOT NULL,
   `Date` VARCHAR(45) NOT NULL,
   `imageUpload` BLOB NULL,
-  `Radialone` VARCHAR(45) NULL,
-  `Radialtwo` VARCHAR(45) NULL,
-  `Radialthree` VARCHAR(45) BINARY NULL,
-  `Radialfour` VARCHAR(45) NULL,
-  `Radialfive` VARCHAR(45) NULL,
-  `RadialSix` VARCHAR(45) NULL,
+  `Radioone` VARCHAR(45) NULL,
+  `Radiotwo` VARCHAR(45) NULL,
+  `Radiothree` VARCHAR(45) BINARY NULL,
+  `Radiofour` VARCHAR(45) NULL,
+  `Radiofive` VARCHAR(45) NULL,
+  `RadioSix` VARCHAR(45) NULL,
   PRIMARY KEY (`ID`, `Form_List_ID`),
   INDEX `fk_Form_Questions_Form_List1_idx` (`Form_List_ID` ASC) VISIBLE,
   CONSTRAINT `fk_Form_Questions_Form_List1`
