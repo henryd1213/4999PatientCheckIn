@@ -1478,17 +1478,17 @@ app.post("/qOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
-                if(result1[0].RadialSix != undefined){
-                  res.render("dynamicSixRadial", { data: result1, user: result2 });
-                }else if(result1[0].Radialfive != undefined){
-                  res.render("dynamicFiveRadial", { data: result1, user: result2 });
-                }else if(result1[0].Radialfour != undefined){
-                  res.render("dynamicFourRadial", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
                 }
-                 else if(result1[0].Radialthree != undefined){
-                  res.render("dynamicThreeRadial", { data: result1, user: result2 });
-                }   else if(result1[0].Radialone != undefined){
-                  res.render("dynamicTwoRadial", { data: result1, user: result2 });
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
                 }
                 else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
@@ -1523,17 +1523,17 @@ app.post("/qOne", (req, res) => {
             throw err;
           }
           var result2 = result;
-          if(result1[0].RadialSix != undefined){
-            res.render("dynamicSixRadial", { data: result1, user: result2 });
-          }else if(result1[0].Radialfive != undefined){
-            res.render("dynamicFiveRadial", { data: result1, user: result2 });
-          }else if(result1[0].Radialfour != undefined){
-            res.render("dynamicFourRadial", { data: result1, user: result2 });
+          if(result1[0].RadioSix != undefined){
+            res.render("dynamicSixRadio", { data: result1, user: result2 });
+          }else if(result1[0].Radiofive != undefined){
+            res.render("dynamicFiveRadio", { data: result1, user: result2 });
+          }else if(result1[0].Radiofour != undefined){
+            res.render("dynamicFourRadio", { data: result1, user: result2 });
           }
-           else if(result1[0].Radialthree != undefined){
-            res.render("dynamicThreeRadial", { data: result1, user: result2 });
-          }   else if(result1[0].Radialone != undefined){
-            res.render("dynamicTwoRadial", { data: result1, user: result2 });
+           else if(result1[0].Radiothree != undefined){
+            res.render("dynamicThreeRadio", { data: result1, user: result2 });
+          }   else if(result1[0].Radioone != undefined){
+            res.render("dynamicTwoRadio", { data: result1, user: result2 });
           }
           else{
           res.render("dynamicQ1", { data: result1, user: result2 });
@@ -4062,12 +4062,12 @@ app.post("/formInfoChanges", (req, res) => {
 });
 
 app.post("/addQuestion", (req, res) => {
-  let rad1=req.body.radialOne;
-  let rad2=req.body.radialTwo;
-  let rad3=req.body.radialThree;
-  let rad4=req.body.radialFour;
-  let rad5=req.body.radialFive;
-  let rad6=req.body.radialSix;
+  let rad1=req.body.radioOne;
+  let rad2=req.body.radioTwo;
+  let rad3=req.body.radioThree;
+  let rad4=req.body.radioFour;
+  let rad5=req.body.radioFive;
+  let rad6=req.body.radioSix;
   
   let id = req.body.name;
   let qNum = req.body.qCurrent;
@@ -4076,8 +4076,8 @@ app.post("/addQuestion", (req, res) => {
   let submission = JSON.stringify(req.body);
   let data = {
     ID: 0, Qone_type: req.body.qType, Qone_content: req.body.qContent, Q_apperance: req.body.qNumber, Form_List_ID: id,
-    Date: req.body.date, Radialone: rad1, Radialtwo: rad2,
-    Radialthree: rad3, Radialfour: rad4, Radialfive: rad5, RadialSix: rad5, imageUpload: req.body.imagePrompt,
+    Date: req.body.date, Radioone: rad1, Radiotwo: rad2,
+    Radiothree: rad3, Radiofour: rad4, Radiofive: rad5, RadioSix: rad5, imageUpload: req.body.imagePrompt,
   };
   let sql1 = `SELECT * FROM Form_List WHERE ID='${id}'`;
   let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID='${id}' AND Q_apperance='${nextQ}'`;
