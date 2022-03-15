@@ -4,7 +4,7 @@
 
 <head>
     <title>Patient List </title>
-    <link href="List.css" rel="stylesheet">
+    
    
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -16,13 +16,11 @@
     -moz-user-select: none;
     user-select: none;
   }
-
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
   }
-
   html,body {
             height: 100%;
         }
@@ -30,13 +28,10 @@
            h1,h2{
                 color: white; 
          }
-
          .mb{
              margin-bottom:10%;
          }
-
           /*Header*/
-
           .nav-masthead .nav-link {
                 padding: .25rem 0;
                 font-weight: 700;
@@ -44,22 +39,52 @@
                 background-color: transparent;
                 border-bottom: .25rem solid transparent;
             }
-
             .nav-masthead .nav-link:hover,
             .nav-masthead .nav-link:focus {
                 border-bottom-color: rgba(255, 255, 255, .25);
             }
-
             .nav-masthead .nav-link + .nav-link{
                 margin-left: 1rem;
              
             }
-
             .nav-masthead .active {
                 color: white;
                 border-bottom-color: white;
    
-    }
+            }
+
+            /*Table*/
+
+            table, th, td{
+            border-style: solid;
+            border-color: black;
+            text-align: center;
+        }
+
+        tr:nth-child(even){
+             background-color: white;
+             color: black;
+         }
+
+
+
+            
+          /*left column*/
+          .nav-left{
+            float:left;
+            width: 15%;
+            background: #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+         
+        /* Clear floats after the columns */
+        section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
 </style>
 </head>
 
@@ -71,106 +96,100 @@
             <div>
                 <h3 class="float-md-start mb-0">Check-In</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                  <a class="nav-link active" aria-current="page" href="adminterminal.html">Back</a>
-                  <a class="nav-link" aria-current="page" href="Home.html">logout</a>
+                  <a class="nav-link active" aria-current="page" href="admin_list_return">Back</a>
+                  <a class="nav-link" aria-current="page" href="home_return">logout</a>
                 <a class="nav-link" href="userinfo.html">Profile</a>
               </nav>
             </div>
-          </header>
+          </header><br><br>
+
+          <div class="container ">
+            <div class="row">
+            <!-- Left side -->
+               <div class="col-auto nav-left text-left">
+                    <nav class="flex-column">
+                        <a class="text-black" href="new_user">Add User</a><br><br>
+                        <a class="text-black" href="remove_user" >Remove User</a><br><br>
+                        <a class="text-black" href="form_list" >Available Patient Forms</a><br><br>
+                        <a class="text-black" href="new_form" >Create New Patient Form</a><br><br>
+                        <a class="text-black" href="#">Software Updates<br></a><br><br>
+                    </nav>
+               </div>
+        
+          <!--Righ side-->
+       <div class="col-10 justify-content-center">
 
     <center>
-        <h1>Create New Patient Form</h1>
+        <h1>Create New Patient Form</h1><br>
         <script>
             var today = new Date();
             
             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getHours()+'.'+today.getMinutes()+'.'+today.getSeconds();
+            </script>
+             <form action="newForm" method="post">
+                <table>
+                    <tr>
+                        
+                        <th>Form Name</th>
+                      
+                       
+                    </tr>
+                    <tr>
+                        
+                        <td> <textarea name="formName" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea></td> 
+                                    
+                        <tr>
+                        
+                            <th>Author</th>
+                          
+                           
+                        </tr>
+                        <tr>
+                            
+                            <td> <textarea name="formCreator" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea></td> 
+                                    
+                            <tr>
+                        
+                                <th>MetaData</th>
+                              
+                               
+                            </tr>
+                            <tr>
+                                
+                                <td> <textarea name="formMeta" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea></td> 
+                                    
+    
+                                <tr>
+                        
+                                    <th>Use</th>
+                                  
+                                   
+                                </tr>
+                                <tr>
+                                  <td> <textarea name="formUse" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea></td> 
+                                    
+                                   
+                                    
+                </table><br>
+                <script>
+                     document.write('<input name="date" type="text" value="'+ date+'" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">');
+                </script>
+        
             
-            </script> <br>
+ <button class=" btn-primary btn btn-lg btn-block" type="submit" style="margin: 5px;">Submit</button>
+        
+       </form><br>
+    </center>
+        </div>
+    </div>
+</div>
 
-        <!-- Output table-->
-        <form action="newForm" method="post">
-            <table>
-                <tr>
-                    <th>Number of Questions</th>
-                    <th>Form Name</th>
-                  
-                   
-                </tr>
-                <tr>
-                    
+    <footer class="mt-auto text-white-50">
 
-                    <td> <select name="qNumber" id="qNumber" onchange="questionNumber()" style="background: none;">
-                            <script>
-                                for (var d = 1; d <= 20; d++) {
-                                    document.write("<option>" + d + "</option>");
-                                }
-                            </script>
-                        </select>
-                    </td>
-                    <td><input name="formName" type="text" style="background: none; border:none;"></td>
-                    
-            </table> 
-            <script>
-                 document.write('<input name="date" type="text" value="'+ date+'" style="color: seashell; background: none; border: none; position: absolute; z-index: -1000;">');
-            </script> <br> 
-            <table name="fullTable" id="fullTable">
-                <tr>
-                    <th>Question Number</th>
-                    <th>Question Type</th>
-                    <th>Question</th>
-                    <th>Number of Radio/Image Options</th>
-                    <th>Image/Radio Option One</th>
-                    <th>Image/Radio Option Two</th>
-                    <th>Image/Radio Option Three</th>
-                    <th>Image/Radio Option Four</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td><select name="qType1" onchange="typeSelection()" style="background: none; border:none;">
-                            <option value="text"id="text">Text</option>
-                            <option value="image"id="image">Image</option>
-                            <option value="radial"id="radial">Radial</option>
-                        </select></td>
-                    <td><input name="input1" type="text" style="background: none; border:none;"></td>
-                    <td> <select name="qNumber" id="qNumber" style="background: none;">
-                        <script>
-                            for (var d = 1; d <= 4; d++) {
-                                document.write("<option>" + d + "</option>");
-                            }
-                        </script>
-                    </select>
-                </td>
-                <td><input name="image11" type="text" style="background: none; border:none;"></td>
-                <td><input name="image12" type="text" style="background: none; border:none;"></td>
-                <td><input name="image13" type="text" style="background: none; border:none;"></td>
-                <td><input name="image14" type="text" style="background: none; border:none;"></td>
-                </tr>
-            </table>
+     <p class="footer" style="text-align: center;" >&copy; 2021 Company, Inc</p>
 
-            <script>
-                function questionNumber() {
-                    var number;
-                    number = document.getElementById('qNumber').value;
-                    var rows = '';
-                    for (var i = 1; i <= number; i++) {
-                        rows += '<tr id = "row' + i + '"><td>' + i + '</td><td><select name="qType' + i + '" value="text"onchange="typeSelection()" style="background: none; border:none;">   <option value="text"name="text"id="text">Text</option><option value="image"id="image">Image</option> <option value="radial"id="radial">Radial</option></select></td><td><input name="input' + i + '" type="text" style="background: none; border:none"></td><td> <select value="0"name="imageNumber' + i + '" id="imageNumber' + i + '" style="background: none;"><option value="0"name="0"id="0">0</option><option value="1"id="1">1</option> <option value="2"id="2">2</option><option value="3"id="3">3</option> <option value="4"id="4">4</option></select></td><td><input name="image' + i + '1" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '2" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '3" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '4" type="text" style="background: none; border:none;"></td></tr>';
-                    }
-                    var header;
-                    header = '<tr id = "row"><th>Question Number</th><th>Question Type</th><th>Question</th><th>Number of Radio/Image Options</th><th>Image/Radio Option One</th><th>Image/Radio Option Two</th><th>Image/Radio Option Three</th><th>Image/Radio Option Four</th></tr>';
-                    document.getElementById('fullTable').innerHTML = header + rows;
-                }
-            </script> <br> <br>
- 
-            
- <button class=" btn-primary btn btn-lg btn-block" type="submit">Submit</button>
-       
-</form>
+    </footer>
 
 </body>
 
 </html>
-
-
-
-
-<td style=" background-color: white;"> <select value="0"name="imageNumber' + i + '" id="imageNumber' + i + '" style="background: none;"><option value="0"name="0"id="0">0</option><option value="1"id="1">1</option> <option value="2"id="2">2</option><option value="3"id="3">3</option> <option value="4"id="4">4</option></select></td><td><input name="image' + i + '1" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '2" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '3" type="text" style="background: none; border:none;"></td><td><input name="image' + i + '4" type="text" style="background: none; border:none;"></td>
