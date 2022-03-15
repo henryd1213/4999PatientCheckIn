@@ -4,7 +4,7 @@
 
 <head>
     <title>Administator Terminal </title>
-    <link rel="stylesheet" href="mystyle.css">
+   <!--<link rel="stylesheet" href="mystyle.css">--> 
 
    <!-- Bootstrap core CSS -->
    <link href="bootstrap.min.css" rel="stylesheet">
@@ -28,8 +28,9 @@
                height: 100%;
            }
      .mb-10{
-         margin-bottom: 10%;
+         margin-bottom: 5%;
      }
+
              /*Header*/
 
              .nav-masthead .nav-link {
@@ -54,6 +55,38 @@
                 color: white;
                 border-bottom-color: white;
         }
+
+        /*button size*/
+        .btn-size{
+            width: 35%;
+            line-height: 2em;
+        }
+
+        /*left column*/
+        .nav-left{
+            float:left;
+            width: 30%;
+            background: #ccc;
+            padding:20px;
+            text-align: left;
+        }
+
+        /*Right column*/
+        .nav-right{
+            float:left;
+            width: 30%;
+            background: #ccc;
+            padding:20px;
+            
+        }
+        
+        /* Clear floats after the columns */
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
     </style> 
 </head>      
 
@@ -71,28 +104,51 @@
         </header>
 
     <!--admin list-->
-    <center>
-        <h2 class="h3 mb-3 fw-normal text-white"> Patient Check-In Administrator Terminal <br></h2>
-        <a href="new_user" class="btone btn-lg btn-block">Add User<br></a>
-        <a href="remove_user" class="bttwo btn-lg btn-block">Remove User<br></a>
-        <a href="form_list" class="btthree btn-lg btn-block">Available Patient Forms<br></a>
-        <a href="new_form" class="btfour btn-lg btn-block">Create New Patient Form<br></a>
-        <a href="#" class="btfive btn-lg btn-block">Software Updates<br></a>
-    </center>
 
-    <!--user information icon-->
-    <!--<div class="container">
-        <div class="topright">
-            <a href="accountInfoLogin">
-                <img src="/public/css/userinfo.png" alt="User Info" width="90" height="85">
-            </a>
+    <div class="container ">
+        <div class="row">
+        <!-- Left side -->
+            <div class="col nav-left text-black text-left">
+              
+                
+                1. To create new user (Doctor/Nurse/Admin) click on "Add Users".<br>
+                2. To delete any existing user (Doctor/Nurse/Admin) form the system click on "Remove User".<br>
+                3. To view Patient from click on "Available Patient Forms".<br>
+                4. To add new forms to the list click on "Create New Patient Form".<br>
+                5. For Software updates and information click on "Software Updates".
+                
+
+            </div> 
+        <!--Center-->
+        <div class="col-8" >
+
+    <center>
+        <h2 class="h3 mb-3 fw-normal text-white"> Patient Check-In Administrator Terminal <br><br></h2>
+        <a href="new_user" style="color: black;"class=" btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Add User</a><br><br>
+        <a href="remove_user" style="color: black;"class="btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Remove User</a><br><br>
+        <a href="form_list" style="color: black;"class="btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Available Patient Forms<br></a><br><br>
+        <a href="new_form" style="color: black;"class="btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Create New Patient Form<br></a><br><br>
+        <a href="#" style="color: black;"class="btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Software Updates<br></a><br><br>
+    </center>
+        </div>
+
+        <!--Right side-->
+    <div class="col nav-right text-black">
+        
+        For Technical Support Call: (123)456-7890.<br>
+        For any Emargency Call: (098)765-4321.
+      
+    </div>
+
         </div>
     </div>
-    Exit button
-    <div class="close">
-        <a href="home_return" class="closebutton">Exit</a>
-    </div>-->
+    
+    <footer class="mt-auto text-white-50">
 
+        <p class="footer" >&copy; 2021 Company, Inc</p>
+       
+      </footer>
+    
 </body>
 
 </html>
