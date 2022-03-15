@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Enter your pin.
+    </title>
+    <style>
+        body {
+            background-color: seashell;
+            margin-top: 200px;
+        }
+
+        p {
+            color: navy;
+            font-size: x-large;
+
+        }
+
+        form {
+            display: block;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <!--This will be a field that will allow users to enter a pin.-->
+        <div id="Name">
+            <p>Please enter your pin.<br></p>
+            <form method="post" action="doctor_pin_auth">
+                <label for="pin" style="font-size: larger;">Pin:</label><br>
+                <input type="password" id="pin" name="pin" style="margin: 5px;"><br><br>
+                <!-- condition ti check the pin -->
+
+
+                <input type="submit" value="Submit" style="margin: 10px;">
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
