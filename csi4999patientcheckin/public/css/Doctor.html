@@ -1,180 +1,150 @@
 <!DOCTYPE html>
-    <html>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <head>
-        <title> Doctor's Terminal </title>
-        <style>
-            body{
-                background-color:seashell;
-                margin: auto;
-         }
-            h2{
-                color: navy; 
-         }
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-            .container{
-                position: relative;
-         }
-
-            /* Exit */
-                .closebutton {
-                     position: relative;
-                     top: -139px;
-                     left: 23px;
-                     float: left;
-                     padding: 20px;
-                     border-radius: 8px;
-                     text-align: center;
-                     text-decoration: none;
-                     color:cadetblue;
-                     background-color: lightblue;
-                     margin: auto;
-                     outline: none;
-                     cursor: pointer;
-                 }
-                   a.closebutton {
-                    display: inline-block;
-                    width: 9%;
-                    line-height: 8px;
-                    margin: auto;
-                    text-align: center;
-                    text-decoration: none;
-                    border-radius: 8px;
-                }
-                    a.closebutton:hover{
-                        color:steelblue;
-                        background: powderblue;
-                    }
-
-            /* link to User Profile */
-                    img{
-                        position: relative;
-                        top: -154px;
-                        left: -13px;
-                        float: right;
-                        width: 9%;
-                        padding: 10px;
-                        height: auto;
-                        opacity: 0.3;
-                        cursor: pointer;
-                    }
-                    img:hover {
-                        box-shadow: 0 0 2px 1px black(0, 140, 186, 0.5);
-                    }
-            
-             /*Input readonly text field for user name */
-                    input[type="text"]{
-                       
-                       position: relative; 
-                       top: -14px;
-                        left: 152px;
-                        float:right;
-                        width: 8%;
-                        border: 2px solid steelblue;
-                        margin: 8px 8px;
-                        outline: none;
-                        padding: 6px 6px;
-                        box-sizing: border-box;
-                        font-size: large;
-                        text-align: center;
-                    }
-
-                    input[type="type"]:focus{
-                        border-color:dodgerBlue;
-                        box-shadow:0 0 8px 0 dodgerBlue;
-
-                    }
-
-            /* link to Patient List */
-                    .btone{
-                        position: relative;
-                        top: 50px;
-                        display: block;
-                        padding: 11px 13px;
-                        text-align: center;
-                        text-decoration: none;
-                        color:cadetblue;
-                        background-color: lightblue;
-                        margin: auto;
-                        outline: none;
-                        cursor: pointer;
-                    }
-                    a.btone{
-                        width: 46%;
-                        line-height: 2em;
-                        margin: auto;
-                        text-align: center;
-                        text-decoration: none;
-                        border-radius: 8px;
+<head>
     
-                    }
-                    a.btone:hover{
-                        color:steelblue;
-                        background: powderblue;
-                    }
+    <title>Administator Terminal </title>
 
-            /* link to Forum List */
-                    .bttwo{
-                        position: relative;
-                        top: 70px;
-    
-                        display: block;
-                        padding: 11px 13px;
-                        text-align: center;
-                        text-decoration: none;
-                        color:cadetblue;
-                        background-color: lightblue;
-                        margin: auto;
-                        outline: none;
-                        cursor: pointer;
-                    }
-                    a.bttwo{
+   <!-- Bootstrap core CSS -->
+   <link href="bootstrap.min.css" rel="stylesheet">
 
-                        display: block;
-                        width: 46%;
-                        line-height: 2em;
-                        margin: auto;
-                        text-align: center;
-                        text-decoration: none;
-                        border-radius: 8px;
-    
-                    }
-                    a.bttwo:hover{
-                        color:steelblue;
-                        background: powderblue;
-                    }
-        </style>
-        </head>
-        <body>
-            <!-- list selection -->
-            <center>
-                <h2> Doctor's Administrative Terminal <br></h2>
-                <a href="PinLogin.html" class="btone">Patient List<br></a>
-                <a href="#" class="bttwo">Forum List<br></a>   
-            </center>
-           
-            <!--user information icon-->
-            <div class="container">
-            <div class="topright">
-            <a href="userinfo.html">
-            <img src="unserinfo.png" alt="User Info" width="90" height="85">
-            </a>
-            </div>
-            </div>
+   <style>
+     .bd-placeholder-img {
+       font-size: 1.125rem;
+       text-anchor: middle;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       user-select: none;
+     }
+   
+     @media (min-width: 768px) {
+       .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+       }
+     }
+   
+     html,body {
+               height: 100%;
+           }
+     .mb-10{
+         margin-bottom: 5%;
+     }
+
+             /*Header*/
+
+             .nav-masthead .nav-link {
+                padding: .25rem 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, .5);
+                background-color: transparent;
+                border-bottom: .25rem solid transparent;
+            }
+
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, .25);
+            }
+
+            .nav-masthead .nav-link {
+                margin-left: 1rem;
+             
+            }
+
+            .nav-masthead .active {
+                color: white;
+                border-bottom-color: white;
+        }
+
+        /*button size*/
+        .btn-size{
+            width: 35%;
+            line-height: 2em;
+        }
+
+        /*left column*/
+        .nav-left{
+            float:left;
+            width: 30%;
+            background: #ccc;
+            padding:20px;
+            text-align: left;
+        }
+
+        /*Right column*/
+        .nav-right{
+            float:left;
+            width: 30%;
+            background: #ccc;
+            padding:20px;
             
-             <!-- readonly text field for username -->
-            <div id="Username">
-                <label for="username" style = "font-size:larger; top:100px; right:100px; float:right;">User:</label>
-                <input type="text" id="username" name="username" value=""  readonly>
-            </div>
-            
-          
-            <!--Exit button-->
-            <div class="close">
-                <a href="setting.html" class="closebutton">Exit</a>
-            </div>
+        }
+        
+        /* Clear floats after the columns */
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
 
-        </body>
+    </style> 
+</head>      
+
+<body class=" d-flex h-100 text-center bg-dark">
+    
+    <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+        <header class="mb-10">
+          <div>
+            <h3 class="float-md-start mb-0">Check-In</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link active" aria-current="page" href="Home.html">logout</a>
+              <a class="nav-link" href="userinfo.html">Profile</a>
+            </nav>
+          </div>
+        </header><br>
+
+    <!--admin list-->
+
+    <div class="container ">
+        <div class="row">
+        <!-- Left side -->
+            <div class="col nav-left text-black text-left">
+              
+                
+                1. To view current list of patients click on "Patient List" <br>
+                2. To view current list of avalable forms click on "Form List"<br>
+               
+                
+
+            </div> 
+        <!--Center-->
+        <div class="col-8" >
+
+    <center>
+        <h2 class="h3 mb-3 fw-normal text-white">Doctor's Administrative Terminal<br><br></h2>
+        <a href="doctor_selection" style="color: black;"class=" btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Patient List</a><br><br>
+        <a href="#" style="color: black;"class="btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Form List</a><br><br>
        
-    </html>
+    </center>
+        </div>
+
+        <!--Right side-->
+    <div class="col nav-right text-black">
+        
+        For Technical Support Call: (123)456-7890.<br>
+        For any Emargency Call: (098)765-4321.
+      
+    </div>
+
+        </div>
+    </div>
+
+    <footer class="mt-auto text-white-50">
+
+        <p class="footer" >&copy; 2021 Company, Inc</p>
+       
+      </footer>
+    
+</body>
+
+</html>
