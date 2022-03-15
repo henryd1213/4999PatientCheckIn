@@ -7,7 +7,6 @@
     <link href="bootstrap.min.css" rel="stylesheet">
 </head>
 <style>
-
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -15,13 +14,11 @@
     -moz-user-select: none;
     user-select: none;
   }
-
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
   }
-
   html,body {
             height: 100%;
         }
@@ -29,13 +26,10 @@
            h1,h2{
                 color: white; 
          }
-
          .mb{
              margin-bottom:10%;
          }
-
           /*Header*/
-
           .nav-masthead .nav-link {
                 padding: .25rem 0;
                 font-weight: 700;
@@ -43,50 +37,42 @@
                 background-color: transparent;
                 border-bottom: .25rem solid transparent;
             }
-
             .nav-masthead .nav-link:hover,
             .nav-masthead .nav-link:focus {
                 border-bottom-color: rgba(255, 255, 255, .25);
             }
-
             .nav-masthead .nav-link + .nav-link{
                 margin-left: 1rem;
              
             }
-
             .nav-masthead .active {
                 color: white;
                 border-bottom-color: white;
    
-    }
+            }
 
-    .btone {
-        position: relative;
-        top: 50px;
-        display: block;
-        padding: 11px 13px;
-        text-align: center;
-        text-decoration: none;
-        color: cadetblue;
-        background-color: lightblue;
-        margin: auto;
-        outline: none;
-        cursor: pointer;
-        border: none;
-        font-size: 15px;
-    }
-    .btone {
-        width: 46%;
-        line-height: 2em;
-        margin: auto;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 8px;
-    }
-    .btone:hover {
-        color: steelblue;
-        background: powderblue;
-    }
+         /*button size*/
+        .btn-size{
+            width: 35%;
+            line-height: 2em;
+        }
+
+         /*left column*/
+         .nav-left{
+            float:left;
+            width: 15%;
+            background: #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+         
+        /* Clear floats after the columns */
+        section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
 </style>
 
 <body class="d-flex h-100 text-center bg-dark">
@@ -97,56 +83,81 @@
             <div>
                 <h3 class="float-md-start mb-0">Check-In</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                  <a class="nav-link active" aria-current="page" href="form_list">Back</a>
-                  <a class="nav-link" aria-current="page" href="Home.html">logout</a>
+                  <a class="nav-link active" aria-current="page" href="admin_list_return">Back</a>
+                  <a class="nav-link" aria-current="page" href="home_return">logout</a>
                 <a class="nav-link" href="userinfo.html">Profile</a>
               </nav>
             </div>
-          </header> <br>
+          </header> <br><br>
+
+          <div class="container ">
+            <div class="row">
+            <!-- Left side -->
+               <div class="col-auto nav-left text-left">
+                    <nav class="flex-column">
+                        <a class="text-black" href="new_user">Add User</a><br><br>
+                        <a class="text-black" href="remove_user" >Remove User</a><br><br>
+                        <a class="text-black" href="form_list" >Available Patient Forms</a><br><br>
+                        <a class="text-black" href="new_form" >Create New Patient Form</a><br><br>
+                        <a class="text-black" href="#">Software Updates<br></a><br><br>
+                    </nav>
+               </div>
+        
+          <!--Righ side-->
+       <div class="col-10 justify-content-center">
 
     <center>
         <form action="formInfoChanges" method="post">
             <%data.forEach((item)=>{%>
                 <h1>
                     <%=item.Name%> Form Information
-                </h1> 
+                </h1>
                 <input type="text" name="name" value="<%=item.ID%>"
-                    style="color: white; background: none; border: none; position: absolute; z-index: -1000;"> <br>
+                    style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
                 <table>
                     <th>Author</th>
                     </tr>
                     <tr>
-                        <td><input name="author" type="text" style="background: white; border:none; width:200%;" readonly
+                        <td><input name="author" type="text" style="background: none; border:none; width:200%; color: white;" readonly
                                 value="<%=item.Author%>"></td>
                     <tr>
                         <th>MetaData</th>
                     </tr>
                     <tr>
-                        <td><input name="metadata" type="text" style="background: white; border:none;width:200%;"
+                        <td><input name="metadata" type="text" style="background: none; border:none;width:200%; color: white;"
                                 readonly value="<%=item.Metadata%>"></td>
                     <tr>
                         <th>Use</th>
                     </tr>
                     <tr>
-                        <td><input name="use" type="text" style="background: white; border:none;width:200%;" readonly
+                        <td><input name="use" type="text" style="background: none; border:none;width:200%; color: white;" readonly
                                 value="<%=item.Use%>"></td>
-                </table> <br>
-                <%});%>
+                </table>
+                <%});%> 
 
                     <!-- Output table-->
 
+                    <br><br>
 
-                    <input type="submit" name="submit" value="Delete Form" style="margin: 5px;" class="btone"> <br>
-                    <input type="submit" name="submit" value="View And Add Questions" style="margin: 5px;"
-                        class="btone">
+            
+                    <input type="submit" name="submit" value="Delete Form"
+                    style="color: black; margin: 5px;"class="btn btn-size btn-lg btn-secondary fw-bold border-white bg-white"> <br>
+                <input type="submit" name="submit" value="View and Add Questions"
+                style="color: black; margin: 5px;"class="btn btn-size btn-lg btn-secondary fw-bold border-white bg-white">
+
         </form>
     </center>
 
-    <!--Exit button
-    <div class="close">
-        <a href="form_list" class="closebutton" style="margin-top: 9.6em;">Back</a>
-    </div> -->
         </div>
+    </div>
+</div>
+
+    <footer class="mt-auto text-white-50">
+
+        <p class="footer" style="text-align: center;" >&copy; 2021 Company, Inc</p>
+
+    </footer>
+
 </body>
 
 </html>
