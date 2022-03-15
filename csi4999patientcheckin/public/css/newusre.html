@@ -58,6 +58,26 @@
                 color: white;
                 border-bottom-color: white;
         }
+
+         /*left column*/
+         .nav-left{
+            float:left;
+            width: 15%;
+            background: #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+         
+        /* Clear floats after the columns */
+        section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+           
+
     </style>
 </head>
 
@@ -77,6 +97,24 @@
         </div>
       </header> <br> <br>
 
+      <div class="container ">
+        <div class="row">
+        <!-- Left side -->
+            <div class="col-auto nav-left text-left">
+                <nav class="flex-column">
+                    <a class="text-black" href="new_user">Add User</a><br><br>
+                    <a class="text-black" href="remove_user" >Remove User</a><br><br>
+                    <a class="text-black" href="form_list" >Available Patient Forms</a><br><br>
+                    <a class="text-black" href="new_form" >Create New Patient Form</a><br><br>
+                    <a class="text-black" href="#">Software Updates<br></a><br><br>
+                </nav>
+            
+                 
+
+            </div> 
+
+   <div class="col-10 justify-content-center">
+   
     <center>
         <h1>
             Enter User information
@@ -165,14 +203,23 @@
                     </tr>
                 </table>
                  <br>
-                <button class=" btn-primary btn btn-lg btn-block" type="submit">Submit</button>
-                <p class="mt-5 mb-3 text-muted">&copy; 2021 Company, Inc</p>
+                <button class=" btn-primary btn btn-lg btn-block" type="submit">Submit</button><br>
+                
 
             </form>
         </div>
     </center>
+  
+   </div>
+        </div>
+      </div>
 
-   
+    <footer class="mt-auto text-white-50">
+
+        <p class="footer" >&copy; 2021 Company, Inc</p>
+       
+      </footer>
+    
 
 </body>
 
