@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/henryd1213/4999PatientCheckIn"
   },
-  "homepage": "https://github.com/henryd1213/4999PatientCheckIn#readme"
+  "homepage": "https://github.com/henryd1213/4999PatientCheckIn#readme",
+  "devDependencies": {}
 }
