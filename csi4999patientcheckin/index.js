@@ -230,29 +230,56 @@ app.get("/form_list", (req, res) => {
 //If failed verficiation, display message and return to index page
 app.post("/login_auth", (req, res) => {
   let sql = `SELECT * FROM Employee_Info WHERE Employee_Info.Username='${req.body.username}' AND Employee_Info.Password='${req.body.password}'`;
+  let sql2 = `SELECT * FROM Employee_Info WHERE Employee_Info.Username='${req.body.username}'`;
+  let sql3 = `UPDATE Employee_Info SET LogLim += 1 WHERE ID(SELECT ID WHERE Username='${req.body.username}')`;
   db.query(sql, (err, result) => {
     if (err) {
       throw err;
     }
     if (result[0] == undefined) {
-      res.send('<script>alert("Invalid Username or Password"); window.location.href = "/login_return"; </script>');
+      db.query(sql2, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        if (result[0]!=undefined){
+          db.query(sql3, (err, result) => {
+            if (err) {
+              throw err;
+            }
+            if (result[0].LogLim == 4){
+              res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
+            }
+            res.send('<script>alert("Invalid Password"); window.location.href = "/login_return"; </script>');
+          });
+        }
+        else {res.send('<script>alert("Username does not exist."); window.location.href = "/login_return"; </script>');}
+      });
     }
     else if (result[0].Role == "Nurse") {
-      if (result[0].FPass == "Y") {
+      if (result[0].LogLim == 4){
+        res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
+      }
+      else if (result[0].FPass == "Y") {
         res.render("expiredPassReset", { data: result });
       } else {
         res.render("nursePage", { data: result });
       }
     }
     else if (result[0].Role == "Doctor") {
-      if (result[0].FPass == "Y") {
+      if (result[0].LogLim == 4){
+        res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
+      }
+      else if (result[0].FPass == "Y") {
         res.render("expiredPassReset", { data: result });
       } else {
         res.render("doctorPage", { data: result });
       }
     }
     else if (result[0].Role == "Admin") {
-      if (result[0].FPass == "Y") {
+      if (result[0].LogLim == 4){
+        res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
+      }
+      else if (result[0].FPass == "Y") {
         res.render("expiredPassReset", { data: result });
       } else {
         res.render("adminTerminal", { data: result });
@@ -1738,7 +1765,7 @@ app.post("/dynamicQOne", (req, res) => {
       throw err;
     }
     let listApperance = result[0].Apperance;
-    //start here 
+
     if (listApperance == "2" && apperance == "1") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
@@ -2462,14 +2489,14 @@ app.post("/dynamicQOne", (req, res) => {
         }
       });
     } else if (listApperance == "2" && apperance == "20") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="21"`;
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -2500,163 +2527,7 @@ app.post("/dynamicQOne", (req, res) => {
         }
       });
     }
-    else if (listApperance == "2" && apperance == "21") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="22"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }
-    else if (listApperance == "2" && apperance == "22") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="23"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }
-    else if (listApperance == "2" && apperance == "23") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="24"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }
-    //working from here 
-    else if (listApperance == "2" && apperance == "51") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="52"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }
+
 
     else if (listApperance == "3" && apperance == "1") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="2"`;
