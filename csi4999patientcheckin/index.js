@@ -2496,9 +2496,6 @@ app.post("/dynamicQOne", (req, res) => {
           throw err;
         }
         if (result[0] == undefined) {
-<<<<<<< Updated upstream
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-=======
           let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
@@ -3544,7 +3541,6 @@ app.post("/dynamicQOne", (req, res) => {
         }
       });
     }
-    //working from here 
     else if (listApperance == "2" && apperance == "51") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="52"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
@@ -3554,7 +3550,6 @@ app.post("/dynamicQOne", (req, res) => {
         }
         if (result[0] == undefined) {
           let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
->>>>>>> Stashed changes
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -3584,12 +3579,7 @@ app.post("/dynamicQOne", (req, res) => {
           });
         }
       });
-    }
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
+    } 
     else if (listApperance == "3" && apperance == "1") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
