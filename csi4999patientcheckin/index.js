@@ -5520,6 +5520,7 @@ app.post("/dynamicQOne", (req, res) => {
         }
       });
     }
+    //continue here 3/23/2022
     else if (listApperance == "4" && apperance == "1") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;

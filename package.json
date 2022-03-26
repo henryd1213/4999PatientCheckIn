@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/henryd1213/4999PatientCheckIn/issues"
   },
-  "homepage": "https://github.com/henryd1213/4999PatientCheckIn#readme"
+  "homepage": "https://github.com/henryd1213/4999PatientCheckIn#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {}
 }

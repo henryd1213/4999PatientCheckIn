@@ -23,5 +23,7 @@
     "url": "https://github.com/henryd1213/4999PatientCheckIn"
   },
   "homepage": "https://github.com/henryd1213/4999PatientCheckIn#readme",
-  "devDependencies": {}
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
