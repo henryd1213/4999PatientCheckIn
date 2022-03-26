@@ -229,9 +229,10 @@ app.get("/form_list", (req, res) => {
 //If successful verification, render admin page
 //If failed verficiation, display message and return to index page
 app.post("/login_auth", (req, res) => {
+  newLogLim=0;
+  increment=1;
   let sql = `SELECT * FROM Employee_Info WHERE Employee_Info.Username='${req.body.username}' AND Employee_Info.Password='${req.body.password}'`;
   let sql2 = `SELECT * FROM Employee_Info WHERE Employee_Info.Username='${req.body.username}'`;
-  let sql3 = `UPDATE Employee_Info SET LogLim += 1 WHERE ID(SELECT ID WHERE Username='${req.body.username}')`;
   db.query(sql, (err, result) => {
     if (err) {
       throw err;
@@ -242,21 +243,24 @@ app.post("/login_auth", (req, res) => {
           throw err;
         }
         if (result[0]!=undefined){
+          newLogLim=result[0].LogLim +1;
+          let sql3 = `UPDATE Employee_Info SET LogLim = '${newLogLim}' WHERE ID = (SELECT ID WHERE Username='${req.body.username}')`;
           db.query(sql3, (err, result) => {
             if (err) {
               throw err;
             }
-            if (result[0].LogLim == 4){
-              res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
-            }
-            res.send('<script>alert("Invalid Password"); window.location.href = "/login_return"; </script>');
           });
+          if (result[0].LogLim >= 3){
+            res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
+          } else{
+            res.send('<script>alert("Invalid Password"); window.location.href = "/login_return"; </script>');
+          }
         }
         else {res.send('<script>alert("Username does not exist."); window.location.href = "/login_return"; </script>');}
       });
     }
     else if (result[0].Role == "Nurse") {
-      if (result[0].LogLim == 4){
+      if (result[0].LogLim >= 3){
         res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
       }
       else if (result[0].FPass == "Y") {
@@ -266,7 +270,7 @@ app.post("/login_auth", (req, res) => {
       }
     }
     else if (result[0].Role == "Doctor") {
-      if (result[0].LogLim == 4){
+      if (result[0].LogLim >= 3){
         res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
       }
       else if (result[0].FPass == "Y") {
@@ -276,7 +280,7 @@ app.post("/login_auth", (req, res) => {
       }
     }
     else if (result[0].Role == "Admin") {
-      if (result[0].LogLim == 4){
+      if (result[0].LogLim >= 3){
         res.send('<script>alert("Account locked contact your administrator."); window.location.href = "/login_return"; </script>');
       }
       else if (result[0].FPass == "Y") {
