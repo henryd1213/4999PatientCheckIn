@@ -6,15 +6,12 @@
    
     <title>Patient Check-In System</title>
 
-    
-
     <!-- Bootstrap core CSS -->
 <link href="bootstrap.min.css" rel="stylesheet">
 
-    <style>
+<style>
 
-      
-      .bd-placeholder-img {
+.bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -22,112 +19,129 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
+    @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
 
+ .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
-        /* Custom default button */
-        .btn-secondary,
-        .btn-secondary:hover,
-        .btn-secondary:focus {
-            color: #333;
-            text-shadow: none; /* Prevent inheritance from `body` */
-        }
-
-
-        /* Base structure*/
-
-        body {
-            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-        }
-
-        .cover-container {
-             max-width: 42em;
+/*background image*/
+.bg-image{
+              background-image: url("bgimgcopy.png");
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+              background-size: cover;
+              width: 100%;
+              height: 100vh;
+             
             }
 
+/*sidebar nevigation*/
 
-        /*Header*/
+.sidebar {
+  /* position: fixed; */
+  width: 25%;
+  height: 100vh;
+  background: lightgray;
+  font-size: 0.65em;
+}
 
-            .nav-masthead .nav-link {
-                padding: .25rem 0;
-                font-weight: 700;
-                color: rgba(255, 255, 255, .5);
-                background-color: transparent;
-                border-bottom: .25rem solid transparent;
-            }
+.nav {
+  /* position: relative; */
+  margin: 0 15%;
+  text-align: right;
+  font-weight: bold;
+}
 
-            .nav-masthead .nav-link:hover,
-            .nav-masthead .nav-link:focus {
-                border-bottom-color: rgba(255, 255, 255, .25);
-            }
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  position: relative;
+  margin: 3.2em 0;
+  
+}
+.nav ul li a {
+  line-height: 5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4em;
+  color: black;
+  display: block;
+  transition: all ease-out 300ms;
+}
+.nav ul li.active a {
+  color: black;
+}
 
-            .nav-masthead .nav-link + .nav-link {
-                margin-left: 1rem;
-               
-            }
+.nav ul li:not(.active)::after {
+  opacity: 0.2;
+}
+.nav ul li:not(.active):hover a {
+  color: rgba(255, 255, 255, 0.25);
+}
+ 
+.nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  background: black;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+}
 
-            .nav-masthead .active {
-                color: white;
-                border-bottom-color: white;
-        }
 
-
-    </style>
-
+</style>
 
   </head>
-  
-  <body class="d-flex h-100 text-center text-white bg-dark">
+
+  <body class="text-center d-flex flex-column w-100">
     
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Check-In</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+   <div class="d-flex" >
+    <header class="sidebar">
+        <nav class="nav">
+            <h1 class="d-flex pb-3 mt-3 h1 fw-light text-upercase text-black">
+                Chick-In</h1>
+          <ul>
+            <li class="active"><a href="#">Welcome</a></li>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">What We Do</a></li>
+            <li><a href="#">Get In Touch</a></li>
+          </ul>
+        </nav>
+    </header><br>
 
-      <!--  <a class="nav-link" data-toggle="collapse" href="#collapseInfo"  aria-expanded="false" aria-controls="collapseExample">About us</a>
-        <a class="nav-link" data-toggle="collapse" href="#collapseContact"  aria-expanded="false" aria-controls="collapseExample">Contact</a>
+    <center class="w-75% d-flex align-items-center m-auto bg-image">
+
+      <main class="container px-3 d-inline-flex justify-content-center align-items-center text-white flex-column">
+
+
   
-        <div class="collapse" id="collapseInfo">
-          <div class="card card-body text-white bg-dark">
-            Information about the site
-          </div>
-        </div>
-        <div class="collapse text-black bg-white" id="collapseContact">
-          <div class="card card-body">
-           Contact information 
-          </div>
-        </div> -->
 
-        <a class="nav-link" href="#">About Us</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
+        <h1 class="display-1 mb-0">PATIENT CHECK-IN</h1><br><br>
+        <p class="lead display-5">Please select</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-block fw-bold bg-white text-black d-inline">Patient</a>
+          <a href="Signin.html" class="btn btn-lg btn-block fw-bold bg-white text-black d-inline">Staff</a>
+        </p>
 
-  <main class="px-3">
-    <h1>WELCOME</h1>
-    <p class="lead">Please select.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Patient</a>
-      <a href="Signin.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Staff</a>
-    </p>
-  </main>
-
-
-  <footer class="mt-auto text-white-50">
-
-    <p class="footer" >&copy; 2021 Company, Inc</p>
-   
-  </footer>
-
-
+        <footer class="mt-5 text-white-50">
+            <p class="footer" style="color:white;">&copy; 2021 Company, Inc</p>
+        </footer>
 
     
+      </main>
+    </center>
+   </div>
   </body>
 </html>
