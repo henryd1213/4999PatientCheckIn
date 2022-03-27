@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,72 +26,66 @@
   }
 
   html,body {
+=======
+   
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Administator Terminal </title>
+    <link rel="stylesheet" href="mystyle.css">
+
+   <!-- Bootstrap core CSS -->
+   <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+     .bd-placeholder-img {
+       font-size: 1.125rem;
+       text-anchor: middle;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       user-select: none;
+     }
+   
+     @media (min-width: 768px) {
+       .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+       }
+     }
+   
+     html,body {
+>>>>>>> parent of 5e5f988 (Update adminTerminal.ejs)
                height: 100%;
            }
      .mb-10{
-         margin-bottom: 5%;
+         margin-bottom: 10%;
      }
+             /*Header*/
 
-     *, :before, :after {
-  box-sizing: border-box;
-}
-
-    .unstyled {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .unstyled a {
-        text-decoration: none;
-    }
-
-    .list-inline {
-        overflow: hidden;
-    }
-    .list-inline li {
-        float: left;
-    }
-
-    .sidebar {
-        position: fixed;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 17.5em;
-        height: 100vh;
-        background: white;
-    }
-
-
-    .main-nav ul {
-        border-top: solid 1px #DFDBD9;
-    }
-    .main-nav li {
-        border-bottom: solid 1px #DFDBD9;
-    }
-    .main-nav a {
-        padding: 1.1em 0;
-        color: black;
-        text-align: left;
-    }
-    .main-nav a:hover {
-        color: #fff;
+             .nav-masthead .nav-link {
+                padding: .25rem 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, .5);
+                background-color: transparent;
+                border-bottom: .25rem solid transparent;
             }
-    .main-nav a.active{
-        border-right: solid 10px #5e42a6;
-        background: lightgray;
-    }
 
-    .list-hover-slide li {
-        position: relative;
-        overflow: hidden;
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, .25);
+            }
+
+            .nav-masthead .nav-link {
+                margin-left: 1rem;
+             
+            }
+
+            .nav-masthead .active {
+                color: white;
+                border-bottom-color: white;
         }
-    .list-hover-slide a {
-        display: block;
-        position: relative;
-        z-index: 1;
-        transition: .35s ease color;
-        }
+<<<<<<< HEAD
     .list-hover-slide a:before {
         content: '';
         display: block;
@@ -185,7 +180,51 @@
     <a href="#" style="color: black;"class="btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Software Updates<br></a><br><br>
 </center>
   </div>
+=======
+    </style> 
+</head>      
+
+<body class=" d-flex h-100 text-center bg-dark">
+    
+    <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+        <header class="mb-10">
+          <div>
+            <h3 class="float-md-start mb-0">Check-In</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link active" aria-current="page" href="home_return">logout</a>
+              <a class="nav-link" href="userinfo.html">Profile</a>
+            </nav>
+          </div>
+        </header>
+
+    <!--admin list-->
+    <center>
+        <h2 class="h3 mb-3 fw-normal text-white"> Patient Check-In Administrator Terminal <br></h2>
+        <a href="new_user" style="color: black;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">Add User</a><br><br>
+        <a href="remove_user" style="color: black;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">Remove User</a><br><br>
+        <a href="form_list" style="color: black;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">Available Patient Forms<br></a><br><br>
+        <a href="new_form" style="color: black;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">Create New Patient Form<br></a><br><br>
+        <a href="#" style="color: black;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">Software Updates<br></a><br><br>
+    </center>
+
+    <!--user information icon-->
+    <!--<div class="container">
+        <div class="topright">
+            <a href="accountInfoLogin">
+                <img src="/public/css/userinfo.png" alt="User Info" width="90" height="85">
+            </a>
+        </div>
+>>>>>>> parent of 5e5f988 (Update adminTerminal.ejs)
     </div>
+    Exit button
+    <div class="close">
+        <a href="home_return" class="closebutton">Exit</a>
+    </div>-->
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+
+</html>
+>>>>>>> parent of 5e5f988 (Update adminTerminal.ejs)
