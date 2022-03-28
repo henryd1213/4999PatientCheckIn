@@ -438,7 +438,51 @@ app.post("/accountInfo", (req, res) => {
     else {
       res.render("accountInfo", { data: result });
     }
+    
   });
+  
+  /*let sql = `UPDATE Employee_Info SET Gender='${req.body.gender}' WHERE ID='${req.body.id}'`;
+//db.query(sql, (err, result) => {
+    if (err) {
+      throw err;
+    }
+   
+  });
+
+  let sq2 = `UPDATE Employee_Info SET AGE='${req.body.age}' WHERE ID='${req.body.id}'`;
+  db.query(sql, (err, result) => {
+      if (err) {
+        throw err;
+      }
+     
+    });
+
+    let sq3 = `UPDATE Employee_Info SET DESIGNATION='${req.body.role}' WHERE ID='${req.body.id}'`;
+    db.query(sql, (err, result) => {
+        if (err) {
+          throw err;
+        }
+       
+      });
+
+      let sq4 = `UPDATE Employee_Info SET CONTACT='${req.body.phone}' WHERE ID='${req.body.id}'`;
+      db.query(sql, (err, result) => {
+          if (err) {
+            throw err;
+          }
+         
+        });
+
+
+let sq5 = `UPDATE Employee_Info SET Email='${req.body.email}' WHERE ID='${req.body.id}'`;
+   db.query(sql, (err, result) => {
+     if (err) {
+       throw err;
+     }
+	
+   });
+
+   res.send('<script>alert("Account Updates Applied"); window.location.href = "/home_return"; </script>');*/
 });
 
 app.post("/terminalReturn", (req, res) => {
