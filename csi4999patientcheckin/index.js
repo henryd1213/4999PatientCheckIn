@@ -6192,8 +6192,6 @@ app.post("/dynamicQOne", (req, res) => {
       });
     }
 
-    
-    
     else if (listApperance == "2" && apperance == "51") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="52"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
@@ -6217,7 +6215,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6228,11 +6240,25 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } 
+    }
     else if (listApperance == "3" && apperance == "1") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
@@ -6256,7 +6282,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6267,11 +6307,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "2") {
+    }
+    else if (listApperance == "3" && apperance == "2") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="3"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6294,7 +6349,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6305,11 +6374,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "3") {
+    }
+    else if (listApperance == "3" && apperance == "3") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="4"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6332,7 +6416,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6343,11 +6441,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "4") {
+    }
+    else if (listApperance == "3" && apperance == "4") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="5"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6370,7 +6483,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6381,11 +6508,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "5") {
+    }
+    else if (listApperance == "3" && apperance == "5") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="6"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6408,7 +6550,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6419,11 +6575,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "6") {
+    }
+    else if (listApperance == "3" && apperance == "6") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="7"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6446,7 +6617,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6457,11 +6642,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "7") {
+    }
+    else if (listApperance == "3" && apperance == "7") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="8"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6484,7 +6684,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6495,11 +6709,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "8") {
+    }
+    else if (listApperance == "3" && apperance == "8") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="9"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6522,7 +6751,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6533,11 +6776,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "9") {
+    }
+    else if (listApperance == "3" && apperance == "9") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="10"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6560,7 +6818,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6571,11 +6843,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "10") {
+    }
+    else if (listApperance == "3" && apperance == "10") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="11"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6598,7 +6885,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6609,11 +6910,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "11") {
+    }
+    else if (listApperance == "3" && apperance == "11") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="12"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6636,7 +6952,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6647,11 +6977,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "12") {
+    }
+    else if (listApperance == "3" && apperance == "12") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="13"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6674,7 +7019,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6685,11 +7044,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "13") {
+    }
+    else if (listApperance == "3" && apperance == "13") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="14"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6712,7 +7086,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6723,11 +7111,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "14") {
+    }
+    else if (listApperance == "3" && apperance == "14") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="15"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6750,7 +7153,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6761,11 +7178,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "15") {
+    }
+    else if (listApperance == "3" && apperance == "15") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="16"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6788,7 +7220,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6799,11 +7245,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "16") {
+    }
+    else if (listApperance == "3" && apperance == "16") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="17"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6826,7 +7287,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6837,11 +7312,27 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "17") {
+    }
+    
+    else if (listApperance == "3" && apperance == "17") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="18"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6864,7 +7355,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6875,11 +7380,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "18") {
+    }
+    else if (listApperance == "3" && apperance == "18") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="19"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6902,7 +7422,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -6913,11 +7447,26 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "3" && apperance == "19") {
+    }
+    else if (listApperance == "3" && apperance == "19") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="20"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
@@ -6940,83 +7489,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "20") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="21"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
                 }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "3" && apperance == "21") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="22"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
                 }
-                var result2 = result;
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -7027,1153 +7514,25 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "22") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="23"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "23") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="24"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "24") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="25"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "25") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="26"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "26") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="27"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "27") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="28"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "28") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="29"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "29") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="30"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "30") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="31"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "31") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="32"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "32") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="33"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "33") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="34"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "34") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="35"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "35") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="36"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "36") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="37"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "37") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="38"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "38") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="39"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "39") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="40"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "40") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="41"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "41") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="42"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "42") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="43"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "43") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="44"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "44") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="45"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "45") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="46"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "46") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="47"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "47") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="48"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "48") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="49"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "49") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="50"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }else if (listApperance == "3" && apperance == "50") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="51"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
     }
-    else if (listApperance == "3" && apperance == "51") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="52"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    }
-    //continue here 3/23/2022
     else if (listApperance == "4" && apperance == "1") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
@@ -8197,7 +7556,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8208,19 +7581,34 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "4" && apperance == "2") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="3"`;
+    }
+    else if (listApperance == "5" && apperance == "1") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='6') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -8235,7 +7623,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8246,19 +7648,34 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "4" && apperance == "3") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="4"`;
+    }
+    else if (listApperance == "6" && apperance == "1") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='6') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='7') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -8273,7 +7690,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8284,19 +7715,34 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "4" && apperance == "4") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="5"`;
+    }
+    else if (listApperance == "7" && apperance == "1") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='7') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='8') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -8311,7 +7757,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8322,19 +7782,34 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "4" && apperance == "5") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="6"`;
+    }
+    else if (listApperance == "8" && apperance == "1") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='8') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='9') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -8349,7 +7824,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8360,19 +7849,34 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "4" && apperance == "6") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="7"`;
+    }
+    else if (listApperance == "9" && apperance == "1") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='9') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='10') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -8387,7 +7891,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8398,19 +7916,34 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "4" && apperance == "7") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="8"`;
+    }
+    else if (listApperance == "10" && apperance == "1") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='10') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='11') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -8425,7 +7958,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8436,19 +7983,34 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "4" && apperance == "8") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="9"`;
+    }
+    else if (listApperance == "11" && apperance == "1") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='11') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='12') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -8463,7 +8025,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8474,19 +8050,34 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
-    } else if (listApperance == "4" && apperance == "9") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="10"`;
+    }
+    else if (listApperance == "12" && apperance == "1") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='12') AND Q_apperance="2"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
       db.query(sql, (err, result) => {
         if (err) {
           throw err;
         }
         if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='13') AND Q_apperance="1"`;
           let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
           db.query(sql, (err, result) => {
             if (err) {
@@ -8501,83 +8092,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "10") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="11"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
                 }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "11") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="12"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
                 }
-                var result2 = result;
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -8588,349 +8117,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "12") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="13"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "13") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="14"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "14") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="15"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "15") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="16"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "16") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="17"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "17") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="18"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "18") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="19"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "19") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="20"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
-          });
-        }
-      });
-    } else if (listApperance == "4" && apperance == "20") {
-      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='4') AND Q_apperance="1"`;
-      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-      db.query(sql, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        if (result[0] == undefined) {
-          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='5') AND Q_apperance="1"`;
-          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
-          db.query(sql, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            if (result[0] == undefined) {
-              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
-            } else {
-              var result1 = result;
-              db.query(sql2, (err, result) => {
-                if (err) {
-                  throw err;
-                }
-                var result2 = result;
-                res.render("dynamicQ1", { data: result1, user: result2 });
-              });
-            }
-          });
-        } else {
-          var result1 = result;
-          db.query(sql2, (err, result) => {
-            if (err) {
-              throw err;
-            }
-            var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
