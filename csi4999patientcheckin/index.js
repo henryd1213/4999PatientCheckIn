@@ -3681,7 +3681,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3692,7 +3706,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -3719,7 +3747,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3730,7 +3772,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -3757,7 +3813,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3768,7 +3838,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          };
           });
         }
       });
@@ -3795,7 +3879,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3833,7 +3931,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3844,7 +3956,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -3871,7 +3997,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3882,7 +4022,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -3909,7 +4063,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3920,7 +4088,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -3947,7 +4129,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3958,7 +4154,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -3985,7 +4195,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -3996,7 +4220,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4023,7 +4261,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4034,7 +4286,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4062,7 +4328,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4073,7 +4353,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -4101,7 +4395,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4112,7 +4420,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -4140,7 +4462,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4151,11 +4487,35 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
     }
+
+
+
+
+
+
+
+
+
+
     else if (listApperance == "2" && apperance == "26") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="27"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
@@ -4179,7 +4539,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4190,7 +4564,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4218,7 +4606,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4229,7 +4631,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4257,7 +4673,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4268,7 +4698,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4296,7 +4740,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4307,7 +4765,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4335,7 +4807,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4346,7 +4832,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4374,7 +4874,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4385,7 +4899,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4413,7 +4941,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4424,7 +4966,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4452,7 +5008,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4463,7 +5033,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4491,7 +5075,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4502,7 +5100,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4530,7 +5142,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4541,7 +5167,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4569,7 +5209,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4580,7 +5234,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4608,7 +5276,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4619,7 +5301,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4647,7 +5343,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4658,7 +5368,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4686,7 +5410,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4697,7 +5435,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4725,7 +5477,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4736,7 +5502,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4764,7 +5544,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4775,7 +5569,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4803,7 +5611,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4814,7 +5636,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4842,7 +5678,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4853,7 +5703,88 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
+          });
+        }
+      });
+    }
+    else if (listApperance == "2" && apperance == "44") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="45"`;
+      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
+      db.query(sql, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        if (result[0] == undefined) {
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
+          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
+          db.query(sql, (err, result) => {
+            if (err) {
+              throw err;
+            }
+            if (result[0] == undefined) {
+              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
+            } else {
+              var result1 = result;
+              db.query(sql2, (err, result) => {
+                if (err) {
+                  throw err;
+                }
+                var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
+              });
+            }
+          });
+        } else {
+          var result1 = result;
+          db.query(sql2, (err, result) => {
+            if (err) {
+              throw err;
+            }
+            var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
+            res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4881,7 +5812,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4892,7 +5837,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4920,7 +5879,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4931,7 +5904,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4959,7 +5946,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -4970,7 +5971,88 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
+          });
+        }
+      });
+    }
+    else if (listApperance == "2" && apperance == "48") {
+      let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="49"`;
+      let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
+      db.query(sql, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        if (result[0] == undefined) {
+          let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='3') AND Q_apperance="1"`;
+          let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
+          db.query(sql, (err, result) => {
+            if (err) {
+              throw err;
+            }
+            if (result[0] == undefined) {
+              res.send('<script>alert("All forms completed"); window.location.href = "/home_return"; </script>');
+            } else {
+              var result1 = result;
+              db.query(sql2, (err, result) => {
+                if (err) {
+                  throw err;
+                }
+                var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
+              });
+            }
+          });
+        } else {
+          var result1 = result;
+          db.query(sql2, (err, result) => {
+            if (err) {
+              throw err;
+            }
+            var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
+            res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -4998,7 +6080,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -5009,7 +6105,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
@@ -5037,7 +6147,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -5048,11 +6172,28 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
+            if(result1[0].RadioSix != undefined){
+              res.render("dynamicSixRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofive != undefined){
+              res.render("dynamicFiveRadio", { data: result1, user: result2 });
+            }else if(result1[0].Radiofour != undefined){
+              res.render("dynamicFourRadio", { data: result1, user: result2 });
+            }
+             else if(result1[0].Radiothree != undefined){
+              res.render("dynamicThreeRadio", { data: result1, user: result2 });
+            }   else if(result1[0].Radioone != undefined){
+              res.render("dynamicTwoRadio", { data: result1, user: result2 });
+            }
+            else{
             res.render("dynamicQ1", { data: result1, user: result2 });
+          }
           });
         }
       });
     }
+
+    
+    
     else if (listApperance == "2" && apperance == "51") {
       let sql = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Apperance='2') AND Q_apperance="52"`;
       let sql2 = `SELECT * FROM Patient_Info WHERE ID=(SELECT ID WHERE Fname = '${req.body.fname}' AND Lname= '${req.body.lname}')`;
