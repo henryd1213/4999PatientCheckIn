@@ -670,6 +670,128 @@ app.post("/formChanges", (req, res) => {
   formPosition19 = req.body.Position19
   formPosition20 = req.body.Position20
 
+  var formName021 = req.body.form21
+  var formName21
+  formPosition21 = req.body.Position21
+  var formName022 = req.body.form22
+  var formName22
+  formPosition22 = req.body.Position22
+  var formName023 = req.body.form23
+  var formName23
+  formPosition23 = req.body.Position23
+  var formName024 = req.body.form24
+  var formName24
+  formPosition24 = req.body.Position24
+  var formName025 = req.body.form25
+  var formName25
+  formPosition25 = req.body.Position25
+  var formName026 = req.body.form26
+  var formName26
+  formPosition26 = req.body.Position26
+  var formName027 = req.body.form27
+  var formName27
+  formPosition27 = req.body.Position27
+  var formName028 = req.body.form28
+  var formName28
+  formPosition28 = req.body.Position28
+  var formName029 = req.body.form29
+  var formName29
+  formPosition29 = req.body.Position29
+  var formName030 = req.body.form30
+  var formName30
+  formPosition30 = req.body.Position30
+  var formName031 = req.body.form31
+  var formName31
+  formPosition31 = req.body.Position31
+  var formName032 = req.body.form32
+  var formName32
+  formPosition32 = req.body.Position32
+  var formName033 = req.body.form33
+  var formName33
+  formPosition33 = req.body.Position33
+  var formName034 = req.body.form34
+  var formName34
+  formPosition34 = req.body.Position34
+  var formName035 = req.body.form35
+  var formName35
+  formPosition35 = req.body.Position35
+  var formName036 = req.body.form36
+  var formName36
+  formPosition36 = req.body.Position36
+  var formName037 = req.body.form37
+  var formName37
+  formPosition37 = req.body.Position37
+  var formName038 = req.body.form38
+  var formName38
+  formPosition38 = req.body.Position38
+  var formName039 = req.body.form39
+  var formName39
+  formPosition39 = req.body.Position39
+  var formName040 = req.body.form40
+  var formName40
+  formPosition40 = req.body.Position40
+  var formName041 = req.body.form41
+  var formName41
+  formPosition41 = req.body.Position41
+  var formName042 = req.body.form42
+  var formName42
+  formPosition42 = req.body.Position42
+  var formName043 = req.body.form43
+  var formName43
+  formPosition43 = req.body.Position43
+  var formName044 = req.body.form44
+  var formName44
+  formPosition44 = req.body.Position44
+  var formName045 = req.body.form45
+  var formName45
+  formPosition45 = req.body.Position45
+  var formName046 = req.body.form46
+  var formName46
+  formPosition46 = req.body.Position46
+  var formName047 = req.body.form47
+  var formName47
+  formPosition47 = req.body.Position47
+  var formName048 = req.body.form48
+  var formName48
+  formPosition48 = req.body.Position48
+  var formName049 = req.body.form49
+  var formName49
+  formPosition49 = req.body.Position49
+  var formName050 = req.body.form50
+  var formName50
+  formPosition50 = req.body.Position50
+  let submitName21 = JSON.stringify(formName021);
+  let submitName22 = JSON.stringify(formName022);
+  let submitName23 = JSON.stringify(formName023);
+  let submitName24 = JSON.stringify(formName024);
+  let submitName25 = JSON.stringify(formName025);
+  let submitName26 = JSON.stringify(formName026);
+  let submitName27 = JSON.stringify(formName027);
+  let submitName28 = JSON.stringify(formName028);
+  let submitName29 = JSON.stringify(formName029);
+  let submitName30 = JSON.stringify(formName030);
+  let submitName31 = JSON.stringify(formName031);
+  let submitName32 = JSON.stringify(formName032);
+  let submitName33 = JSON.stringify(formName033);
+  let submitName34 = JSON.stringify(formName034);
+  let submitName35 = JSON.stringify(formName035);
+  let submitName36 = JSON.stringify(formName036);
+  let submitName37 = JSON.stringify(formName037);
+  let submitName38 = JSON.stringify(formName038);
+  let submitName39 = JSON.stringify(formName039);
+  let submitName40 = JSON.stringify(formName040);
+  let submitName41 = JSON.stringify(formName041);
+  let submitName42 = JSON.stringify(formName042);
+  let submitName43 = JSON.stringify(formName043);
+  let submitName44 = JSON.stringify(formName044);
+  let submitName45 = JSON.stringify(formName045);
+  let submitName46 = JSON.stringify(formName046);
+  let submitName47 = JSON.stringify(formName047);
+  let submitName48 = JSON.stringify(formName048);
+  let submitName49 = JSON.stringify(formName049);
+  let submitName50 = JSON.stringify(formName050);
+
+
   let submitName1 = JSON.stringify(formName01);
   let submitName2 = JSON.stringify(formName02);
   let submitName3 = JSON.stringify(formName03);
@@ -787,7 +909,151 @@ app.post("/formChanges", (req, res) => {
     let splits2 = splits00002.split(' Form')[0]
     formName20 = splits2
   }
-
+  if (submitName21 != undefined) {
+    let splits00002 = submitName21.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName21 = splits2
+  }
+  if (submitName22 != undefined) {
+    let splits00002 = submitName22.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName22 = splits2
+  }
+  if (submitName23 != undefined) {
+    let splits00002 = submitName23.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName23 = splits2
+  }
+  if (submitName24 != undefined) {
+    let splits00002 = submitName24.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName24 = splits2
+  }
+  if (submitName25 != undefined) {
+    let splits00002 = submitName25.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName25 = splits2
+  }
+  if (submitName26 != undefined) {
+    let splits00002 = submitName26.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName26 = splits2
+  }
+  if (submitName27 != undefined) {
+    let splits00002 = submitName27.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName27 = splits2
+  }
+  if (submitName28 != undefined) {
+    let splits00002 = submitName28.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName28 = splits2
+  }
+  if (submitName29 != undefined) {
+    let splits00002 = submitName29.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName29 = splits2
+  }
+  if (submitName30 != undefined) {
+    let splits00002 = submitName30.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName30 = splits2
+  }
+  if (submitName31 != undefined) {
+    let splits00002 = submitName31.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName31 = splits2
+  }
+  if (submitName32 != undefined) {
+    let splits00002 = submitName32.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName32 = splits2
+  }
+  if (submitName33 != undefined) {
+    let splits00002 = submitName33.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName33 = splits2
+  }
+  if (submitName34 != undefined) {
+    let splits00002 = submitName34.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName34 = splits2
+  }
+  if (submitName35 != undefined) {
+    let splits00002 = submitName35.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName35 = splits2
+  }
+  if (submitName36 != undefined) {
+    let splits00002 = submitName36.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName36 = splits2
+  }
+  if (submitName37 != undefined) {
+    let splits00002 = submitName37.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName37 = splits2
+  }
+  if (submitName38 != undefined) {
+    let splits00002 = submitName38.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName38 = splits2
+  }
+  if (submitName39 != undefined) {
+    let splits00002 = submitName39.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName39 = splits2
+  }
+  if (submitName40 != undefined) {
+    let splits00002 = submitName40.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName40 = splits2
+  }
+  if (submitName41 != undefined) {
+    let splits00002 = submitName41.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName41 = splits2
+  }
+  if (submitName42 != undefined) {
+    let splits00002 = submitName42.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName42 = splits2
+  }
+  if (submitName43 != undefined) {
+    let splits00002 = submitName43.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName43 = splits2
+  }
+  if (submitName44 != undefined) {
+    let splits00002 = submitName44.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName44 = splits2
+  }
+  if (submitName45 != undefined) {
+    let splits00002 = submitName45.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName45 = splits2
+  }
+  if (submitName46 != undefined) {
+    let splits00002 = submitName46.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName46 = splits2
+  }
+  if (submitName47 != undefined) {
+    let splits00002 = submitName47.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName47 = splits2
+  }
+  if (submitName48 != undefined) {
+    let splits00002 = submitName48.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName48 = splits2
+  }
+  if (submitName50 != undefined) {
+    let splits00002 = submitName50.split('Edit ')[1]
+    let splits2 = splits00002.split(' Form')[0]
+    formName50 = splits2
+  }
 
   if (submitName1 != undefined) {
     if (submitName1.includes("form1") == true) {
@@ -1287,6 +1553,757 @@ app.post("/formChanges", (req, res) => {
       });
     }
   }
+  if (submitName21 != undefined) {
+    if (submitName21.includes("form21") == true) {
+      let splits002 = submitName21.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName22 != undefined) {
+    if (submitName22.includes("form22") == true) {
+      let splits002 = submitName22.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName23 != undefined) {
+    if (submitName23.includes("form23") == true) {
+      let splits002 = submitName23.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName24 != undefined) {
+    if (submitName24.includes("form24") == true) {
+      let splits002 = submitName24.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName25 != undefined) {
+    if (submitName25.includes("form25") == true) {
+      let splits002 = submitName25.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName26 != undefined) {
+    if (submitName26.includes("form26") == true) {
+      let splits002 = submitName26.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName27 != undefined) {
+    if (submitName27.includes("form27") == true) {
+      let splits002 = submitName27.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName28 != undefined) {
+    if (submitName28.includes("form28") == true) {
+      let splits002 = submitName28.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName29 != undefined) {
+    if (submitName29.includes("form29") == true) {
+      let splits002 = submitName29.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName30 != undefined) {
+    if (submitName30.includes("form30") == true) {
+      let splits002 = submitName30.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName31 != undefined) {
+    if (submitName31.includes("form31") == true) {
+      let splits002 = submitName31.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName32 != undefined) {
+    if (submitName32.includes("form32") == true) {
+      let splits002 = submitName32.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName33 != undefined) {
+    if (submitName33.includes("form33") == true) {
+      let splits002 = submitName33.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName34 != undefined) {
+    if (submitName34.includes("form34") == true) {
+      let splits002 = submitName34.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName35 != undefined) {
+    if (submitName35.includes("form35") == true) {
+      let splits002 = submitName35.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName36 != undefined) {
+    if (submitName36.includes("form36") == true) {
+      let splits002 = submitName36.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName37 != undefined) {
+    if (submitName37.includes("form37") == true) {
+      let splits002 = submitName37.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName38 != undefined) {
+    if (submitName38.includes("form38") == true) {
+      let splits002 = submitName38.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName39 != undefined) {
+    if (submitName39.includes("form39") == true) {
+      let splits002 = submitName39.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName40 != undefined) {
+    if (submitName40.includes("form40") == true) {
+      let splits002 = submitName40.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName41 != undefined) {
+    if (submitName41.includes("form41") == true) {
+      let splits002 = submitName41.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName42 != undefined) {
+    if (submitName42.includes("form42") == true) {
+      let splits002 = submitName42.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName43 != undefined) {
+    if (submitName43.includes("form43") == true) {
+      let splits002 = submitName43.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName44 != undefined) {
+    if (submitName44.includes("form44") == true) {
+      let splits002 = submitName44.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName45 != undefined) {
+    if (submitName45.includes("form45") == true) {
+      let splits002 = submitName45.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName46 != undefined) {
+    if (submitName46.includes("form46") == true) {
+      let splits002 = submitName46.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName47 != undefined) {
+    if (submitName47.includes("form47") == true) {
+      let splits002 = submitName47.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName48 != undefined) {
+    if (submitName48.includes("form48") == true) {
+      let splits002 = submitName48.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName49 != undefined) {
+    if (submitName49.includes("form49") == true) {
+      let splits002 = submitName49.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+  if (submitName50 != undefined) {
+    if (submitName50.includes("form50") == true) {
+      let splits002 = submitName50.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits00002 = splits0002.split('Edit ')[1]
+      let splits2 = splits00002.split(' Form')[0]
+
+      let sql1 = `SELECT * FROM Form_List WHERE ID=(SELECT ID WHERE Name = '${splits2}')`;
+      let sql2 = `SELECT * FROM Form_Questions WHERE Form_List_ID=(SELECT ID FROM Form_List WHERE Name = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.render("formInfo", { data: result1, questions: result2 });
+        });
+      });
+    }
+  }
+
 
   if (submission.includes("Submit") == true) {
 
@@ -1409,8 +2426,189 @@ app.post("/formChanges", (req, res) => {
       if (err) {
         throw err;
       }
+    });
+    let sql21 = `UPDATE Form_List SET Apperance='${formPosition21}' WHERE ID=(SELECT ID WHERE Name='${formName21}')`;
+    let query21 = db.query(sql21, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql22 = `UPDATE Form_List SET Apperance='${formPosition22}' WHERE ID=(SELECT ID WHERE Name='${formName22}')`;
+    let query22 = db.query(sql22, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql23 = `UPDATE Form_List SET Apperance='${formPosition23}' WHERE ID=(SELECT ID WHERE Name='${formName23}')`;
+    let query23 = db.query(sql23, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql24 = `UPDATE Form_List SET Apperance='${formPosition24}' WHERE ID=(SELECT ID WHERE Name='${formName24}')`;
+    let query24 = db.query(sql24, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql25 = `UPDATE Form_List SET Apperance='${formPosition25}' WHERE ID=(SELECT ID WHERE Name='${formName25}')`;
+    let query25 = db.query(sql25, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql26 = `UPDATE Form_List SET Apperance='${formPosition26}' WHERE ID=(SELECT ID WHERE Name='${formName26}')`;
+    let query26 = db.query(sql26, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql27 = `UPDATE Form_List SET Apperance='${formPosition27}' WHERE ID=(SELECT ID WHERE Name='${formName27}')`;
+    let query27 = db.query(sql27, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql28 = `UPDATE Form_List SET Apperance='${formPosition28}' WHERE ID=(SELECT ID WHERE Name='${formName28}')`;
+    let query28 = db.query(sql28, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql29 = `UPDATE Form_List SET Apperance='${formPosition29}' WHERE ID=(SELECT ID WHERE Name='${formName29}')`;
+    let query29 = db.query(sql29, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql30 = `UPDATE Form_List SET Apperance='${formPosition30}' WHERE ID=(SELECT ID WHERE Name='${formName30}')`;
+    let query30 = db.query(sql30, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql31 = `UPDATE Form_List SET Apperance='${formPosition31}' WHERE ID=(SELECT ID WHERE Name='${formName31}')`;
+    let query31 = db.query(sql31, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql32 = `UPDATE Form_List SET Apperance='${formPosition32}' WHERE ID=(SELECT ID WHERE Name='${formName32}')`;
+    let query32 = db.query(sql32, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql33 = `UPDATE Form_List SET Apperance='${formPosition33}' WHERE ID=(SELECT ID WHERE Name='${formName33}')`;
+    let query33 = db.query(sql33, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql34 = `UPDATE Form_List SET Apperance='${formPosition34}' WHERE ID=(SELECT ID WHERE Name='${formName34}')`;
+    let query34 = db.query(sql34, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql35 = `UPDATE Form_List SET Apperance='${formPosition35}' WHERE ID=(SELECT ID WHERE Name='${formName35}')`;
+    let query35 = db.query(sql35, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql36 = `UPDATE Form_List SET Apperance='${formPosition36}' WHERE ID=(SELECT ID WHERE Name='${formName36}')`;
+    let query36 = db.query(sql36, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql37 = `UPDATE Form_List SET Apperance='${formPosition37}' WHERE ID=(SELECT ID WHERE Name='${formName37}')`;
+    let query37 = db.query(sql37, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql38 = `UPDATE Form_List SET Apperance='${formPosition38}' WHERE ID=(SELECT ID WHERE Name='${formName38}')`;
+    let query38 = db.query(sql38, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql39 = `UPDATE Form_List SET Apperance='${formPosition39}' WHERE ID=(SELECT ID WHERE Name='${formName39}')`;
+    let query39 = db.query(sql39, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql40 = `UPDATE Form_List SET Apperance='${formPosition40}' WHERE ID=(SELECT ID WHERE Name='${formName40}')`;
+    let query40 = db.query(sql40, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql41 = `UPDATE Form_List SET Apperance='${formPosition41}' WHERE ID=(SELECT ID WHERE Name='${formName41}')`;
+    let query41 = db.query(sql41, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql42 = `UPDATE Form_List SET Apperance='${formPosition42}' WHERE ID=(SELECT ID WHERE Name='${formName42}')`;
+    let query42 = db.query(sql42, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql43 = `UPDATE Form_List SET Apperance='${formPosition43}' WHERE ID=(SELECT ID WHERE Name='${formName43}')`;
+    let query43 = db.query(sql43, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql44 = `UPDATE Form_List SET Apperance='${formPosition44}' WHERE ID=(SELECT ID WHERE Name='${formName44}')`;
+    let query44 = db.query(sql44, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql45 = `UPDATE Form_List SET Apperance='${formPosition45}' WHERE ID=(SELECT ID WHERE Name='${formName45}')`;
+    let query45 = db.query(sql45, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql46 = `UPDATE Form_List SET Apperance='${formPosition46}' WHERE ID=(SELECT ID WHERE Name='${formName46}')`;
+    let query46 = db.query(sql46, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql47 = `UPDATE Form_List SET Apperance='${formPosition47}' WHERE ID=(SELECT ID WHERE Name='${formName47}')`;
+    let query47 = db.query(sql47, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql48 = `UPDATE Form_List SET Apperance='${formPosition48}' WHERE ID=(SELECT ID WHERE Name='${formName48}')`;
+    let query48 = db.query(sql48, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql49 = `UPDATE Form_List SET Apperance='${formPosition49}' WHERE ID=(SELECT ID WHERE Name='${formName49}')`;
+    let query49 = db.query(sql49, (err, result) => {
+      if (err) {
+        throw err;
+      }
+    });
+    let sql50 = `UPDATE Form_List SET Apperance='${formPosition50}' WHERE ID=(SELECT ID WHERE Name='${formName50}')`;
+    let query50 = db.query(sql50, (err, result) => {
+      if (err) {
+        throw err;
+      }
       res.send('<script>alert("Form order updated"); window.location.href = "/admin_list_return"; </script>');
     });
+
   }
 });
 
@@ -1837,7 +3035,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -1875,7 +3087,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -1886,7 +3112,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -1913,7 +3153,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -1924,7 +3178,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -1951,7 +3219,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -1962,7 +3244,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -1989,7 +3285,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -2000,7 +3310,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -2027,7 +3351,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -2038,7 +3376,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -2065,7 +3417,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -2076,7 +3442,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -2103,7 +3483,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -2114,7 +3508,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -2141,7 +3549,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -2152,7 +3574,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
@@ -2179,7 +3615,21 @@ app.post("/dynamicQOne", (req, res) => {
                   throw err;
                 }
                 var result2 = result;
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
                 res.render("dynamicQ1", { data: result1, user: result2 });
+              }
               });
             }
           });
@@ -2190,7 +3640,21 @@ app.post("/dynamicQOne", (req, res) => {
               throw err;
             }
             var result2 = result;
-            res.render("dynamicQ1", { data: result1, user: result2 });
+                if(result1[0].RadioSix != undefined){
+                  res.render("dynamicSixRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofive != undefined){
+                  res.render("dynamicFiveRadio", { data: result1, user: result2 });
+                }else if(result1[0].Radiofour != undefined){
+                  res.render("dynamicFourRadio", { data: result1, user: result2 });
+                }
+                 else if(result1[0].Radiothree != undefined){
+                  res.render("dynamicThreeRadio", { data: result1, user: result2 });
+                }   else if(result1[0].Radioone != undefined){
+                  res.render("dynamicTwoRadio", { data: result1, user: result2 });
+                }
+                else{
+                res.render("dynamicQ1", { data: result1, user: result2 });
+              }
           });
         }
       });
