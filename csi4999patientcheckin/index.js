@@ -397,7 +397,7 @@ app.get("/doctor_selection", (req, res) => {
 app.post("/addUser", (req, res) => {
   let data1 = {
     ID: 0, Fname: req.body.Fname, Lname: req.body.Lname, Email: req.body.Email,
-    Phone: req.body.Phone, Gender: req.body.Gender, Age: req.body.Age,
+    Phone: req.body.Phone, Gender: req.body.Gender,
     Birthday: req.body.Birthday, Username: req.body.Username, Password: req.body.Password, Role: req.body.Profession, FPass: 'Y', Form_List_ID: '1'
   };
   let sql1 = `INSERT INTO Employee_Info SET ?`;
@@ -425,6 +425,18 @@ app.post("/deleteUser", (req, res) => {
 });
 
 
+app.get("/getUsers", (req, res) => {
+  let sql = `SELECT * FROM Employee_Info`;
+  db.query(sql, (err, result) => {
+    if (err) {
+      throw err;
+    }
+      res.render("unlockUser", { data: result });
+  
+    
+  });
+});
+
 
 app.post("/accountInfo", (req, res) => {
   let sql = `SELECT * FROM Employee_Info WHERE Employee_Info.Username='${req.body.username}' AND Employee_Info.Password='${req.body.password}'`;
@@ -440,6 +452,9 @@ app.post("/accountInfo", (req, res) => {
     }
     
   });
+
+
+
   
   /*let sql = `UPDATE Employee_Info SET Gender='${req.body.gender}' WHERE ID='${req.body.id}'`;
 //db.query(sql, (err, result) => {
@@ -607,6 +622,1574 @@ app.post("/passReset", (req, res) => {
     }
   });
 });
+
+
+app.post("/unlockUser", (req, res) => {
+  var userName01 = req.body.user1
+  var userName1
+  var userName02 = req.body.user2
+  var userName2
+  userName03 = req.body.user3
+  var userName3
+  userName04 = req.body.user4
+  var userName4
+  userName05 = req.body.user5
+  var userName5
+  userName06 = req.body.user6
+  var userName6
+  userName07 = req.body.user7
+  var userName7
+  userName08 = req.body.user8
+  var userName8
+  userName09 = req.body.user9
+  var userName9
+  userName010 = req.body.user10
+  var userName10
+  userName011 = req.body.user11
+  var userName11
+  userName012 = req.body.user12
+  var userName12
+  userName013 = req.body.user13
+  var userName13
+  userName014 = req.body.user14
+  var userName14
+  userName015 = req.body.user15
+  var userName15
+  userName016 = req.body.user16
+  var userName16
+  userName017 = req.body.user17
+  var userName17
+  userName018 = req.body.user18
+  var userName18
+  userName019 = req.body.user19
+  var userName19
+  userName020 = req.body.user20
+  var userName20
+ 
+
+  var userName021 = req.body.user21
+  var userName21
+  var userName022 = req.body.user22
+  var userName22
+  var userName023 = req.body.user23
+  var userName23
+  var userName024 = req.body.user24
+  var userName24
+  var userName025 = req.body.user25
+  var userName25
+  var userName026 = req.body.user26
+  var userName26
+  var userName027 = req.body.user27
+  var userName27
+  var userName028 = req.body.user28
+  var userName28
+  var userName029 = req.body.user29
+  var userName29
+  var userName030 = req.body.user30
+  var userName30
+  var userName031 = req.body.user31
+  var userName31
+  var userName032 = req.body.user32
+  var userName32
+  var userName033 = req.body.user33
+  var userName33
+  var userName034 = req.body.user34
+  var userName34
+  var userName035 = req.body.user35
+  var userName35
+  var userName036 = req.body.user36
+  var userName36
+  var userName037 = req.body.user37
+  var userName37
+  var userName038 = req.body.user38
+  var userName38
+  var userName039 = req.body.user39
+  var userName39
+  var userName040 = req.body.user40
+  var userName40
+  var userName041 = req.body.user41
+  var userName41
+  var userName042 = req.body.user42
+  var userName42
+  var userName043 = req.body.user43
+  var userName43
+  var userName044 = req.body.user44
+  var userName44
+  var userName045 = req.body.user45
+  var userName45
+  var userName046 = req.body.user46
+  var userName46
+  var userName047 = req.body.user47
+  var userName47
+  var userName048 = req.body.user48
+  var userName48
+  var userName049 = req.body.user49
+  var userName49
+  var userName050 = req.body.user50
+  var userName50
+
+  let submitName21 = JSON.stringify(userName021);
+  let submitName22 = JSON.stringify(userName022);
+  let submitName23 = JSON.stringify(userName023);
+  let submitName24 = JSON.stringify(userName024);
+  let submitName25 = JSON.stringify(userName025);
+  let submitName26 = JSON.stringify(userName026);
+  let submitName27 = JSON.stringify(userName027);
+  let submitName28 = JSON.stringify(userName028);
+  let submitName29 = JSON.stringify(userName029);
+  let submitName30 = JSON.stringify(userName030);
+  let submitName31 = JSON.stringify(userName031);
+  let submitName32 = JSON.stringify(userName032);
+  let submitName33 = JSON.stringify(userName033);
+  let submitName34 = JSON.stringify(userName034);
+  let submitName35 = JSON.stringify(userName035);
+  let submitName36 = JSON.stringify(userName036);
+  let submitName37 = JSON.stringify(userName037);
+  let submitName38 = JSON.stringify(userName038);
+  let submitName39 = JSON.stringify(userName039);
+  let submitName40 = JSON.stringify(userName040);
+  let submitName41 = JSON.stringify(userName041);
+  let submitName42 = JSON.stringify(userName042);
+  let submitName43 = JSON.stringify(userName043);
+  let submitName44 = JSON.stringify(userName044);
+  let submitName45 = JSON.stringify(userName045);
+  let submitName46 = JSON.stringify(userName046);
+  let submitName47 = JSON.stringify(userName047);
+  let submitName48 = JSON.stringify(userName048);
+  let submitName49 = JSON.stringify(userName049);
+  let submitName50 = JSON.stringify(userName050);
+
+
+  let submitName1 = JSON.stringify(userName01);
+  let submitName2 = JSON.stringify(userName02);
+  let submitName3 = JSON.stringify(userName03);
+  let submitName4 = JSON.stringify(userName04);
+  let submitName5 = JSON.stringify(userName05);
+  let submitName6 = JSON.stringify(userName06);
+  let submitName7 = JSON.stringify(userName07);
+  let submitName8 = JSON.stringify(userName08);
+  let submitName9 = JSON.stringify(userName09);
+  let submitName10 = JSON.stringify(userName010);
+  let submitName11 = JSON.stringify(userName011);
+  let submitName12 = JSON.stringify(userName012);
+  let submitName13 = JSON.stringify(userName013);
+  let submitName14 = JSON.stringify(userName014);
+  let submitName15 = JSON.stringify(userName015);
+  let submitName16 = JSON.stringify(userName016);
+  let submitName17 = JSON.stringify(userName017);
+  let submitName18 = JSON.stringify(userName018);
+  let submitName19 = JSON.stringify(userName019);
+  let submitName20 = JSON.stringify(userName020);
+  let submission = JSON.stringify(req.body);
+
+  if (submitName1 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName1 = splits2
+  }
+  if (submitName2 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName2 = splits2
+  }
+  if (submitName3 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName3 = splits2
+  }
+  if (submitName4 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName4 = splits2
+  }
+  if (submitName5 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName5 = splits2
+  }
+  if (submitName6 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName6 = splits2
+  }
+  if (submitName7 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName7 = splits2
+  }
+  if (submitName8 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName8 = splits2
+  }
+  if (submitName9 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName9 = splits2
+  }
+  if (submitName10 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName10 = splits2
+  }
+  if (submitName11 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName11 = splits2
+  }
+  if (submitName12 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName12 = splits2
+  }
+  if (submitName13 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName13 = splits2
+  }
+  if (submitName14 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName14 = splits2
+  }
+  if (submitName15 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName15 = splits2
+  }
+  if (submitName16 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName16 = splits2
+  }
+  if (submitName17 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName17 = splits2
+  }
+  if (submitName18 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName18 = splits2
+  }
+  if (submitName19 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName19 = splits2
+  }
+  if (submitName20 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName20 = splits2
+  }
+  if (submitName21 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName21 = splits2
+  }
+  if (submitName22 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName22 = splits2
+  }
+  if (submitName23 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName23 = splits2
+  }
+  if (submitName24 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName24 = splits2
+  }
+  if (submitName25 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName25 = splits2
+  }
+  if (submitName26 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName26 = splits2
+  }
+  if (submitName27 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName27 = splits2
+  }
+
+  if (submitName28 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName28 = splits2
+  }
+  if (submitName29 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName29 = splits2
+  }
+  if (submitName30 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName30 = splits2
+  }
+  if (submitName31 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName31 = splits2
+  }
+  if (submitName32 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName32 = splits2
+  }
+  if (submitName33 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName33 = splits2
+  }
+  if (submitName34 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName34 = splits2
+  }
+  if (submitName35 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName35 = splits2
+  }
+  if (submitName36 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName36 = splits2
+  }
+  if (submitName37 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName37 = splits2
+  }
+  if (submitName38 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName38 = splits2
+  }
+  if (submitName39 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName39 = splits2
+  }
+  if (submitName40 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName40 = splits2
+  }
+
+  if (submitName41 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName41 = splits2
+  }
+  if (submitName42 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName42 = splits2
+  }
+  if (submitName43 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName43 = splits2
+  }
+  if (submitName44 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName44 = splits2
+  }
+  if (submitName45 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName45 = splits2
+  }
+  if (submitName46 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName46 = splits2
+  }
+  if (submitName47 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName47 = splits2
+  }
+  if (submitName48 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName48 = splits2
+  }
+  if (submitName49 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName49 = splits2
+  }
+  if (submitName50 != undefined) {
+    splits2 = submitName2.split('Unlock ')[1]
+    userName50 = splits2
+  }
+
+
+  if (submitName1 != undefined) {
+    if (submitName1.includes("user1") == true) {
+      let splits002 = submitName1.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName2 != undefined) {
+    if (submitName2.includes("user2") == true) {
+      let splits002 = submitName2.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName3 != undefined) {
+    if (submitName3.includes("user3") == true) {
+      let splits002 = submitName3.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName4 != undefined) {
+    if (submitName4.includes("user4") == true) {
+      let splits002 = submitName4.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName5 != undefined) {
+    if (submitName5.includes("user5") == true) {
+      let splits002 = submitName5.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName6 != undefined) {
+    if (submitName6.includes("user6") == true) {
+      let splits002 = submitName6.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName7 != undefined) {
+    if (submitName7.includes("user7") == true) {
+      let splits002 = submitName7.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName8 != undefined) {
+    if (submitName8.includes("user8") == true) {
+      let splits002 = submitName8.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName9 != undefined) {
+    if (submitName9.includes("user9") == true) {
+      let splits002 = submitName9.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName10 != undefined) {
+    if (submitName10.includes("user10") == true) {
+      let splits002 = submitName10.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName11 != undefined) {
+    if (submitName11.includes("user11") == true) {
+      let splits002 = submitName11.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName12 != undefined) {
+    if (submitName12.includes("user12") == true) {
+      let splits002 = submitName12.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName13 != undefined) {
+    if (submitName13.includes("user13") == true) {
+      let splits002 = submitName13.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName14 != undefined) {
+    if (submitName14.includes("user14") == true) {
+      let splits002 = submitName14.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName15 != undefined) {
+    if (submitName15.includes("user15") == true) {
+      let splits002 = submitName15.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName16 != undefined) {
+    if (submitName16.includes("user16") == true) {
+      let splits002 = submitName16.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName17 != undefined) {
+    if (submitName17.includes("user17") == true) {
+      let splits002 = submitName17.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName18 != undefined) {
+    if (submitName18.includes("user18") == true) {
+      let splits002 = submitName18.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName19 != undefined) {
+    if (submitName19.includes("user19") == true) {
+      let splits002 = submitName19.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName20 != undefined) {
+    if (submitName20.includes("user20") == true) {
+      let splits002 = submitName20.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName21 != undefined) {
+    if (submitName21.includes("user21") == true) {
+      let splits002 = submitName21.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName22 != undefined) {
+    if (submitName22.includes("user22") == true) {
+      let splits002 = submitName22.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName23 != undefined) {
+    if (submitName23.includes("user23") == true) {
+      let splits002 = submitName23.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName24 != undefined) {
+    if (submitName24.includes("user24") == true) {
+      let splits002 = submitName24.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName25 != undefined) {
+    if (submitName25.includes("user25") == true) {
+      let splits002 = submitName25.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName26 != undefined) {
+    if (submitName26.includes("user26") == true) {
+      let splits002 = submitName26.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName27 != undefined) {
+    if (submitName27.includes("user27") == true) {
+      let splits002 = submitName27.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName28 != undefined) {
+    if (submitName28.includes("user28") == true) {
+      let splits002 = submitName28.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName29 != undefined) {
+    if (submitName29.includes("user29") == true) {
+      let splits002 = submitName29.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName30 != undefined) {
+    if (submitName30.includes("user30") == true) {
+      let splits002 = submitName30.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName31 != undefined) {
+    if (submitName31.includes("user31") == true) {
+      let splits002 = submitName31.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName32 != undefined) {
+    if (submitName32.includes("user32") == true) {
+      let splits002 = submitName32.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName33 != undefined) {
+    if (submitName33.includes("user33") == true) {
+      let splits002 = submitName33.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName34 != undefined) {
+    if (submitName34.includes("user34") == true) {
+      let splits002 = submitName34.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName35 != undefined) {
+    if (submitName35.includes("user35") == true) {
+      let splits002 = submitName35.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName36 != undefined) {
+    if (submitName36.includes("user36") == true) {
+      let splits002 = submitName36.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName37 != undefined) {
+    if (submitName37.includes("user37") == true) {
+      let splits002 = submitName37.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName38 != undefined) {
+    if (submitName38.includes("user38") == true) {
+      let splits002 = submitName38.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName39 != undefined) {
+    if (submitName39.includes("user39") == true) {
+      let splits002 = submitName39.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName40 != undefined) {
+    if (submitName40.includes("user40") == true) {
+      let splits002 = submitName40.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName41 != undefined) {
+    if (submitName41.includes("user41") == true) {
+      let splits002 = submitName41.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName42 != undefined) {
+    if (submitName42.includes("user42") == true) {
+      let splits002 = submitName42.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName43 != undefined) {
+    if (submitName43.includes("user43") == true) {
+      let splits002 = submitName43.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName44 != undefined) {
+    if (submitName44.includes("user44") == true) {
+      let splits002 = submitName44.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName45 != undefined) {
+    if (submitName45.includes("user45") == true) {
+      let splits002 = submitName45.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName46 != undefined) {
+    if (submitName46.includes("user46") == true) {
+      let splits002 = submitName46.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName47 != undefined) {
+    if (submitName47.includes("user47") == true) {
+      let splits002 = submitName47.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName48 != undefined) {
+    if (submitName48.includes("user48") == true) {
+      let splits002 = submitName48.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+  if (submitName49 != undefined) {
+    if (submitName49.includes("user49") == true) {
+      let splits002 = submitName49.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+
+  if (submitName50 != undefined) {
+    if (submitName50.includes("user50") == true) {
+      let splits002 = submitName50.split(']')[0]
+      let splits02 = splits002.split(',')[1]
+      let splits0002 = splits02.split('"')[1]
+      let splits2 = splits0002.split('Unlock ')[1]
+
+      let sql1 = `SELECT * FROM Employee_Info WHERE ID=(SELECT ID WHERE Username = '${splits2}')`;
+      let sql2 = `UPDATE Employee_Info SET LogLim =0 WHERE ID =(SELECT ID WHERE Username = '${splits2}')`;
+      let query1 = db.query(sql1, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        var result1 = result;
+        let query2 = db.query(sql2, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          var result2 = result;
+          res.send('<script>alert("User unlocked"); window.location.href = "/admin_list_return"; </script>');
+        });
+      });
+    }
+  }
+
+});
+
 
 app.post("/formChanges", (req, res) => {
   var formName01 = req.body.form1
