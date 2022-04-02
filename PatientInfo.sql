@@ -8,6 +8,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema PatientInfo
 -- -----------------------------------------------------
 
+
 -- -----------------------------------------------------
 -- Schema PatientInfo
 -- -----------------------------------------------------
@@ -44,7 +45,6 @@ CREATE TABLE IF NOT EXISTS `PatientInfo`.`Employee_Info` (
   `Role` VARCHAR(45) NOT NULL,
   `Phone` VARCHAR(45) NOT NULL,
   `Gender` VARCHAR(45) NOT NULL,
-  `Age` VARCHAR(45) NOT NULL,
   `FPass` VARCHAR(45) NOT NULL,
   `Form_List_ID` INT NOT NULL,
   `LogLim` INT NULL,
@@ -155,9 +155,9 @@ INSERT INTO Form_List VALUES
 
 INSERT INTO Employee_Info
 VALUES 
-(0,'Henry','Dare','exampleemail@domain.com','12/13/1999','nurseUser1','test','Nurse','123-456-7890','Male','22','N', '1', 0),
-(0,'Sam','Dillon','exampleemail2@domain.com','12/13/1999','doctorUser1','test','Doctor','246-810-1214','Male','22','N', '1', 0),
-(0,'Jared','Ormond','exampleemail3@domain.com','12/13/1999','adminUser1','test','Admin','135-791-1315','Male','22','N', '1', 0);
+(0,'Henry','Dare','exampleemail@domain.com','12/13/1999','nurseUser1','test','Nurse','123-456-7890','Male','N', '1', 0),
+(0,'Sam','Dillon','exampleemail2@domain.com','12/13/1999','doctorUser1','test','Doctor','246-810-1214','Male','N', '1', 0),
+(0,'Jared','Ormond','exampleemail3@domain.com','12/13/1999','adminUser1','test','Admin','135-791-1315','Male','N', '1', 0);
 
 INSERT INTO PATIENT_INFO VALUES
 (0,'Henry','Dare','1234 Example Street Dr','','Example City','MI','48309','123-456-7891','email@exampledomain.com','Text'),
@@ -178,7 +178,6 @@ SELECT * FROM Form_List;
 
 SELECT * FROM Form_Answers;
 
-SELECT * FROM Employee_Info;
+SELECT * FROM Patient_Info;
 
-
-
+-- DROP SCHEMA `PatientInfo`;
