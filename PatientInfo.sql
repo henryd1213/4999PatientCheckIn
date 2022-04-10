@@ -155,9 +155,9 @@ INSERT INTO Form_List VALUES
 
 INSERT INTO Employee_Info
 VALUES 
-(0,'Henry','Dare','exampleemail@domain.com','12/13/1999','nurseUser1','test','Nurse','123-456-7890','Male','N', '1', 0),
-(0,'Sam','Dillon','exampleemail2@domain.com','12/13/1999','doctorUser1','test','Doctor','246-810-1214','Male','N', '1', 0),
-(0,'Jared','Ormond','exampleemail3@domain.com','12/13/1999','adminUser1','test','Admin','135-791-1315','Male','N', '1', 0);
+(0,'Henry','Dare','exampleemail@domain.com','1999-12-13','nurseUser1','test','Nurse','123-456-7890','Male','N', '1', 0),
+(0,'Sam','Dillon','exampleemail2@domain.com','1999-12-13','doctorUser1','test','Doctor','246-810-1214','Male','N', '1', 0),
+(0,'Jared','Ormond','exampleemail3@domain.com','1999-12-13','adminUser1','test','Admin','135-791-1315','Male','N', '1', 0);
 
 INSERT INTO PATIENT_INFO VALUES
 (0,'Henry','Dare','1234 Example Street Dr','','Example City','MI','48309','123-456-7891','email@exampledomain.com','Text'),
@@ -169,8 +169,8 @@ INSERT INTO Pin_Info VALUES
 (0,'genericPin','12345','1');
 
 INSERT INTO Form_Questions VALUES
-(0,'Text','First Name','1', '1', '2022-2-17-16.24', '', '', '', '', '', '', ''),
-(0,'Text','Last Name','2', '1', '2022-2-17-16.24', '', '', '', '', '', '', '');
+(0,'text','First Name','1', '1', '2022-2-17-16.24', '', '', '', '', '', '', ''),
+(0,'text','Last Name','2', '1', '2022-2-17-16.24', '', '', '', '', '', '', '');
 
 SELECT * FROM Form_Questions;
 
@@ -178,6 +178,6 @@ SELECT * FROM Form_List;
 
 SELECT * FROM Form_Answers;
 
-SELECT * FROM Patient_Info;
+SELECT * FROM Employee_Info;
 
 -- DROP SCHEMA `PatientInfo`;
