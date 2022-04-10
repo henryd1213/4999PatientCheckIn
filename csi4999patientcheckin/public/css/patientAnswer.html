@@ -1,0 +1,192 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <head>
+        <title>Form Information</title>
+       
+
+          <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+
+<style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+        
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        
+          html,body {
+                    height: 100%;
+                }
+               
+                   h1,h2{
+                        color: white; 
+                 }
+        
+                 .mb{
+                     margin-bottom:10%;
+                 }
+        
+                  /*Header*/
+        
+                  .nav-masthead .nav-link {
+                        padding: .25rem 0;
+                        font-weight: 700;
+                        color: rgba(255, 255, 255, .5);
+                        background-color: transparent;
+                        border-bottom: .25rem solid transparent;
+                    }
+        
+                    .nav-masthead .nav-link:hover,
+                    .nav-masthead .nav-link:focus {
+                        border-bottom-color: rgba(255, 255, 255, .25);
+                    }
+        
+                    .nav-masthead .nav-link + .nav-link{
+                        margin-left: 1rem;
+                     
+                    }
+        
+                    .nav-masthead .active {
+                        color: white;
+                        border-bottom-color: white;
+                }
+        
+                /* Table*/
+                table, th, td{
+                    border: 2.5px solid;
+                    border-color: black;
+                    text-align: center;
+                }
+        
+                tr:nth-child(even){
+                     background-color: white;
+                     color: black;
+                 }
+        
+        
+                  /*left column*/
+                  .nav-left{
+                    float:left;
+                    width: 15%;
+                    background: #ccc;
+                    padding: 10px;
+                    text-align: left;
+                }
+        
+                 
+                /* Clear floats after the columns */
+                section::after {
+                        content: "";
+                        display: table;
+                        clear: both;
+                    }
+                     </style>
+                 </head>
+        
+                 <body class="d-flex h-100 text-center bg-dark">
+        
+                    <!-- Header -->
+                    <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+                      <header class="mb-10">
+                        <div>
+                            <h3 class="float-md-start mb-0">Check-In</h3>
+                            <nav class="nav nav-masthead justify-content-center float-md-end">
+                              <a class="nav-link active" aria-current="page" href="adminterminal.html">Back</a> <!--link to be changed-->
+                              <a class="nav-link" aria-current="page" href="Home.html">logout</a> <!--link to be changed-->
+                            <a class="nav-link" href="userinfo.html">Profile</a>
+                          </nav>
+                        </div>
+                      </header><br>
+            
+    
+        <center>
+            <form action="formInfoChanges" method="post">
+                <%user.forEach((item)=>{%>
+                    <h1>
+                        <%=item.Fname%>
+                            <%=item.Lname%>'s Form Answers
+                    </h1><br>
+                    <input type="text" name="name" value="<%=item.ID%>"
+                        style="color: seashell; background: none; border: none; position: absolute; z-index: -1000;">
+                    <%});%>
+    
+                        <!-- Output table-->
+    
+                        <table id='fullTable' class="text-white">
+                            <tr>
+                                
+                                <th>Question Number</th>
+                                <th>Question Prompt</th>
+                                <th>Question Response</th>
+                            </tr>
+                            <script>count = 0;
+                                var apperance = [];
+                                var apperance2 = [];
+                                var apperance3 = [];
+                                var apperance4 = [];
+                                var apperance5=[];
+                                var apperance6=[];
+                            </script>
+                           
+                            
+                        
+                                    <%question.forEach((item)=>{%>
+                                        <script>
+                                            apperance.push('<%=item.Q_apperance%>')
+                                            apperance2.push('<%=item.Qone_content%>')
+                                        </script>
+                                        <%});%>
+                                                    <%data.forEach((item)=>{%>
+                                                        <script>
+                                                            apperance3.push('<%=item.Answer%>')
+                                                        </script>
+                                                        <%});%>
+    
+                        </table><br>
+    
+    
+                        <%data.forEach((item)=>{%>
+                            <script>for (var x of '<%=item.ID%>') {
+                                    if (x.ID != '') {
+                                        count++;
+                                    }
+                                }
+                            </script>
+                            <%});%>
+    
+                                <script>
+                                    var rows = '';
+                                    var count=0;
+                                    for (var i = 0; i < apperance3.length; i++) {
+                                       previous =i-1;
+    
+                                        rows = '<tr id = "row' + i + '"><td>' + apperance[i] + '</td><td>' + apperance2[i] + '</td><td>' + apperance3[i] + '</td></tr>';
+                                     if(apperance2[i]==undefined){
+                                       rows = '<tr id = "row' + i + '"><td>' + apperance[previous] + '</td><td>' + apperance2[previous] + '</td><td>' + apperance3[i] + '</td></tr>';
+                                    
+                                     }
+                                        
+                                        document.getElementById('fullTable').innerHTML += rows;
+                                        
+                                    }
+                                    var header;
+                                    header = '<tr id = "row"><th>Question Number</th><th>Question Prompt</th><th>Response</th></tr>';
+                                </script>
+            </form>
+        </center>
+    
+        <footer class="mt-auto text-white-50">
+            <p class="footer" >&copy; 2021 Company, Inc</p>
+        </footer>
+    </body>
+    
+    </html>

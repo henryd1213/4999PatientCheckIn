@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100"></html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+        <title>Q3</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+
+      
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+
+      /* Custom default button */
+      .btn-secondary,
+      .btn-secondary:hover,
+      .btn-secondary:focus {
+          color: #333;
+          text-shadow: none; /* Prevent inheritance from `body` */
+      }
+
+
+      /* Base structure*/
+
+      body {
+          text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+          box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+      }
+
+      .cover-container {
+           max-width: 42em;
+          }
+
+
+      /*Header*/
+
+          .nav-masthead .nav-link {
+              padding: .25rem 0;
+              font-weight: 700;
+              color: rgba(255, 255, 255, .5);
+              background-color: transparent;
+              border-bottom: .25rem solid transparent;
+          }
+
+          .nav-masthead .nav-link:hover,
+          .nav-masthead .nav-link:focus {
+              border-bottom-color: rgba(255, 255, 255, .25);
+          }
+
+          .nav-masthead .nav-link + .nav-link {
+              margin-left: 1rem;
+             
+          }
+
+          .nav-masthead .active {
+              color: white;
+              border-bottom-color: white;
+      }
+
+
+    </style>
+    
+    </head>
+
+    <body class="d-flex h-100 text-center text-white bg-dark"> </body>
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <center>
+                <h1>Please enter your city</h1>
+            </center>
+            <center>
+                <!--Creates form for the patient's name.-->
+                <div id="City">
+                <form action="Q4.html">
+                    <input type="text" id="City" name="City"><br><br>
+                    <a href="Q4.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Submit<br></a>   
+                </form>
+                </div>
+            </center>
+        </header>
+
+
+    <h2>
+        
+    </h2>
+
+    <!--The following code is an attempt to print the previously entered information.-->
+    <script type="text/javascript">
+        function printDiv(Name) {
+            var printContents = document.getElementById(Name);
+            w=window.open("");
+            w.document.write(printContents.outerHTML);
+            w.print();
+            w.close();
+        }
+    </script>
+</html>

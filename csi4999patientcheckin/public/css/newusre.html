@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Auhtorized User</title>
+     <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  html,body {
+            height: 100%;
+        }
+       
+            h2{
+                color: white; 
+         }
+
+         .mb{
+             margin-bottom:10%;
+         }
+
+     /*Sidebar Nevigation*/
+    *, :before, :after {
+        box-sizing: border-box;
+    }
+    .unstyled {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .unstyled a {
+        text-decoration: none;
+    }
+
+    .list-inline {
+        overflow: hidden;
+    }
+    .list-inline li {
+        float: left;
+    }
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 17.5em;
+        height: 100vh;
+        background: white;
+    }
+    .main-nav ul {
+        border-top: solid 1px #DFDBD9;
+    }
+    .main-nav li {
+        border-bottom: solid 1px #DFDBD9;
+    }
+    .main-nav a {
+        padding: 1.1em 0;
+        color: black;
+        text-align: left;
+    }
+    .main-nav a:hover {
+        color: #fff;
+    }
+    .main-nav a.active{
+        border-right: solid 10px #5e42a6;
+        background: lightgray;
+    }
+
+    .list-hover-slide li {
+        position: relative;
+        overflow: hidden;
+        }
+    .list-hover-slide a {
+        display: block;
+        position: relative;
+        z-index: 1;
+        transition: .35s ease color;
+        }
+    .list-hover-slide a:before {
+        content: '';
+        display: block;
+        z-index: -1;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-right: solid 10px #5e42a6;
+        background: lightgray;
+        transition: .35s ease left;
+        }
+    .list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
+        left: 0;
+        }
+    
+    .btn-size {
+            width: 35%;
+            line-height: 2em;
+        }
+
+    .dropdown-toggle { outline: 0; }
+
+      /*background image*/
+        .bg-image{
+            background-image: url("bgimg4cp.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            width: 100%;
+        }           
+
+    </style>
+</head>
+
+
+<body class="d-flex h-100 text-center bg-image bg-opacity-10">
+
+    <!-- Header -->
+    <header class="sidebar h-100" role="banner">
+    
+        <div class="flex-shrink-0 p-3 bg-light" style="width: 280px;">
+          <p class="d-flex pb-3 mb-3 h1 fw-light text-upercase text-black">
+             Chick-In</p>
+        
+             <div class="nav-warp">
+                 <nav class="main-nav" role="navigation">
+          <ul class="list-hover-slide flex-column">
+            <li><a class="text-black" href="Home.html">Home</a></li> <br> 
+           <li> <a class="text-black active" href="new_user">Add User</a></li><br>
+            <li><a class="text-black" href="remove_user" >Remove User</a></li><br>
+            <li><a class="text-black" href="form_list" >Available Patient Forms</a></li><br>
+            <li><a class="text-black" href="new_form" >Create New Patient Form</a></li><br>
+            <li><a class="text-black" href="#">Software Updates<br></a></li>
+          </ul>
+        </nav>
+        </div>
+        </div>
+      
+            <p class="mb-3 mt-auto text-white-50" >&copy; 2021 Company, Inc</p>
+           
+        
+      </header><br> <br>
+      <div class="col-10 justify-content-center">
+   <!--User Entry Table-->
+
+    <center class="w-100 p-2 text-white" style="margin-left: 250px;">
+        <h1 class="mt-3 display-4 fw-light text-white">
+            Enter User Information
+        </h1> <br><br>
+
+        <div id="User">
+            <form method="post" action="addUser">
+
+                <div class="container w-75 ">
+                    <div class="row align-items-start">
+                        <div class="col">
+                    <!--Name-->
+                 <div class="row align-items-start">
+                    <div class=" col col-auto"> 
+                      <label for="fname lname" class="fs-4 text">Name:</label>
+                    </div>
+                  <div class='col col-md'>
+                    <input class="form-control "type="text" placeholder= "First Name"id="fname" name="Fname">
+                    </div>
+                    <div class="col col">
+                        <input class="form-control" type="text"  placeholder= "Last Name"id="lname" name="Lname">
+                    </div>
+                  </div><br>
+
+                  <!--Email-->
+                 <div class="row align-items-start">
+                    <div class=" col col-auto"> 
+                      <label for="email" class="fs-4 text">Email:</label> 
+                    </div>
+                    <div class="col col">
+                        <input class="form-control" type="email" placeholder= "Email" id="email" name="Email">
+                    </div>  
+                 </div><br>
+
+                  <!--Username & Password-->
+                   <div class="row align-items-start">
+                    <div class=" col col-auto"> 
+                      <label for="username" class="fs-4 text">Username:</label> 
+                    </div>
+                    <div class="col col-md">
+                        <input class="form-control" type="email" placeholder= "Username" id="username" name="Username">
+                    </div>
+    
+                 <div class=" col col-md-auto"> 
+                    <label for="password" class="fs-4 text">Password:</label> 
+                  </div>
+                  <div class="col col">
+                      <input class="form-control" type="text" placeholder="Password" id="password" name="Password">
+                  </div>    
+                 </div><br>
+                 
+                  <!--Age & Birthday-->
+                 <div class="row align-items-start">
+                    <div class=" col col-auto"> 
+                      <label for="age" class="fs-4 text">Age:</label> 
+                    </div>
+                    <div class="col col-md">
+                        <input class="form-control" type="text"  placeholder= "Age" id="age" name="Age">
+                    </div>
+                 
+                 <div class=" col col-md-auto"> 
+                      <label for="birthday" class="fs-4 text">Birthday:</label> 
+                    </div>
+                    <div class="col col">
+                        <input class="form-control" type="date" id="birthday" name="Birthday">
+                    </div>
+                 </div><br>
+
+                  <!--gender & Role-->
+                 <div class="row align-items-start">
+                    <div class=" col col-auto"> 
+                      <label for="gender" class="fs-4 text">Gender:</label> 
+                    </div>
+                    <div class="col col-md">
+                        <input class="form-control" type="text" placeholder= "Gender" id="gender" name="Gender">
+                    </div>
+    
+                 <div class=" col col-md-auto"> 
+                    <label for="Profession" class="fs-4 text">Role:</label> 
+                  </div>
+                  <div class="col col">
+                    <select class="form-control" name="Profession">
+                        <option valus="none" selected> None</option>
+                        <option value="Doctor"> Doctor</option>
+                        <option value="Nurse"> Nurse</option>
+                        <option value="Admin"> Admin</option>
+                    </select>
+                  </div>    
+                 </div><br>
+
+                   <!--Phone Number-->
+                 <div class="row align-items-start">
+                    <div class=" col col-auto"> 
+                      <label for="number" class="fs-4 text">Cell Phone:</label> 
+                    </div>
+                    <div class="col col">
+                        <input class="form-control" type="text" placeholder= "Phon Number" id="number" name="Number">
+                    </div>  
+                 </div><br>
+                    </div>
+                </div><br> <br>
+
+               
+               <button class=" float-end btn-secondary btn btn-lg btn-block" style="line-height: 2em;width: 35%;" type="submit">Save & Submit</button><br>
+                
+                
+
+            </form>
+        </div><br>
+
+    </center>
+      </div>
+
+  </body>
+</html>

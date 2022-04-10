@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Administator Terminal </title>
+   <!--<link rel="stylesheet" href="mystyle.css">--> 
+
+   <!-- Bootstrap core CSS -->
+   <link href="bootstrap.min.css" rel="stylesheet">
+
+   <style>
+     .bd-placeholder-img {
+       font-size: 1.125rem;
+       text-anchor: middle;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       user-select: none;
+     }
+   
+     @media (min-width: 768px) {
+       .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+       }
+     }
+   
+     html,body {
+               height: 100%;
+           }
+     .mb-10{
+         margin-bottom: 5%;
+     }
+
+             /*Header*/
+
+             .nav-masthead .nav-link {
+                padding: .25rem 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, .5);
+                background-color: transparent;
+                border-bottom: .25rem solid transparent;
+            }
+
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, .25);
+            }
+
+            .nav-masthead .nav-link {
+                margin-left: 1rem;
+             
+            }
+
+            .nav-masthead .active {
+                color: white;
+                border-bottom-color: white;
+        }
+
+        /*button size*/
+        .btn-size{
+            width: 35%;
+            line-height: 2em;
+        }
+
+        /*left column*/
+        .nav-left{
+            float:left;
+            width: 30%;
+            background: #ccc;
+            padding:20px;
+            text-align: left;
+        }
+
+        /*Right column*/
+        .nav-right{
+            float:left;
+            width: 30%;
+            background: #ccc;
+            padding:20px;
+            
+        }
+        
+        /* Clear floats after the columns */
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+    </style> 
+</head>      
+
+<body class=" d-flex h-100 text-center bg-dark">
+    
+    <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+        <header class="mb-10">
+          <div>
+            <h3 class="float-md-start mb-0">Check-In</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link active" aria-current="page" href="Home.html">logout</a>
+              <a class="nav-link" href="userinfo.html">Profile</a>
+            </nav>
+          </div>
+        </header><br>
+
+    <!--admin list-->
+
+    <div class="container ">
+        <div class="row">
+        <!-- Left side -->
+            <div class="col nav-left text-black text-left">
+              
+                
+                1. To view current list of patients click on "Patient List" <br>
+                2. To view current list of avalable forms click on "Form List"<br>
+               
+                
+
+            </div> 
+        <!--Center-->
+        <div class="col-8" >
+
+    <center>
+        <h2 class="h3 mb-3 fw-normal text-white">Nurse's Administrative Terminal<br><br></h2>
+        <a href="nurse_selection" style="color: black;"class=" btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Patient List</a><br><br>
+        <a href="#" style="color: black;"class="btn-size btn btn-lg btn-secondary fw-bold border-white bg-white">Form List</a><br><br>
+       
+    </center>
+        </div>
+
+        <!--Right side-->
+    <div class="col nav-right text-black">
+        
+        For Technical Support Call: (123)456-7890.<br>
+        For any Emargency Call: (098)765-4321.
+      
+    </div>
+
+        </div>
+    </div>
+
+      <!-- user information icon-->
+     <!--<form id="my_form" action="accountInfo" method="post">
+       user information icon
+        <div class="container">
+            <div class="topright">
+                <a href="javascript:{}" onclick="document.getElementById('my_form').submit(); return false;">
+                    <img src="/public/css/userinfo.png" alt="User Info" width="90" height="85">
+                </a>
+            </div>
+        </div>-->
+
+    <footer class="mt-auto text-white-50">
+
+        <p class="footer" >&copy; 2021 Company, Inc</p>
+       
+      </footer>
+    
+</body>
+
+</html>

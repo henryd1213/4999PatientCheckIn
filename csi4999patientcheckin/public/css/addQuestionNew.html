@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Form Information</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+       
+           h1,h2{
+                color: white; 
+         }
+         .mb{
+             margin-bottom:10%;
+         }
+          /*Header*/
+          .nav-masthead .nav-link {
+                padding: .25rem 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, .5);
+                background-color: transparent;
+                border-bottom: .25rem solid transparent;
+            }
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, .25);
+            }
+            .nav-masthead .nav-link + .nav-link{
+                margin-left: 1rem;
+             
+            }
+            .nav-masthead .active {
+                color: white;
+                border-bottom-color: white;
+   
+    }
+
+    /*button size*/
+    .btn-size{
+            width: 44%;
+           
+        }
+
+    
+         /*left column*/
+         .nav-left{
+            float:left;
+            width: 15%;
+            background: #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+         
+        /* Clear floats after the columns */
+        section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+   
+
+    
+</style>
+
+<body class="bg-dark text-center text-white">
+    <!-- Header -->
+    <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+       <header class="mb-10">
+         <div>
+             <h3 class="float-md-start mb-0">Check-In</h3>
+             <nav class="nav nav-masthead justify-content-center float-md-end">
+               <a class="nav-link active" aria-current="page" href="admin_list_return">Back</a>
+               <a class="nav-link" aria-current="page" href="home_return">logout</a>
+             <a class="nav-link" href="userinfo.html">Profile</a>
+           </nav>
+         </div>
+       </header> <br>
+             
+
+       <div class="container ">
+        <div class="row">
+        <!-- Left side -->
+           <div class="col-auto nav-left text-left">
+                <nav class="flex-column">
+                    <a class="text-black" href="new_user">Add User</a><br><br>
+                    <a class="text-black" href="remove_user" >Remove User</a><br><br>
+                    <a class="text-black" href="form_list" >Available Patient Forms</a><br><br>
+                    <a class="text-black" href="new_form" >Create New Patient Form</a><br><br>
+                    <a class="text-black" href="#">Software Updates<br></a><br><br>
+                </nav>
+           </div>
+    
+      <!--Righ side-->
+   <div class="col-10 justify-content-center">
+          
+    <script>
+        var today = new Date();
+        
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getHours()+'.'+today.getMinutes()+'.'+today.getSeconds();
+        </script>
+  
+     <center>
+        <form action="addQuestion" method="post">
+            <script>
+                document.write('<input name="date" type="text" value="'+ date+'" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">');
+           </script>
+            <h1>New Question</h1> <br> <%form.forEach((item)=>{%>
+            
+                <input type="text" name="name" value="<%=item.ID%>" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+     
+                <%});%>
+                <table>
+                <tr>
+                    
+                        <th>Question Apperance </th>
+                      
+                       
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <select name="qNumber" id="qNumber" onchange="questionNumber()" style=" color: white; border: none; background: none;">
+                            <script>
+                                for (var d = 1; d <= 50; d++) {
+                                    document.write("<option>" + d + "</option>");
+                                }
+
+                            </script>
+                        </select>
+                    </td>  
+                        </tr>
+                        <tr>
+                    
+                            <th>Question Type</th>
+                          
+                           
+                        </tr>
+                        <tr>
+                            <td><select name="qType" id="qType"onchange="typeSelection()"
+                                default="text"
+                                style="background: none; border:none; color: white;">
+                               
+                                <option value="text" id="text">Text</option>
+                                <option value="image" id="image">Image</option>
+                                <option value="radio" id="radio">Radio</option>
+                            </select></td>
+                    <tr>
+
+                        <th>Question Content</th>
+
+
+                    </tr>
+                    <tr>
+                        <td> <textarea name="qContent" class="form-control"
+                                id="exampleFormControlTextarea1" rows="3"
+                                style="width: 200%;" placeholder="Enter Question Here"></textarea></td>
+
+                    </tr>
+                    <tr>                                          
+                        <th id="imageHeader"></th>
+                    </tr>
+                    <tr>
+                        <td id="imageUpload">
+                        </td>
+                    </tr>
+
+                    <tr>                                         
+                        <th id="radioNumHeader"></th>
+                    </tr>
+                    <tr>
+                        <td id="radioNum">
+                        </td>
+                    </tr>
+                    <tr>                                         
+                        <th id="radioResOneH"></th>
+                    </tr>
+                    <tr>
+                        <td id="radioResOne" >
+                        </td>
+                    </tr>
+                    <tr>                                         
+                        <th id="radioResTwoH"></th>
+                    </tr>
+                    <tr>
+                        <td id="radioResTwo" >
+                        </td>
+                    </tr>
+                    <tr>                                         
+                        <th id="radioResThreeH"></th>
+                    </tr>
+                    <tr>
+                        <td id="radioResThree" >
+                        </td>
+                    </tr>
+                    <tr>                                         
+                        <th id="radioResFourH"></th>
+                    </tr>
+                    <tr>
+                        <td id="radioResFour">
+                        </td>
+                    </tr>
+                    <tr>                                         
+                        <th id="radioResFiveH"></th>
+                    </tr>
+                    <tr>
+                        <td id="radioResFive">
+                        </td>
+                    </tr>
+                    <tr>                                         
+                        <th id="radioResSixH"></th>
+                    </tr>
+                    <tr>
+                        <td id="radioResSix" >
+                        </td>
+                    </tr>
+
+                </table>
+                    <!-- Output table-->
+
+
+                    <script>
+                        function typeSelection() {
+                            document.getElementById('radioResOneH').innerHTML = '';
+                            document.getElementById('radioResOne').innerHTML = '';
+                            document.getElementById('radioResTwoH').innerHTML = '';
+                            document.getElementById('radioResTwo').innerHTML = '';
+                            document.getElementById('radioResThreeH').innerHTML = '';
+                            document.getElementById('radioResThree').innerHTML = '';
+                            document.getElementById('radioResFourH').innerHTML = '';
+                            document.getElementById('radioResFour').innerHTML = '';
+                            document.getElementById('radioResFiveH').innerHTML = '';
+                            document.getElementById('radioResFive').innerHTML = '';
+                            document.getElementById('radioResSixH').innerHTML = '';
+                            document.getElementById('radioResSix').innerHTML = '';
+                            document.getElementById('imageHeader').innerHTML = '';
+                            document.getElementById('imageUpload').innerHTML = '';
+                            document.getElementById('radioNumHeader').innerHTML = '';
+                            document.getElementById('radioNum').innerHTML = '';
+                            var type;
+                            type = document.getElementById('qType').value;
+                            if(type=="image"){
+                            var imageType = '';
+                            imageType = '<input type="file" id="imagePrompt" name="imagePrompt">';
+                            var imageHeader = 'Select Image File';
+                            document.getElementById('imageHeader').innerHTML = imageHeader;
+                            document.getElementById('imageUpload').innerHTML = imageType;
+                        }
+                            else if(type=="radio"){
+                                var radioNum = '';
+                            radioNum= '<select name="radioNumber" id="radioNumber"value="2"onchange="radioNum()" style="background: none; border:none; color:white;">   <option value="2"name="2"id="2">2</option> <option value="3"name="3"id="3">3</option> <option value="4"name="4"id="4">4</option> <option value="5"name="5"id="5">5</option> <option value="6"name="6"id="6">6</option></select>';
+                            var radioNumHeader = 'Select Number of Radios';
+                            document.getElementById('radioNumHeader').innerHTML = radioNumHeader;
+                            document.getElementById('radioNum').innerHTML = radioNum;
+                            var radioOneH = 'Radio One Response';
+                                var radioOne= '<textarea name="radioOne" class="form-control" id="RadioOne" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResOneH').innerHTML = radioOneH;
+                            document.getElementById('radioResOne').innerHTML = radioOne;
+                            var radioTwoH = 'Radio Two Response';
+                                var radioTwo= '<textarea name="radioTwo" class="form-control" id="RadioTwo" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResTwoH').innerHTML = radioTwoH;
+                            document.getElementById('radioResTwo').innerHTML = radioTwo;
+                            }
+                            
+                        }
+                    </script>
+
+                    <script>
+                        function radioNum(){
+                            document.getElementById('radioResOneH').innerHTML = '';
+                            document.getElementById('radioResOne').innerHTML = '';
+                            document.getElementById('radioResTwoH').innerHTML = '';
+                            document.getElementById('radioResTwo').innerHTML = '';
+                            document.getElementById('radioResThreeH').innerHTML = '';
+                            document.getElementById('radioResThree').innerHTML = '';
+                            document.getElementById('radioResFourH').innerHTML = '';
+                            document.getElementById('radioResFour').innerHTML = '';
+                            document.getElementById('radioResFiveH').innerHTML = '';
+                            document.getElementById('radioResFive').innerHTML = '';
+                            document.getElementById('radioResSixH').innerHTML = '';
+                            document.getElementById('radioResSix').innerHTML = '';
+                            var amount;
+                            amount = document.getElementById('radioNumber').value;
+                            if(amount=="2"){
+                                var radioOneH = 'Radio One Response';
+                                var radioOne= '<textarea name="radioOne" class="form-control" id="RadioOne" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResOneH').innerHTML = radioOneH;
+                            document.getElementById('radioResOne').innerHTML = radioOne;
+                            var radioTwoH = 'Radio Two Response';
+                                var radioTwo= '<textarea name="radioTwo" class="form-control" id="RadioTwo" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResTwoH').innerHTML = radioTwoH;
+                            document.getElementById('radioResTwo').innerHTML = radioTwo;
+                            }else if(amount=="3"){
+                                var radioOneH = 'Radio One Response';
+                                var radioOne= '<textarea name="radioOne" class="form-control" id="RadioOne" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResOneH').innerHTML = radioOneH;
+                            document.getElementById('radioResOne').innerHTML = radioOne;
+                            var radioTwoH = 'Radio Two Response';
+                                var radioTwo= '<textarea name="radioTwo" class="form-control" id="RadioTwo" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResTwoH').innerHTML = radioTwoH;
+                            document.getElementById('radioResTwo').innerHTML = radioTwo;
+                            var radioThreeH = 'Radio Three Response';
+                                var radioThree= '<textarea name="radioThree" class="form-control" id="RadioThree" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResThreeH').innerHTML = radioThreeH;
+                            document.getElementById('radioResThree').innerHTML = radioThree;
+                            }else if(amount=="4"){
+                                var radioOneH = 'Radio One Response';
+                                var radioOne= '<textarea name="radioOne" class="form-control" id="RadioOne" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResOneH').innerHTML = radioOneH;
+                            document.getElementById('radioResOne').innerHTML = radioOne;
+                            var radioTwoH = 'Radio Two Response';
+                                var radioTwo= '<textarea name="radioTwo" class="form-control" id="RadioTwo" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResTwoH').innerHTML = radioTwoH;
+                            document.getElementById('radioResTwo').innerHTML = radioTwo;
+                            var radioThreeH = 'Radio Three Response';
+                                var radioThree= '<textarea name="radioThree" class="form-control" id="RadioThree" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResThreeH').innerHTML = radioThreeH;
+                            document.getElementById('radioResThree').innerHTML = radioThree;
+                            var radioFourH = 'Radio Four Response';
+                                var radioFour= '<textarea name="radioFour" class="form-control" id="RadioFour" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResFourH').innerHTML = radioFourH;
+                            document.getElementById('radioResFour').innerHTML = radioFour;
+                                
+                            }else if(amount=="5"){
+                                var radioOneH = 'Radio One Response';
+                                var radioOne= '<textarea name="radioOne" class="form-control" id="RadioOne" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResOneH').innerHTML = radioOneH;
+                            document.getElementById('radioResOne').innerHTML = radioOne;
+                            var radioTwoH = 'Radio Two Response';
+                                var radioTwo= '<textarea name="radioTwo" class="form-control" id="RadioTwo" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResTwoH').innerHTML = radioTwoH;
+                            document.getElementById('radioResTwo').innerHTML = radioTwo;
+                            var radioThreeH = 'Radio Three Response';
+                                var radioThree= '<textarea name="radioThree" class="form-control" id="RadioThree" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResThreeH').innerHTML = radioThreeH;
+                            document.getElementById('radioResThree').innerHTML = radioThree;
+                            var radioFourH = 'Radio Four Response';
+                                var radioFour= '<textarea name="radioFour" class="form-control" id="RadioFour" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResFourH').innerHTML = radioFourH;
+                            document.getElementById('radioResFour').innerHTML = radioFour;
+                            var radioFiveH = 'Radio Five Response';
+                                var radioFive= '<textarea name="radioFive" class="form-control" id="RadioFive" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResFiveH').innerHTML = radioFiveH;
+                            document.getElementById('radioResFive').innerHTML = radioFive;
+                                
+                            }else if(amount=="6"){
+                                var radioOneH = 'Radio One Response';
+                                var radioOne= '<textarea name="radioOne" class="form-control" id="RadioOne" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResOneH').innerHTML = radioOneH;
+                            document.getElementById('radioResOne').innerHTML = radioOne;
+                            var radioTwoH = 'Radio Two Response';
+                                var radioTwo= '<textarea name="radioTwo" class="form-control" id="RadioTwo" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResTwoH').innerHTML = radioTwoH;
+                            document.getElementById('radioResTwo').innerHTML = radioTwo;
+                            var radioThreeH = 'Radio Three Response';
+                                var radioThree= '<textarea name="radioThree" class="form-control" id="RadioThree" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResThreeH').innerHTML = radioThreeH;
+                            document.getElementById('radioResThree').innerHTML = radioThree;
+                            var radioFourH = 'Radio Four Response';
+                                var radioFour= '<textarea name="radioFour" class="form-control" id="RadioFour" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResFourH').innerHTML = radioFourH;
+                            document.getElementById('radioResFour').innerHTML = radioFour;
+                            var radioFiveH = 'Radio Five Response';
+                                var radioFive= '<textarea name="radioFive" class="form-control" id="RadioFive" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResFiveH').innerHTML = radioFiveH;
+                            document.getElementById('radioResFive').innerHTML = radioFive;
+                            var radioSixH = 'Radio Six Response';
+                                var radioSix= '<textarea name="radioSix" class="form-control" id="RadioSix" rows="1"style="width: 200%;" placeholder="Enter Raidial Response Option Here"></textarea>';
+                            document.getElementById('radioResSixH').innerHTML = radioSixH;
+                            document.getElementById('radioResSix').innerHTML = radioSix;
+                                
+                            }
+                        }
+                    </script> 
+
+                    <br>
+                        
+                     <input type="submit" name="submit" value="Return to Terminal"
+                     style="color: black; margin: 5px;"class="btn btn-size btn-lg btn-secondary fw-bold border-white bg-white"> <br>
+                 <input type="submit" name="submit" value="Submit and Add or View Next Question"
+                 style="color: black; margin: 5px;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">
+ </form>
+                 </center>
+
+                 
+            </div>
+        </div>
+    </div>
+
+                <footer class="mt-auto text-white-50">
+
+                    <p class="footer" style="text-align: center;" >&copy; 2021 Company, Inc</p>
+
+                </footer>
+             
+               
+             </body>
+             
+     </html>

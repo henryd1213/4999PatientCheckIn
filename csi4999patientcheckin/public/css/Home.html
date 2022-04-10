@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Patient Check-In System</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+ .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/*background image*/
+.bg-image{
+              background-image: url("bgimgcopy.png");
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+              background-size: cover;
+              width: 100%;
+              height: 100vh;
+             
+            }
+
+/*sidebar nevigation*/
+
+.sidebar {
+  /* position: fixed; */
+  width: 25%;
+  height: 100vh;
+  background: lightgray;
+  font-size: 0.65em;
+}
+
+.nav {
+  /* position: relative; */
+  margin: 0 15%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  position: relative;
+  margin: 3.2em 0;
+  
+}
+.nav ul li a {
+  line-height: 5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4em;
+  color: black;
+  display: block;
+  transition: all ease-out 300ms;
+}
+.nav ul li.active a {
+  color: black;
+}
+
+.nav ul li:not(.active)::after {
+  opacity: 0.2;
+}
+.nav ul li:not(.active):hover a {
+  color: rgba(255, 255, 255, 0.25);
+}
+ 
+.nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  background: black;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+}
+
+
+</style>
+
+  </head>
+
+  <body class="text-center d-flex flex-column w-100">
+    
+   <div class="d-flex" >
+    <header class="sidebar">
+        <nav class="nav">
+            <h1 class="d-flex pb-3 mt-3 h1 fw-light text-upercase text-black">
+                Check-In</h1>
+          <ul>
+            <li class="active"><a href="#">Welcome</a></li>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">What We Do</a></li>
+            <li><a href="#">Get In Touch</a></li>
+          </ul>
+        </nav>
+    </header><br>
+
+    <center class="w-75% d-flex align-items-center m-auto bg-image">
+
+      <main class="container px-3 d-inline-flex justify-content-center align-items-center text-white flex-column">
+
+
+  
+
+        <h1 class="display-1 mb-0">PATIENT CHECK-IN</h1><br><br>
+        <p class="lead display-5">Please select</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-block fw-bold bg-white text-black d-inline">Patient</a>
+          <a href="Signin.html" class="btn btn-lg btn-block fw-bold bg-white text-black d-inline">Staff</a>
+        </p>
+
+        <footer class="mt-5 text-white-50">
+            <p class="footer" style="color:white;">&copy; 2021 Company, Inc</p>
+        </footer>
+
+    
+      </main>
+    </center>
+   </div>
+  </body>
+</html>

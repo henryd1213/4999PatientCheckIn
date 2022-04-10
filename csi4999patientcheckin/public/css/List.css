@@ -1,0 +1,52 @@
+body{
+    background-color:seashell;
+    margin: auto;
+
+  }
+    h1{
+        color: navy;
+    }
+   
+    table, th, td{
+        border-style: solid;
+        border-color: black;
+        text-align: center;
+     }
+
+     tr:nth-child(even){
+         background-color: white;
+     }
+
+     .closebutton {
+        position: relative;
+        top: -180px;
+        left: 4px;
+        float: left;
+        padding: 12px;
+        border-radius: 7px;
+        text-align: center;
+        text-decoration: none;
+        color:cadetblue;
+        background-color: lightblue;
+        margin: auto;
+        outline: none;
+        cursor: pointer;
+      }
+      a{
+        display: block;
+        width: 20%;
+        line-height: 1em;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+        }
+      a:hover{
+        color:steelblue;
+        background: powderblue;
+      }
+    .PatientTableButton{
+      border-style: solid;
+        border: none;
+        text-align: center;
+        background: transparent;
+    }
