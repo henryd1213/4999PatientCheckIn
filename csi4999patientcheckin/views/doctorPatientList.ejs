@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Form List </title>
+    <link href="List.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  html,body {
+            height: 100%;
+        }
+       
+           h1,h2{
+                color: white; 
+         }
+         .mb{
+             margin-bottom:10%;
+         }
+        
+     /*Sidebar Nevigation*/
+    *, :before, :after {
+        box-sizing: border-box;
+    }
+    .unstyled {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .unstyled a {
+        text-decoration: none;
+    }
+
+    .list-inline {
+        overflow: hidden;
+    }
+    .list-inline li {
+        float: left;
+    }
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 16em;
+        height: 100vh;
+        background: white;
+    }
+    .main-nav ul {
+        border-top: solid 1px #DFDBD9;
+    }
+    .main-nav li {
+        border-bottom: solid 1px #DFDBD9;
+    }
+    .main-nav a {
+        padding: 1.1em 0;
+        color: black;
+        text-align: left;
+    }
+    .main-nav a:hover {
+        color: #fff;
+    }
+    .main-nav a.active{
+        border-right: solid 10px #5e42a6;
+        background: lightgray;
+    }
+
+    .list-hover-slide li {
+        position: relative;
+        overflow: hidden;
+        }
+    .list-hover-slide a {
+        display: block;
+        position: relative;
+        z-index: 1;
+        transition: .35s ease color;
+        }
+    .list-hover-slide a:before {
+        content: '';
+        display: block;
+        z-index: -1;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-right: solid 10px #5e42a6;
+        background: lightgray;
+        transition: .35s ease left;
+        }
+    .list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
+        left: 0;
+        }
+    
+    .btn-size {
+            width: 35%;
+            line-height: 2em;
+        }
+
+    .dropdown-toggle { outline: 0; }
+
+      /*background image*/
+        .bg-image{
+            background-image: url("/public/css/bgimg4cp.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            width: 100%;
+        }           
+
+    </style>
+</head>
+
+
+<body class="d-flex h-100 text-center bg-image bg-opacity-10">
+
+    <!-- Header -->
+    <header class="sidebar h-100" role="banner">
+    
+        <div class="flex-shrink-0 p-3 bg-light" style="width: 250px;">
+          <p class="d-flex pb-3 mb-3 h1 fw-light text-upercase text-black">
+             Check-In</p>
+        
+             <div class="nav-warp">
+                <nav class="main-nav" role="navigation"> <!--work in progress-->
+         <ul class="list-hover-slide flex-column">
+             <li > <a href="doctor_return" class="active font-monospace btn"><i class="fa-solid fa-house-chimney-user fa-2x1"></i> Home</a></li><br>
+             <li ><a href="#contact" class="font-monospace btn"><i class="fa-solid fa-square-phone-flip fa-2x1"></i>Contact</a></li><br> 
+             <li><a href="accountInfoLogin" class="dropdowntoggle font-monospace btn" data-toggle="dropdown"><i class="fa-solid fa-user-nurse fa-2x1"></i> Profile</a></li></li><br>
+             <li ><a href="home_return" class="font-monospace btn"><i class="fa-solid fa-right-from-bracket fa-flip-horizontal fa-2x1"></i> SignOut</a></li>
+         </ul>
+       </nav>
+       </div>
+        </div>
+      
+            <p class="mb-3 mt-auto text-white-50" >&copy; 2021 Company, Inc</p>
+           
+        
+      </header><br> <br>
+    
+      <div class="col-10 justify-content-center">
+          <center class="w-100 p-2 text-white" style="margin-left: 200px;">
+        <h1 class="display-4 fw-light text-white">Available Patients</h1> <br>
+
+        <!-- Output table-->
+        <form action="patientAnsweredForms" method="post">
+            <table id=>
+                <tr>
+                    <th style="text-align: center;">NO.</th>
+                    <th style="text-align: center;">Last Name</th>
+                    <th style="text-align: center;">First Name</th>
+                    <th style="text-align: center;">Patient Number</th>
+                </tr>
+                <script>count = 0;</script> 
+
+                <%data.forEach((item)=>{%>
+                    <script>for (var x of '<%=item.ID%>') {
+                            if (x.ID != '') {
+                                count++;
+                            }
+                        }
+                    </script>
+               
+                            <tr>
+                                <td>
+                                    <script>document.write(count);</script>
+                                </td>
+                                <td><label><%= item.Lname%></label></td>
+                                <td><label><%= item.Fname%></label></td>
+                                
+                                <td>
+                                 <button type="submit" name="patient<%=item.ID%>" value="patient<%=item.ID%>"
+                                    
+                                    style="border: none; background: none;">
+                                    <input name="patient<%=item.ID%>"
+                                        type="text" value="View Patient <%=item.ID%>" 
+                                    style="color: black; margin: 0%;"class="btn btn-lg btn-secondary fw-bold border-white bg-white">
+                                   
+                                </button>
+                            </td>
+                            </tr>
+                            <%});%>
+            </table> <br><br>
+            
+        </form>
+    </center>
+      </div>
+
+</body>
+
+</html>

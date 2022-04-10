@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Profile Page</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+body{
+    margin-top:20px;
+    color: #1a202c;
+    text-align: left;
+    background-color: #e2e8f0;    
+}
+.main-body {
+    padding: 15px;
+}
+        
+</style>
+
+<body class="bg-dark">
+
+    <h1 class="text-upercase text-light font-monospace">
+        Check-In
+    </h1>
+
+    <form action="accountChanges" method="post" id="my_form">
+        <%data.forEach((item)=>{%>
+<div class="container">
+    <div class="main-body">
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                              <h4> <%= item.Fname%>
+                                <%= item.Lname%></h4>
+                              <p class="text-secondary mb-1"><%= item.Role%></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <div class="card mt-3">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <input type="submit" class="btn" value="Home" name="Home">
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    
+                    <input type="submit" class="btn" value="Edit Profile" name="Edit">
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    
+                    <input type="submit" class="btn" value="Reset Password" name="reset">
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <a class="btn" href="home_return">SignOut</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">ID Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" name="id" value="<%= item.ID%>" readonly
+                                style="background: none; border: none; margin: 0%;">
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary"><%= item.Email%></div> 
+                </div> 
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Contact</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary"><%= item.Phone%></div>
+                </div>
+                  <hr>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Birthday</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary"><%= item.Birthday%></div>
+                </div>
+                  <hr>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Gender</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary"><%= item.Gender%></div>
+                </div>
+                  <hr>
+                
+
+                    </div>
+                    <%});%>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+    
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Q1
+    </title>
+</head>
+
+<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+      
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+      /* Custom default button */
+      .btn-secondary,
+      .btn-secondary:hover,
+      .btn-secondary:focus {
+          color: #333;
+          text-shadow: none; /* Prevent inheritance from `body` */
+      }
+      /* Base structure*/
+      body {
+          text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+          box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+      }
+      .cover-container {
+           max-width: 42em;
+          }
+      /*Header*/
+          .nav-masthead .nav-link {
+              padding: .25rem 0;
+              font-weight: 700;
+              color: rgba(255, 255, 255, .5);
+              background-color: transparent;
+              border-bottom: .25rem solid transparent;
+          }
+          .nav-masthead .nav-link:hover,
+          .nav-masthead .nav-link:focus {
+              border-bottom-color: rgba(255, 255, 255, .25);
+          }
+          .nav-masthead .nav-link + .nav-link {
+              margin-left: 1rem;
+             
+          }
+          .nav-masthead .active {
+              color: white;
+              border-bottom-color: white;
+      }
+    </style>
+
+<body class=" h-100 text-center text-light bg-dark">
+    <div class="d-flex w-100 h-100 p-3 mx-auto text-white flex-column">
+        <header class="mb-5">
+          <div>
+            <h3 class="float-md-start mb-0">Check-In</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link active" aria-current="page" href="home_return">Home</a>
+              <a class="nav-link" aria-current="page" href="#">Help</a>
+            </nav>
+          </div>
+        </header>
+
+     <main class="font-monospace text-light"> 
+    <script>alert("Question response recorded"); </script>
+    <center>
+        <!--Creates form for the patient's name.-->
+
+        <div class="px-3  fs-4" id="Name">
+            <form action="dynamicQOne" method="post">
+              <script>
+                var today = new Date();
+                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getHours()+'.'+today.getMinutes()+'.'+today.getSeconds();
+                document.write('<input name="answerDate" type="text" value="'+ date+'" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">');
+                </script>
+                <input type="text" id="qAnswer" name="qAnswer" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+                        
+                <%data.forEach((item)=>{%>
+                    <input type="text" name="id" value="<%=item.ID%>" readonly style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+                    <input type="text" name="date" value="<%=item.Date%>" readonly style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+                    <input type="text" name="apperance" value="<%=item.Q_apperance%>" readonly style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+                    <input type="text" name="list" value="<%=item.Form_List_ID%>" readonly style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+                    <p><input type="text" name="question" value="<%= item.Qone_content%>" readonly
+                        style="background: none; border: none; margin: 0%; text-align: center; font-size: larger; width:100%; color: white">
+                        
+                        <br></p>
+                        
+                     
+                      <input type="radio" id="radioOne" name="radioOne" value="<%= item.Radioone%>" onclick="document.getElementById('qAnswer').value='<%= item.Radioone%>';">
+                      <label for="radioOne"><%= item.Radioone%></label><br>
+                      <input type="radio" id="radioPlease" name="radioOne" value="<%= item.Radiotwo%>" onclick="document.getElementById('qAnswer').value='<%= item.Radiotwo%>';">
+                      <label for="radioTwo"><%= item.Radiotwo%></label><br>
+                      <input type="radio" id="radioThree" name="radioOne" value="<%= item.Radiothree%>"onclick="document.getElementById('qAnswer').value='<%= item.Radiothree%>';">
+                      <label for="radio"><%= item.Radiothree%></label><br>
+                    
+                    <%});%>
+                  
+
+                    <%user.forEach((item)=>{%>
+                        <input type="text" name="fname" value="<%=item.Fname%>" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+                        <input type="text" name="lname" value="<%=item.Lname%>" style="color: #212529; background: none; border: none; position: absolute; z-index: -1000;">
+    
+                        <%});%>
+                       
+                        <br><br>
+                        <input type="submit" class="btn btn-light btn-lg float-end" value="Save & Continue">
+                        <input type="submit" href="#" class="btn btn-light btn-lg float-start" value="Previous Question">
+ 
+          
+             </form>
+         </div>
+     </center>
+ </div>
+ 
+ 
+     
+   </body>
+ </html>
+ 

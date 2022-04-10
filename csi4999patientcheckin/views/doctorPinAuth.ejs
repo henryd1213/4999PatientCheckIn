@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Pin-login </title>
+
+    <!--Icon kit-->
+    <script src="https://kit.fontawesome.com/244d58fd5c.js" crossorigin="anonymous"></script>
+
+   <!-- Bootstrap core CSS -->
+   <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+     .bd-placeholder-img {
+       font-size: 1.125rem;
+       text-anchor: middle;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       user-select: none;
+     }
+   
+     @media (min-width: 768px) {
+       .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+       }
+     }
+   
+     html,body {
+               height: 100%;
+           }
+     .mb-10{
+         margin-bottom: 5%;
+     }
+
+            
+/*Sidebar nevigation*/
+     *, :before, :after {
+  box-sizing: border-box;
+}
+
+    .unstyled {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .unstyled a {
+        text-decoration: none;
+    }
+
+    .list-inline {
+        overflow: hidden;
+    }
+    .list-inline li {
+        float: left;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 17.5em;
+        height: 100vh;
+        background: white;
+    }
+
+
+    .main-nav ul {
+        border-top: solid 1px #DFDBD9;
+    }
+    .main-nav li {
+        border-bottom: solid 1px #DFDBD9;
+    }
+    .main-nav a {
+        padding: 1.1em 0;
+        color: black;
+        text-align: left;
+    }
+    .main-nav a:hover {
+        color: #fff;
+            }
+    .main-nav a.active{
+        border-right: solid 10px #5e42a6;
+        background: lightgray;
+    }
+
+    .list-hover-slide li {
+        position: relative;
+        overflow: hidden;
+        }
+    .list-hover-slide a {
+        display: block;
+        position: relative;
+        z-index: 1;
+        transition: .35s ease color;
+        }
+    .list-hover-slide a:before {
+        content: '';
+        display: block;
+        z-index: -1;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-right: solid 10px #5e42a6;
+        background: lightgray;
+        transition: .35s ease left;
+        }
+    .list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
+        left: 0;
+        }
+    
+    .btn-size {
+            width: 35%;
+            line-height: 2em;
+        }
+
+    .dropdown-toggle { outline: 0; }
+
+          body {
+                display: flex;
+                align-items: center;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+        .form-signin {
+                width: 100%;
+                max-width: 330px;
+                padding: 15px;
+                margin: auto;
+            }
+
+        .form-signin .checkbox {
+                font-weight: 400;
+            }
+
+        .form-signin .form-floating:focus-within {
+                z-index: 2;
+            }
+
+        .form-signin input[type="text"] {
+                margin-bottom: -1px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+        .form-signin input[type="password"] {
+                margin-bottom: 10px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+  
+
+</style>
+
+</head>
+<body class="text-center text-white bg-dark ">
+    <!--Sidebar nevigation-->
+    <header class="sidebar h-100" role="banner">
+    
+      <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+        <h1 class="d-flex pb-3 mb-3 h1 fw-light text-upercase text-black">
+           Check-In</h1>
+      
+           <div class="nav-warp">
+               <nav class="main-nav" role="navigation"> <!--work in progress-->
+        <ul class="list-hover-slide flex-column">
+            <li > <a href="doctor_return" class="active font-monospace btn"><i class="fa-solid fa-house-chimney-user fa-2x1"></i> Home</a></li><br>
+            
+            <li ><a href="#contact" class="font-monospace btn"><i class="fa-solid fa-square-phone-flip fa-2x1"></i>Contact</a></li><br>
+            
+            <li class="dropdown"> <!--does not work-->
+                <a href="accountInfoLogin" class="dropdowntoggle font-monospace btn" data-toggle="dropdown"><i class="fa-solid fa-user-nurse fa-2x1"></i> Profile</a></li>
+                <ul class="dropdown-menu animated fadeInLeft" role="menu">
+                    <div>
+                        <li><a href="#ViewProfile">View Profile</a></li>
+                        <li><a href="#">SignOut</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li ><a href="home_return" class="font-monospace btn"><i class="fa-solid fa-right-from-bracket fa-flip-horizontal fa-2x1"></i> SignOut</a></li>
+        </ul>
+      </nav>
+      </div>
+      </div>
+</header>
+  
+    <!--Pin login-->
+    <div class="col-10 justify-content-center">
+      <div class="d-flex w-100 p-3 mx-auto text-white flex-column">
+        <center class="w-100 p-2" style="margin-left: 220px;"> 
+      <main class="form-signin ">
+        <form method="post" action="nurse_pin_auth">
+          <h1 class="h3 mb-3 fw-normal text-white">Please enter your PIN.</h1>
+
+          <div class="form-floating text-black">
+            
+            <input type="password" class="form-control"id="floatingInput" placeholder="Pin" name="pin" >
+            <label for="floatingInput">Pin</label>
+          </div> <br>
+
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2021 Company, Inc</p>
+        </form>
+      </main>
+        </center>
+            </div>
+      </div>
+
+    
+  </body>
+</html>

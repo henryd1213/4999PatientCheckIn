@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Profile Page</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+body{
+    margin-top:20px;
+    color: #1a202c;
+    text-align: left;
+    background-color: #e2e8f0;    
+}
+.main-body {
+    padding: 15px;
+}
+        
+</style>
+
+<body class="bg-dark">
+
+    <h1 class="text-upercase text-light font-monospace">
+        Check-In
+    </h1>
+
+    <form action="accountChanges" method="post" id="my_form">
+        <%data.forEach((item)=>{%>
+<div class="container">
+    <div class="main-body">
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                              <h4> <%= item.Fname%>
+                                <%= item.Lname%></h4>
+                              <p class="text-secondary mb-1"><%= item.Role%></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <input type="submit" class="btn" value="Home" name="Home">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            
+                            <input type="submit" class="btn" value="Edit Profile" name="Edit">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            
+                            <input type="submit" class="btn" value="Reset Password" name="reset">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <a class="btn" href="home_return">SignOut</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">ID Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="text" class="form-control"name="id" value="<%= item.ID%>" readonly
+                                style="background: none; margin: 0%;">
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="fname" class="mb-0">First Name</label>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input class="form-control" type="text" placeholder="<%= item.Fname%>" id="fname" name="Fname" value="<%=item.Fname%>">
+                    </div> 
+                </div> 
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="lname" class="mb-0">Last Name</label>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input class="form-control" type="text" placeholder="<%= item.Lname%>" id="lname" name="Lname" value="<%=item.Lname%>">
+                    </div> 
+                </div> 
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="Email" class="mb-0">Email</label>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input class="form-control" type="text" placeholder="<%= item.Email%>" id="Email" name="Email" value="<%=item.Email%>">
+                    </div> 
+                </div> 
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="Phone" class="mb-0">Contact</label>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input class="form-control" type="text" placeholder="<%= item.Phone%>" id="Phone" name="Phone" value="<%=item.Phone%>">
+                    </div>
+                </div>
+                  <hr>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                        <label for="Profession" class="mb-0">Designation</label>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input class="form-control" type="text" placeholder="<%= item.Role%>" id="Role" name="Role" readonly   style="background: none; margin: 0%;" value="<%=item.Role%>">
+                        
+                    </div> 
+                </div> 
+                <hr>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                        <label for="date" class="mb-0">Birthday</label>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input class="form-control" type="date" placeholder="<%= item.Birthday%>" id="date" name="Birthday" value="<%=item.Birthday%>">
+                        
+                    </div>
+                </div>
+                  <hr>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                        <label for="gender" class="mb-0">Gender</label>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input class="form-control" type="text" placeholder="<%=item.Gender%>" id="gender" name="Gender" value="<%=item.Gender%>">
+                    </div>
+                </div>
+                  <hr>
+                
+
+                    </div>
+                    <%});%>
+                    <input type="submit" class="btn btn-light btn-lg" value="Save Changes" name="save">
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+</form>
+    
+</body>
+
+</html>
