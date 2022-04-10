@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Signin</title>
+
+   
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      html,body {
+                height: 100%;
+            }
+
+            .bg-image{
+              background-image: url("bgimag1.png");
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+              background-size: cover;
+             
+            }
+
+        body {
+                display: flex;
+                align-items: center;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+        .form-signin {
+                width: 100%;
+                max-width: 330px;
+                padding: 15px;
+                margin: auto;
+            }
+
+        .form-signin .checkbox {
+                font-weight: 400;
+            }
+
+        .form-signin .form-floating:focus-within {
+                z-index: 2;
+            }
+
+        .form-signin input[type="text"] {
+                margin-bottom: -1px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+        .form-signin input[type="password"] {
+                margin-bottom: 10px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            
+        /* Base structure*/
+
+        body {
+            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+        }
+
+        .cover-container {
+             max-width: 42em;
+            }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+            /*sidebar nevigation*/
+                        
+        .sidebar {
+            /* position: fixed; */
+            width: 250px;
+            height: 100vh;
+            background: lightgray;
+            font-size: 0.65em;
+        }
+
+        .nav {
+            /* position: relative; */
+            margin: 0 15%;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .nav ul {
+            list-style: none;
+        }
+        .nav ul li {
+            position: relative;
+            margin: 3.2em 0;
+            
+        }
+        .nav ul li a {
+            line-height: 5em;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.4em;
+            color: rgba(255, 255, 255, 0.5);
+            display: block;
+            transition: all ease-out 300ms;
+        }
+        .nav ul li.active a  {
+            color: black;
+        }
+
+        .nav ul li a {
+            color:black;
+        }
+
+        .nav ul li:not(.active)::after {
+            opacity: 0.2; 
+        }
+        .nav ul li:not(.active):hover a {
+            color: rgba(255, 255, 255, .25);
+        }
+        .nav ul li::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.2em;
+            background: black;
+            left: 0;
+            bottom: 0;
+            background-image: linear-gradient(to right, #5e42a6, #b74e91);
+        }
+
+   
+
+
+</style>
+
+  </head>
+
+  <body class="text-center text-white bg-dark ">
+    <!--Sidebar-->
+    <header class="sidebar">
+        <nav class="nav">
+            <h1 class="d-flex pb-3 mt-3 h1 fw-light text-upercase text-black">
+                Check-In</h1>
+        
+          <ul>
+            <li class="active"><a href="home_return">Welcome</a></li>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">What We Do</a></li>
+            <li><a href="#">Get In Touch</a></li>
+          </ul>
+        </nav>
+    </header><br>
+    
+    <!--Sign-in box-->
+    <main class="form-signin">
+      <form method="post" action="login_auth">
+        <h1 class="h3 mb-3 fw-normal text-white">PLEASE SIGN-IN</h1>
+    
+        <div class="form-floating text-black">
+          <input name="username"type="text" class="form-control" id="floatingInput" placeholder="Username" >
+          <label for="floatingInput">Username</label>
+        </div> 
+    
+        <div class="form-floating text-black">
+          <input name="password"type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div> <br> 
+    
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2021 Company, Inc</p>
+      </form>
+    </main>
+    
+  </body>
+</html>
