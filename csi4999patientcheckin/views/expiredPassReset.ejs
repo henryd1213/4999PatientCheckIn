@@ -1,68 +1,221 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Signin</title>
 
-<head>
-    <title>
-        Password Reset
-    </title>
+   
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/public/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      html,body {
+                height: 100%;
+            }
+
+            .bg-image{
+              background-image: url("bgimag1.png");
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+              background-size: cover;
+             
+            }
+
         body {
-            background-color: seashell;
-            margin: auto;
+                display: flex;
+                align-items: center;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
 
+        .form-signin {
+                width: 100%;
+                max-width: 330px;
+                padding: 15px;
+                margin: auto;
+            }
+
+        .form-signin .checkbox {
+                font-weight: 400;
+            }
+
+        .form-signin .form-floating:focus-within {
+                z-index: 2;
+            }
+
+        .form-signin input[type="text"] {
+                margin-bottom: -1px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+        .form-signin input[type="password"] {
+                margin-bottom: 10px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            
+        /* Base structure*/
+
+        body {
+            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
         }
 
-        h1 {
-            color: navy;
+        .cover-container {
+             max-width: 42em;
+            }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
 
-        .closebutton {
+            /*sidebar nevigation*/
+                        
+        .sidebar {
+            /* position: fixed; */
+            width: 250px;
+            height: 100vh;
+            background: lightgray;
+            font-size: 0.65em;
+        }
+
+        .nav {
+            /* position: relative; */
+            margin: 0 15%;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .nav ul {
+            list-style: none;
+        }
+        .nav ul li {
             position: relative;
-            top: -219px;
-            left: 23px;
-            float: left;
-            padding: 18px;
-            border-radius: 8px;
-            text-align: center;
-            text-decoration: none;
-            color: cadetblue;
-            background-color: lightblue;
-            margin: auto;
-            outline: none;
-            border-color: transparent;
-            cursor: pointer;
+            margin: 3.2em 0;
+            
         }
-    </style>
-</head>
-<script>alert("Expired password, please reset");</script>
-<body>
-    <center>
+        .nav ul li a {
+            line-height: 5em;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.4em;
+            color: rgba(255, 255, 255, 0.5);
+            display: block;
+            transition: all ease-out 300ms;
+        }
+        .nav ul li.active a  {
+            color: black;
+        }
+
+        .nav ul li a {
+            color:black;
+        }
+
+        .nav ul li:not(.active)::after {
+            opacity: 0.2; 
+        }
+        .nav ul li:not(.active):hover a {
+            color: rgba(255, 255, 255, .25);
+        }
+        .nav ul li::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.2em;
+            background: black;
+            left: 0;
+            bottom: 0;
+            background-image: linear-gradient(to right, #5e42a6, #b74e91);
+        }
+
+   
+
+
+</style>
+
+  </head>
+
+  <body class="text-center text-white bg-dark ">
+    <!--Sidebar-->
+    <header class="sidebar">
+        <nav class="nav">
+            <h1 class="d-flex pb-3 mt-3 h1 fw-light text-upercase text-black">
+                Check-In</h1>
+        
+          <ul>
+            <li class="active"><a href="home_return">Welcome</a></li>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">What We Do</a></li>
+            <li><a href="#">Get In Touch</a></li>
+          </ul>
+        </nav>
+    </header><br>
+
+   
+            <div class="container ">
+                <div class="col-md-4 justify-content-center">
+    <center class="w-100 p-2 text-white">
+
+       
         <!--This will be a field that will allow users to login.-->
         <div id="User">
-            <h1> Password Reset <br></h1>
+         
+            <h1 class="display-5 mb-3 fw-normal text-white"> Password Reset <br></h1>
             <form method="post" action="passReset">
-
-                <label for="username" style="font-size:larger;">Username: </label><br>
+                
+                <div class="row">
+                    <div class="col">
+                <label class="fs-4" for="username" style="font-size:larger;">Username: </label><br>
                 <%data.forEach((item)=>{%>
                     <input type="text" name="username" value="<%= item.Username%>" readonly
                         style="background: none; border: none; margin: 0%; text-align: center;"><br><br>
-                    
-
-                        <label for="oldPass" style="font-size:larger;">Old Password: </label><br>
-                        <input type="password" id="oldPass" name="oldPass" value="<%= item.Password%>"><br><br>
-                        <%});%>
-                        <label for="newPass" style="font-size:larger;">New Password: </label><br>
-                        <input type="password" id="newPass" name="newPass"><br><br>
+                  
+                            <label class="fs-4" for="oldPass" style="font-size:larger;">Old Password </label><br>
+                            <input class="form-control" type="password" id="oldPass" name="oldPass" value="<%= item.Password%>"><br><br>
+                            <%});%>
+                     
+                        
+                        <label class="fs-4" for="newPass" style="font-size:larger;">New Password </label><br>
+                        <input class="form-control" type="password" id="newPass" name="newPass"><br><br>
 
                         <!-- conditional code for submit button  and redirecting pages to doctor ,nurse and admin-->
-                        <input type="Submit" value="Submit" style="margin: 5px;">
+                        <input class="btn btn-primary btn-lg btn-block" type="Submit" value="Submit" style="margin: 5px;">
             </form>
         </div>
-    </center>
-    <div class="close">
-        <a href="usernameReturn" class="closebutton">Exit</a>
     </div>
+</div>
+    
+    </center>
+            </div>
+        </div>
+
+  
 </body>
 
 </html>
