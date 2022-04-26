@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>What We Do</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+* {
+  box-sizing: border-box;
+}
+
+ body {
+  display: flex;
+   align-items: center;
+              }
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+            
+        /* Base structure*/
+
+        body {
+            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+        }
+
+        .cover-container {
+             max-width: 42em;
+            }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+            /*sidebar nevigation*/
+                        
+        .sidebar {
+            /* position: fixed; */
+            width: 300px;
+            height: 100vh;
+            background: lightgray;
+            font-size: 0.65em;
+        }
+
+        .nav {
+            /* position: relative; */
+            margin: 0 15%;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .nav ul {
+            list-style: none;
+        }
+        .nav ul li {
+            position: relative;
+            margin: 3.2em 0;
+            
+        }
+        .nav ul li a {
+            line-height: 5em;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.4em;
+            color: rgba(255, 255, 255, 0.5);
+            display: block;
+            transition: all ease-out 300ms;
+        }
+        .nav ul li.active a  {
+            color: black;
+        }
+
+        .nav ul li a {
+            color:black;
+        }
+
+        .nav ul li:not(.active)::after {
+            opacity: 0.2; 
+        }
+        .nav ul li:not(.active):hover a {
+            color: rgba(255, 255, 255, .25);
+        }
+        .nav ul li::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.2em;
+            background: black;
+            left: 0;
+            bottom: 0;
+            background-image: linear-gradient(to right, #5e42a6, #b74e91);
+        }
+</style>
+</head>
+
+<body class="text-center text-white bg-dark ">
+    <!--Sidebar-->
+    <header class="sidebar">
+        <nav class="nav">
+            <h1 class="d-flex pb-3 mt-3 h1 fw-light text-upercase text-black"> <img src="/public/css/Formly3.png"  alt="Logo" width="50" height="50">
+                FORMLY</h1>
+        
+          <ul>
+            <li ><a href="home_return">Welcome</a></li>
+            <li ><a href="about"> What We Do</a></li>
+            <li><a href="whoWeAre">Who We Are</a></li>
+            <li  class="active"><a href="contact">Get In Touch</a></li>
+          </ul>
+        </nav>
+    </header><br>
+
+    <div class="container">
+        <h2 class="display-1 fw-light text-white">CONTACT US</h2> <br><br>
+<center class="w-100 p-2 text-dark" style="margin-left:200px">
+    
+
+<div class="row">
+  <div class="column">
+    <div class="card" style="background-color:orangered">
+      <h3>Emergency</h3>
+      <p> 1 324-567-8910 </p>
+      <p>emergency@formly.com</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" style="background-color:dodgerblue;">
+      <h3>Tech Team</h3>
+      <p>1 345-678-9101 </p>
+      <p>techsupport@formly.com</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card" style="background-color:yellow;">
+      <h3>Head Admin</h3>
+      <p>1 456-789-1011</p>
+      <p>adminoffice@formly.com</p>
+    </div>
+  </div>
+  
+</center>
+</div>
+
+</body>
+</html>
