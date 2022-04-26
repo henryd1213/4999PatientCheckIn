@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ViewPatientAnswers()" version="4">
+  <OBJECT>
+    <ID name="ViewPatientAnswers()" mc="Standard.DataType" uid="ebef59cc-9c7c-4f22-9b57-b59050f05a3c"/>
+    <PID name="Nurse_User" mc="Standard.Class" uid="dab6fd34-9c56-4f4a-b157-d3c2bf84397e"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ViewPatientAnswers()]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

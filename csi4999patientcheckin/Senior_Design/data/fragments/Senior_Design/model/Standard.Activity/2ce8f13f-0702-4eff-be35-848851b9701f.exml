@@ -81,7 +81,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="175caeb9-222a-4f2b-ab91-42a9aa3f2cde"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="98806e83-41e2-4fe9-93c4-133adc87d87e"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -91,7 +91,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Login Attempts greater than 3?" mc="Standard.OpaqueAction" uid="8ab3bcb2-1dcd-4693-bf90-c185d8fd3011"/>
+                      <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="dc4b5f01-144a-4116-89a9-2c62c0ecbcc9"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -573,122 +573,6 @@
                   <LINK relation="Target">
                     <REFOBJ>
                       <ID name="Activity Final Node1" mc="Standard.ActivityFinalNode" uid="4b8319df-8d6d-4e68-929a-69927fbed606"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Login Attempts greater than 3?" mc="Standard.OpaqueAction" uid="8ab3bcb2-1dcd-4693-bf90-c185d8fd3011"/>
-          <ATTRIBUTES>
-            <ATT name="Body"></ATT>
-            <ATT name="IsMultipleInstance">false</ATT>
-            <ATT name="IsCompensation">false</ATT>
-            <ATT name="Name"><![CDATA[Login Attempts greater than 3?]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Outgoing">
-              <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="4cd69ba1-9395-40a9-8a84-7bd963945343"/>
-                <ATTRIBUTES>
-                  <ATT name="Guard"></ATT>
-                  <ATT name="Weight"><![CDATA[1]]></ATT>
-                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Target">
-                    <REFOBJ>
-                      <ID name="Decision-Merge4" mc="Standard.DecisionMergeNode" uid="dc13522b-d8fa-41cd-b57e-c95ec74a7e91"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="(YES) Account locked" mc="Standard.OpaqueAction" uid="4053ff31-d3e0-407d-9028-51ab41c5ef6e"/>
-          <ATTRIBUTES>
-            <ATT name="Body"></ATT>
-            <ATT name="IsMultipleInstance">false</ATT>
-            <ATT name="IsCompensation">false</ATT>
-            <ATT name="Name"><![CDATA[(YES) Account locked]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Decision-Merge4" mc="Standard.DecisionMergeNode" uid="dc13522b-d8fa-41cd-b57e-c95ec74a7e91"/>
-          <ATTRIBUTES>
-            <ATT name="DecisionKind">ExclusiveDecision</ATT>
-            <ATT name="DecisionInputBehavior"></ATT>
-            <ATT name="Name"><![CDATA[Decision-Merge4]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Outgoing">
-              <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f30b7947-d9a8-4941-a1a3-00e92b67b9cd"/>
-                <ATTRIBUTES>
-                  <ATT name="Guard"></ATT>
-                  <ATT name="Weight"><![CDATA[1]]></ATT>
-                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Target">
-                    <REFOBJ>
-                      <ID name="(YES) Account locked" mc="Standard.OpaqueAction" uid="4053ff31-d3e0-407d-9028-51ab41c5ef6e"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="540783ab-580a-4912-b88c-286a0377fc6d"/>
-                <ATTRIBUTES>
-                  <ATT name="Guard"></ATT>
-                  <ATT name="Weight"><![CDATA[1]]></ATT>
-                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Target">
-                    <REFOBJ>
-                      <ID name="(NO) Allow Login" mc="Standard.OpaqueAction" uid="af0f9456-4ce5-41c9-b8c3-c153c93730b6"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="(NO) Allow Login" mc="Standard.OpaqueAction" uid="af0f9456-4ce5-41c9-b8c3-c153c93730b6"/>
-          <ATTRIBUTES>
-            <ATT name="Body"></ATT>
-            <ATT name="IsMultipleInstance">false</ATT>
-            <ATT name="IsCompensation">false</ATT>
-            <ATT name="Name"><![CDATA[(NO) Allow Login]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Outgoing">
-              <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="dce6497a-a9c4-4c1a-8e9b-46c3c5c6bf5b"/>
-                <ATTRIBUTES>
-                  <ATT name="Guard"></ATT>
-                  <ATT name="Weight"><![CDATA[1]]></ATT>
-                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Target">
-                    <REFOBJ>
-                      <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="dc4b5f01-144a-4116-89a9-2c62c0ecbcc9"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>

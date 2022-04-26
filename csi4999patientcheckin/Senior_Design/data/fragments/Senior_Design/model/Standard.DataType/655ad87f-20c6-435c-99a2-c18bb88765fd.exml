@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DeleteQuestions()" version="4">
+  <OBJECT>
+    <ID name="DeleteQuestions()" mc="Standard.DataType" uid="655ad87f-20c6-435c-99a2-c18bb88765fd"/>
+    <PID name="Form" mc="Standard.Class" uid="45c24593-b0e2-4b89-adc3-e4e011934b4f"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[DeleteQuestions()]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

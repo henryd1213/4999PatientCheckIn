@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FormQuestions()" version="4">
+  <OBJECT>
+    <ID name="FormQuestions()" mc="Standard.DataType" uid="d261dffc-281e-4e5f-8fdb-b15bb02a72ca"/>
+    <PID name="Admin_user" mc="Standard.Class" uid="5bf34d6f-6c12-4921-aa9d-f2a260281c7e"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[FormQuestions()]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

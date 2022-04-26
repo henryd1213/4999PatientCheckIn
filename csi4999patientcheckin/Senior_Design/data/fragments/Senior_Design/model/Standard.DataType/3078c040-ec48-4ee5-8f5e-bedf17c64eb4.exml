@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ViewPatientList()" version="4">
+  <OBJECT>
+    <ID name="ViewPatientList()" mc="Standard.DataType" uid="3078c040-ec48-4ee5-8f5e-bedf17c64eb4"/>
+    <PID name="Nurse_User" mc="Standard.Class" uid="dab6fd34-9c56-4f4a-b157-d3c2bf84397e"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ViewPatientList()]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
